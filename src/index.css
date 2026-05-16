@@ -34,13 +34,23 @@ body {
   font-family: 'DM Sans', system-ui, sans-serif;
   background: var(--bg);
   color: var(--text);
-  min-height: 600px;
+  height: 100%;
+  overflow: hidden;
 }
 
 #root {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
   overflow: hidden;
 }
 
@@ -151,17 +161,36 @@ body {
 .body {
   display: flex;
   flex: 1;
-  overflow: visible;
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* Scrollable page area (everything in .body except sidebar) */
+.body > .main,
+.body > .cv-container,
+.body > article.main,
+.body > article.question-detail,
+.body > div.main {
+  flex: 1;
+  min-height: 0;
+  min-width: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 /* SIDEBAR */
 .sidebar {
   width: 220px;
   flex-shrink: 0;
+  min-height: 0;
+  align-self: stretch;
   background: var(--sidebar-bg);
   border-right: 1px solid var(--border);
+  overflow-x: hidden;
   overflow-y: auto;
   padding: 10px 8px;
+  -webkit-overflow-scrolling: touch;
 }
 
 .sidebar-group {
@@ -238,26 +267,38 @@ body {
 /* MAIN */
 .main {
   flex: 1;
+  min-height: 0;
+  min-width: 0;
+  overflow-x: hidden;
   overflow-y: auto;
   padding: 20px;
   scrollbar-width: thin;
-  scrollbar-color: var(--border) var(--bg);
+  scrollbar-color: var(--text2) var(--bg);
+  -webkit-overflow-scrolling: touch;
 }
 
-.main::-webkit-scrollbar {
+.main::-webkit-scrollbar,
+.body > .cv-container::-webkit-scrollbar,
+.sidebar::-webkit-scrollbar {
   width: 8px;
 }
 
-.main::-webkit-scrollbar-track {
+.main::-webkit-scrollbar-track,
+.body > .cv-container::-webkit-scrollbar-track,
+.sidebar::-webkit-scrollbar-track {
   background: var(--bg);
 }
 
-.main::-webkit-scrollbar-thumb {
+.main::-webkit-scrollbar-thumb,
+.body > .cv-container::-webkit-scrollbar-thumb,
+.sidebar::-webkit-scrollbar-thumb {
   background: var(--border);
   border-radius: 4px;
 }
 
-.main::-webkit-scrollbar-thumb:hover {
+.main::-webkit-scrollbar-thumb:hover,
+.body > .cv-container::-webkit-scrollbar-thumb:hover,
+.sidebar::-webkit-scrollbar-thumb:hover {
   background: var(--text2);
 }
 

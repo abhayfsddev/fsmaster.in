@@ -1,2538 +1,4584 @@
-export const questions = [
+[
   {
     "id": 1,
     "question": "Find 2nd highest salary of employee in SQL",
     "category": "SQL",
     "subCategory": "Query",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "find",
+      "2nd",
+      "highest",
+      "salary",
+      "employee",
+      "sql",
+      "query"
+    ]
   },
   {
     "id": 2,
     "question": "Given an unsorted array, find the length of the longest consecutive sequence in O(n)",
     "category": "Java-coding",
     "subCategory": "Array",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "given",
+      "unsorted",
+      "array",
+      "find",
+      "the",
+      "length",
+      "longest",
+      "consecutive",
+      "sequence",
+      "java",
+      "coding"
+    ]
   },
   {
     "id": 3,
     "question": "Explain ACID properties",
     "category": "SQL",
     "subCategory": "Theory",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "acid",
+      "properties",
+      "sql",
+      "theory"
+    ]
   },
   {
     "id": 4,
     "question": "How to choose between SQL and NoSQL",
     "category": "Others",
     "subCategory": "Architecture",
-    "codeRequired": false,
-    "tableRequired": true
+    "keywords": [
+      "how",
+      "choose",
+      "between",
+      "sql",
+      "and",
+      "nosql",
+      "others",
+      "architecture"
+    ]
   },
   {
     "id": 5,
     "question": "Find 2nd highest salary using Java 8 Streams",
     "category": "Java-coding",
     "subCategory": "Stream",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "find",
+      "2nd",
+      "highest",
+      "salary",
+      "using",
+      "java",
+      "streams",
+      "coding",
+      "stream"
+    ]
   },
   {
     "id": 6,
     "question": "Get employee salary department-wise",
     "category": "SQL",
     "subCategory": "Query",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "get",
+      "employee",
+      "salary",
+      "department",
+      "wise",
+      "sql",
+      "query"
+    ]
   },
   {
     "id": 7,
     "question": "What is join fetch",
     "category": "Hibernate",
     "subCategory": "Fetching",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "join",
+      "fetch",
+      "hibernate",
+      "fetching"
+    ]
   },
   {
     "id": 8,
     "question": "Explain N+1 query problem and how to resolve it",
     "category": "Hibernate",
     "subCategory": "Performance",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "query",
+      "problem",
+      "and",
+      "how",
+      "resolve",
+      "hibernate",
+      "performance"
+    ]
   },
   {
     "id": 9,
     "question": "Explain N+1 query problem and how to resolve it in sql",
     "category": "SQL",
     "subCategory": "Performance",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "query",
+      "problem",
+      "and",
+      "how",
+      "resolve",
+      "sql",
+      "performance"
+    ]
   },
   {
     "id": 10,
     "question": "Function vs Procedure in SQL",
     "category": "SQL",
     "subCategory": "Functions",
-    "codeRequired": true,
-    "tableRequired": true
+    "keywords": [
+      "function",
+      "procedure",
+      "sql",
+      "functions"
+    ]
   },
   {
     "id": 11,
     "question": "Hibernate VS JPA",
     "category": "Hibernate",
     "subCategory": "ORM",
-    "codeRequired": false,
-    "tableRequired": true
+    "keywords": [
+      "hibernate",
+      "jpa",
+      "orm"
+    ]
   },
   {
     "id": 12,
     "question": "FindByName() or FindByNameAndSalary() will work in hibernate or not",
     "category": "Hibernate",
     "subCategory": "Repository Methods",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "findbyname",
+      "findbynameandsalary",
+      "will",
+      "work",
+      "hibernate",
+      "not",
+      "repository",
+      "methods"
+    ]
   },
   {
     "id": 13,
     "question": "How to connect Spring boot with database",
     "category": "Spring Boot",
     "subCategory": "JPA",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "connect",
+      "spring",
+      "boot",
+      "with",
+      "database",
+      "jpa"
+    ]
   },
   {
     "id": 14,
     "question": "Explain Criteria API",
     "category": "Spring Boot",
     "subCategory": "JPA",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "criteria",
+      "api",
+      "spring",
+      "boot",
+      "jpa"
+    ]
   },
   {
     "id": 15,
     "question": "How to write native query in JPA",
     "category": "Spring Boot",
     "subCategory": "JPA",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "write",
+      "native",
+      "query",
+      "jpa",
+      "spring",
+      "boot"
+    ]
   },
   {
     "id": 16,
     "question": "How to connect two database in one service please explain",
     "category": "Spring Boot",
     "subCategory": "JPA",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "connect",
+      "two",
+      "database",
+      "one",
+      "service",
+      "please",
+      "explain",
+      "spring",
+      "boot",
+      "jpa"
+    ]
   },
   {
     "id": 17,
     "question": "Explain operational isolation property in @Transactional",
     "category": "Spring",
     "subCategory": "Transactions",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "operational",
+      "isolation",
+      "property",
+      "transactional",
+      "spring",
+      "transactions"
+    ]
   },
   {
     "id": 18,
     "question": "What is deadlock and how it comes in database",
     "category": "SQL",
     "subCategory": "Theory",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "deadlock",
+      "and",
+      "how",
+      "comes",
+      "database",
+      "sql",
+      "theory"
+    ]
   },
   {
     "id": 19,
     "question": "How to store insert or update timestamp automatically according to database time",
     "category": "SQL",
     "subCategory": "Theory",
-    "codeRequired": true,
-    "tableRequired": true
+    "keywords": [
+      "how",
+      "store",
+      "insert",
+      "update",
+      "timestamp",
+      "automatically",
+      "according",
+      "database",
+      "time",
+      "sql",
+      "theory"
+    ]
   },
   {
     "id": 20,
     "question": "Find 2nd highest number from an array without predefined functions",
     "category": "Java-coding",
     "subCategory": "Array",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "find",
+      "2nd",
+      "highest",
+      "number",
+      "from",
+      "array",
+      "without",
+      "predefined",
+      "functions",
+      "java",
+      "coding"
+    ]
   },
   {
     "id": 21,
     "question": "Explain locking in DB",
     "category": "SQL",
     "subCategory": "Theory",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "locking",
+      "sql",
+      "theory"
+    ]
   },
   {
     "id": 22,
     "question": "What is the common problem we are getting in database operations in production",
     "category": "SQL",
     "subCategory": "Theory",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "the",
+      "common",
+      "problem",
+      "are",
+      "getting",
+      "database",
+      "operations",
+      "production",
+      "sql",
+      "theory"
+    ]
   },
   {
     "id": 23,
     "question": "Find employee whose salary is less than 50k department wise",
     "category": "SQL",
     "subCategory": "Query",
-    "codeRequired": true,
-    "tableRequired": true
+    "keywords": [
+      "find",
+      "employee",
+      "whose",
+      "salary",
+      "less",
+      "than",
+      "50k",
+      "department",
+      "wise",
+      "sql",
+      "query"
+    ]
   },
   {
     "id": 24,
     "question": "How to manage history table in database for distributed e-commerce system",
     "category": "microservices",
     "subCategory": "transaction",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "manage",
+      "history",
+      "table",
+      "database",
+      "for",
+      "distributed",
+      "commerce",
+      "system",
+      "microservices",
+      "transaction"
+    ]
   },
   {
     "id": 25,
     "question": "What database feature can we use for auditing tables",
     "category": "SQL",
     "subCategory": "Theory",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "database",
+      "feature",
+      "can",
+      "use",
+      "for",
+      "auditing",
+      "tables",
+      "sql",
+      "theory"
+    ]
   },
   {
     "id": 26,
     "question": "How index works internally",
     "category": "SQL",
     "subCategory": "Theory",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "index",
+      "works",
+      "internally",
+      "sql",
+      "theory"
+    ]
   },
   {
     "id": 27,
     "question": "How to create index in SQL",
     "category": "SQL",
     "subCategory": "Theory",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "create",
+      "index",
+      "sql",
+      "theory"
+    ]
   },
   {
     "id": 28,
     "question": "Explain hash collision",
     "category": "Java",
     "subCategory": "Collections",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "hash",
+      "collision",
+      "java",
+      "collections"
+    ]
   },
   {
     "id": 29,
     "question": "If any query is taking too much time in production how do you solve it",
     "category": "SQL",
     "subCategory": "theory",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "any",
+      "query",
+      "taking",
+      "too",
+      "much",
+      "time",
+      "production",
+      "how",
+      "you",
+      "solve",
+      "sql",
+      "theory"
+    ]
   },
   {
     "id": 30,
     "question": "Data integrity in database context",
     "category": "SQL",
     "subCategory": "theory",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "data",
+      "integrity",
+      "database",
+      "context",
+      "sql",
+      "theory"
+    ]
   },
   {
     "id": 31,
     "question": "What happens if we get OutOfMemoryError",
     "category": "Java",
     "subCategory": "Memory-Management",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "happens",
+      "get",
+      "outofmemoryerror",
+      "java",
+      "memory",
+      "management"
+    ]
   },
   {
     "id": 32,
     "question": "How to perform memory cleanup",
     "category": "Java",
     "subCategory": "Memory-Management",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "perform",
+      "memory",
+      "cleanup",
+      "java",
+      "management"
+    ]
   },
   {
     "id": 33,
     "question": "What exceptions have you faced in your project",
     "category": "Java",
     "subCategory": "Exception Handling",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "exceptions",
+      "have",
+      "you",
+      "faced",
+      "your",
+      "project",
+      "java",
+      "exception",
+      "handling"
+    ]
   },
   {
     "id": 34,
     "question": "Write code to read file from remote location but file is not available at runtime and code should not break",
     "category": "Java-coding",
     "subCategory": "File Handling",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "write",
+      "code",
+      "read",
+      "file",
+      "from",
+      "remote",
+      "location",
+      "but",
+      "not",
+      "available",
+      "runtime",
+      "and",
+      "should",
+      "break",
+      "java",
+      "coding",
+      "handling"
+    ]
   },
   {
     "id": 35,
     "question": "Explain try with resources",
     "category": "Java",
     "subCategory": "Exception Handling",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "try",
+      "with",
+      "resources",
+      "java",
+      "exception",
+      "handling"
+    ]
   },
   {
     "id": 36,
     "question": "Explain available methods inside Object class",
     "category": "Java",
     "subCategory": "OOPS",
-    "codeRequired": true,
-    "tableRequired": true
+    "keywords": [
+      "explain",
+      "available",
+      "methods",
+      "inside",
+      "object",
+      "class",
+      "java",
+      "oops"
+    ]
   },
   {
     "id": 37,
     "question": "Explain contract between equals and hashCode",
     "category": "Java",
     "subCategory": "OOPs",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "contract",
+      "between",
+      "equals",
+      "and",
+      "hashcode",
+      "java",
+      "oops"
+    ]
   },
   {
     "id": 38,
     "question": "Explain difference between == and equals method",
     "category": "Java",
     "subCategory": "OOPs",
-    "codeRequired": false,
-    "tableRequired": true
+    "keywords": [
+      "explain",
+      "difference",
+      "between",
+      "and",
+      "equals",
+      "method",
+      "java",
+      "oops"
+    ]
   },
   {
     "id": 39,
     "question": "Explain immutable class",
     "category": "Java",
     "subCategory": "OOPs",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "immutable",
+      "class",
+      "java",
+      "oops"
+    ]
   },
   {
     "id": 40,
     "question": "Write custom immutable class",
     "category": "Java",
     "subCategory": "OOPs",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "write",
+      "custom",
+      "immutable",
+      "class",
+      "java",
+      "oops"
+    ]
   },
   {
     "id": 41,
     "question": "String vs StringBuffer vs StringBuilder",
     "category": "Java",
     "subCategory": "String",
-    "codeRequired": false,
-    "tableRequired": true
+    "keywords": [
+      "string",
+      "stringbuffer",
+      "stringbuilder",
+      "java"
+    ]
   },
   {
     "id": 42,
     "question": "What benefit do we get using balanced tree in HashMap",
     "category": "Java",
     "subCategory": "Collections",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "benefit",
+      "get",
+      "using",
+      "balanced",
+      "tree",
+      "hashmap",
+      "java",
+      "collections"
+    ]
   },
   {
     "id": 43,
     "question": "Explain garbage collection in Java",
     "category": "Java",
     "subCategory": "JVM",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "garbage",
+      "collection",
+      "java",
+      "jvm"
+    ]
   },
   {
     "id": 44,
     "question": "How is memory management done in Java",
     "category": "Java",
     "subCategory": "Memory Management",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "memory",
+      "management",
+      "done",
+      "java"
+    ]
   },
   {
     "id": 45,
     "question": "What will be the return type of filter",
     "category": "Java",
     "subCategory": "Streams API",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "will",
+      "the",
+      "return",
+      "type",
+      "filter",
+      "java",
+      "streams",
+      "api"
+    ]
   },
   {
     "id": 46,
     "question": "Explain Executor Framework",
     "category": "Java",
     "subCategory": "Concurrency",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "executor",
+      "framework",
+      "java",
+      "concurrency"
+    ]
   },
   {
     "id": 47,
     "question": "How many ways can Java solve concurrency",
     "category": "Java",
     "subCategory": "Concurrency",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "many",
+      "ways",
+      "can",
+      "java",
+      "solve",
+      "concurrency"
+    ]
   },
   {
     "id": 48,
     "question": "Streams are mutable or immutable",
     "category": "Java",
     "subCategory": "Streams API",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "streams",
+      "are",
+      "mutable",
+      "immutable",
+      "java",
+      "api"
+    ]
   },
   {
     "id": 49,
     "question": "Streams vs Collections",
     "category": "Java",
     "subCategory": "Streams API",
-    "codeRequired": false,
-    "tableRequired": true
+    "keywords": [
+      "streams",
+      "collections",
+      "java",
+      "api"
+    ]
   },
   {
     "id": 50,
     "question": "Why do we use lambda expressions",
     "category": "Java",
     "subCategory": "java-8",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "why",
+      "use",
+      "lambda",
+      "expressions",
+      "java"
+    ]
   },
   {
     "id": 51,
     "question": "Benefits of functional programming in Java",
     "category": "Java",
     "subCategory": "java-8",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "benefits",
+      "functional",
+      "programming",
+      "java"
+    ]
   },
   {
     "id": 52,
     "question": "How interthread communication happens",
     "category": "Java",
     "subCategory": "Concurrency",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "interthread",
+      "communication",
+      "happens",
+      "java",
+      "concurrency"
+    ]
   },
   {
     "id": 53,
     "question": "Thread 1 output should become input of Thread 2 how can we achieve it",
     "category": "Java",
     "subCategory": "Concurrency",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "thread",
+      "output",
+      "should",
+      "become",
+      "input",
+      "how",
+      "can",
+      "achieve",
+      "java",
+      "concurrency"
+    ]
   },
   {
     "id": 54,
     "question": "How to decide when to use abstract class and when to use interface",
     "category": "Java",
     "subCategory": "OOPs",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "decide",
+      "when",
+      "use",
+      "abstract",
+      "class",
+      "and",
+      "interface",
+      "java",
+      "oops"
+    ]
   },
   {
     "id": 55,
     "question": "Can we extend an abstract class to another abstract class",
     "category": "Java",
     "subCategory": "OOPs",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "can",
+      "extend",
+      "abstract",
+      "class",
+      "another",
+      "java",
+      "oops"
+    ]
   },
   {
     "id": 56,
     "question": "Can we extend one functional interface from another functional interface",
     "category": "Java",
     "subCategory": "java-8",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "can",
+      "extend",
+      "one",
+      "functional",
+      "interface",
+      "from",
+      "another",
+      "java"
+    ]
   },
   {
     "id": 57,
     "question": "How to create custom marker interface",
     "category": "Java",
     "subCategory": "OOPS",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "create",
+      "custom",
+      "marker",
+      "interface",
+      "java",
+      "oops"
+    ]
   },
   {
     "id": 58,
     "question": "@Qualifier vs @Autowired",
     "category": "Spring",
     "subCategory": "Dependency Injection",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "qualifier",
+      "autowired",
+      "spring",
+      "dependency",
+      "injection"
+    ]
   },
   {
     "id": 59,
     "question": "Eureka client uses",
     "category": "Microservices",
     "subCategory": "Service Discovery",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "eureka",
+      "client",
+      "uses",
+      "microservices",
+      "service",
+      "discovery"
+    ]
   },
   {
     "id": 60,
     "question": "Explain API Gateway",
     "category": "Microservices",
     "subCategory": "Gateway",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "api",
+      "gateway",
+      "microservices"
+    ]
   },
   {
     "id": 61,
     "question": "Explain service registry",
     "category": "Microservices",
     "subCategory": "Service Discovery",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "service",
+      "registry",
+      "microservices",
+      "discovery"
+    ]
   },
   {
     "id": 62,
     "question": "How to define REST endpoints",
     "category": "REST APIs",
     "subCategory": "API Design",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "define",
+      "rest",
+      "endpoints",
+      "apis",
+      "api",
+      "design"
+    ]
   },
   {
     "id": 63,
     "question": "PutMapping vs PostMapping",
     "category": "REST APIs",
     "subCategory": "HTTP Methods",
-    "codeRequired": false,
-    "tableRequired": true
+    "keywords": [
+      "putmapping",
+      "postmapping",
+      "rest",
+      "apis",
+      "http",
+      "methods"
+    ]
   },
   {
     "id": 64,
     "question": "Explain stereotype annotations and why they are called stereotype",
     "category": "Spring",
     "subCategory": "spring-core",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "stereotype",
+      "annotations",
+      "and",
+      "why",
+      "they",
+      "are",
+      "called",
+      "spring",
+      "core"
+    ]
   },
   {
     "id": 65,
     "question": "How to validate request body on server side",
     "category": "Spring Boot",
     "subCategory": "Validation",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "validate",
+      "request",
+      "body",
+      "server",
+      "side",
+      "spring",
+      "boot",
+      "validation"
+    ]
   },
   {
     "id": 66,
     "question": "How to throw proper custom error to user and how Spring Boot handles errors",
     "category": "Spring Boot",
     "subCategory": "Spring Advance",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "throw",
+      "proper",
+      "custom",
+      "error",
+      "user",
+      "and",
+      "spring",
+      "boot",
+      "handles",
+      "errors",
+      "advance"
+    ]
   },
   {
     "id": 67,
     "question": "How to upgrade Spring 2.x code to Spring 3.x and what major things should be considered",
     "category": "Spring Boot",
     "subCategory": "Migration",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "upgrade",
+      "spring",
+      "code",
+      "and",
+      "what",
+      "major",
+      "things",
+      "should",
+      "considered",
+      "boot",
+      "migration"
+    ]
   },
   {
     "id": 68,
     "question": "Explain OAuth2 with JWT",
     "category": "Security",
     "subCategory": "spring-security",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "oauth2",
+      "with",
+      "jwt",
+      "security",
+      "spring"
+    ]
   },
   {
     "id": 69,
     "question": "How do you manage key rotation and secure authentication",
     "category": "Security",
     "subCategory": "spring-security",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "you",
+      "manage",
+      "key",
+      "rotation",
+      "and",
+      "secure",
+      "authentication",
+      "security",
+      "spring"
+    ]
   },
   {
     "id": 70,
     "question": "Explain RestTemplate methods",
     "category": "Spring",
     "subCategory": "spring-core",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "resttemplate",
+      "methods",
+      "spring",
+      "core"
+    ]
   },
   {
     "id": 71,
     "question": "How to secure microservices",
     "category": "Microservices",
     "subCategory": "spring-security",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "secure",
+      "microservices",
+      "spring",
+      "security"
+    ]
   },
   {
     "id": 72,
     "question": "Explain Spring Bean lifecycle",
     "category": "Spring",
     "subCategory": "spring-core",
-    "codeRequired": true,
-    "tableRequired": true
+    "keywords": [
+      "explain",
+      "spring",
+      "bean",
+      "lifecycle",
+      "core"
+    ]
   },
   {
     "id": 73,
     "question": "How validating and reviewing the code",
     "category": "Others",
     "subCategory": "Code Review",
-    "codeRequired": false,
-    "tableRequired": true
+    "keywords": [
+      "how",
+      "validating",
+      "and",
+      "reviewing",
+      "the",
+      "code",
+      "others",
+      "review"
+    ]
   },
   {
     "id": 74,
     "question": "Common issues faced in Sonar and how to solve them",
     "category": "Others",
     "subCategory": "Code Quality",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "common",
+      "issues",
+      "faced",
+      "sonar",
+      "and",
+      "how",
+      "solve",
+      "them",
+      "others",
+      "code",
+      "quality"
+    ]
   },
   {
     "id": 75,
     "question": "How to handle distributed transactions in microservices",
     "category": "Microservices",
     "subCategory": "Distributed Transactions",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "handle",
+      "distributed",
+      "transactions",
+      "microservices"
+    ]
   },
   {
     "id": 76,
     "question": "Explain Saga design pattern",
     "category": "Microservices",
     "subCategory": "Distributed Transactions",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "saga",
+      "design",
+      "pattern",
+      "microservices",
+      "distributed",
+      "transactions"
+    ]
   },
   {
     "id": 77,
     "question": "What is Outbox pattern",
     "category": "Microservices",
     "subCategory": "Distributed Transactions",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "outbox",
+      "pattern",
+      "microservices",
+      "distributed",
+      "transactions"
+    ]
   },
   {
     "id": 78,
     "question": "How to decide between monolithic and microservices architecture",
     "category": "Microservices",
     "subCategory": "Architecture",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "decide",
+      "between",
+      "monolithic",
+      "and",
+      "microservices",
+      "architecture"
+    ]
   },
   {
     "id": 79,
     "question": "What is an idempotent API",
     "category": "Microservices",
     "subCategory": "API Design",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "idempotent",
+      "api",
+      "microservices",
+      "design"
+    ]
   },
   {
     "id": 80,
     "question": "What are Correlation IDs",
     "category": "Microservices",
     "subCategory": "Observability",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "are",
+      "correlation",
+      "ids",
+      "microservices",
+      "observability"
+    ]
   },
   {
     "id": 81,
     "question": "How do two microservices communicate",
     "category": "Microservices",
     "subCategory": "Communication",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "two",
+      "microservices",
+      "communicate",
+      "communication"
+    ]
   },
   {
     "id": 82,
     "question": "What design patterns are used for large scale enterprise applications",
     "category": "Architecture",
     "subCategory": "Design Patterns",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "design",
+      "patterns",
+      "are",
+      "used",
+      "for",
+      "large",
+      "scale",
+      "enterprise",
+      "applications",
+      "architecture"
+    ]
   },
   {
     "id": 83,
     "question": "Explain API management tools in cloud services like AWS",
     "category": "AWS",
     "subCategory": "API Management",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "api",
+      "management",
+      "tools",
+      "cloud",
+      "services",
+      "like",
+      "aws"
+    ]
   },
   {
     "id": 84,
     "question": "Suddenly API latency increases how to solve it",
     "category": "Production Issues",
     "subCategory": "Performance",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "suddenly",
+      "api",
+      "latency",
+      "increases",
+      "how",
+      "solve",
+      "production",
+      "issues",
+      "performance"
+    ]
   },
   {
     "id": 85,
     "question": "How to design an API to handle huge traffic",
     "category": "System Design",
     "subCategory": "Scalability",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "design",
+      "api",
+      "handle",
+      "huge",
+      "traffic",
+      "system",
+      "scalability"
+    ]
   },
   {
     "id": 86,
     "question": "Architecting large scale enterprise application which design patterns do you consider",
     "category": "Architecture",
     "subCategory": "Enterprise Design",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "architecting",
+      "large",
+      "scale",
+      "enterprise",
+      "application",
+      "which",
+      "design",
+      "patterns",
+      "you",
+      "consider",
+      "architecture"
+    ]
   },
   {
     "id": 87,
     "question": "API tool to manage APIs on cloud like AWS",
     "category": "AWS",
     "subCategory": "API Management",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "api",
+      "tool",
+      "manage",
+      "apis",
+      "cloud",
+      "like",
+      "aws",
+      "management"
+    ]
   },
   {
     "id": 88,
     "question": "What is Kafka partition and why is it used",
     "category": "Kafka",
     "subCategory": "Partitions",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "kafka",
+      "partition",
+      "and",
+      "why",
+      "used",
+      "partitions"
+    ]
   },
   {
     "id": 89,
     "question": "How microservices are implemented in your project",
     "category": "Microservices",
     "subCategory": "Implementation",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "microservices",
+      "are",
+      "implemented",
+      "your",
+      "project",
+      "implementation"
+    ]
   },
   {
     "id": 90,
     "question": "Explain API Gateway",
     "category": "Microservices",
     "subCategory": "Gateway",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "api",
+      "gateway",
+      "microservices"
+    ]
   },
   {
     "id": 91,
     "question": "How to handle if any service is down and called by another service",
     "category": "Microservices",
     "subCategory": "Fault Tolerance",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "handle",
+      "any",
+      "service",
+      "down",
+      "and",
+      "called",
+      "another",
+      "microservices",
+      "fault",
+      "tolerance"
+    ]
   },
   {
     "id": 92,
     "question": "If multiple microservices are called and one fails how to identify failing service",
     "category": "Microservices",
     "subCategory": "Debugging",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "multiple",
+      "microservices",
+      "are",
+      "called",
+      "and",
+      "one",
+      "fails",
+      "how",
+      "identify",
+      "failing",
+      "service",
+      "debugging"
+    ]
   },
   {
     "id": 93,
     "question": "How to manage latency in microservices",
     "category": "Microservices",
     "subCategory": "Performance",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "manage",
+      "latency",
+      "microservices",
+      "performance"
+    ]
   },
   {
     "id": 94,
     "question": "What are anti-patterns in microservices",
     "category": "Microservices",
     "subCategory": "Architecture",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "are",
+      "anti",
+      "patterns",
+      "microservices",
+      "architecture"
+    ]
   },
   {
     "id": 95,
     "question": "Explain any API monitoring tool",
     "category": "Monitoring",
     "subCategory": "API Monitoring",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "any",
+      "api",
+      "monitoring",
+      "tool"
+    ]
   },
   {
     "id": 96,
     "question": "How to achieve data consistency among multiple services in distributed system",
     "category": "Microservices",
     "subCategory": "Distributed Systems",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "achieve",
+      "data",
+      "consistency",
+      "among",
+      "multiple",
+      "services",
+      "distributed",
+      "system",
+      "microservices",
+      "systems"
+    ]
   },
   {
     "id": 97,
     "question": "How to design high-throughput API",
     "category": "System Design",
     "subCategory": "Scalability",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "design",
+      "high",
+      "throughput",
+      "api",
+      "system",
+      "scalability"
+    ]
   },
   {
     "id": 98,
     "question": "Define system flow from user interface to database",
     "category": "Others",
     "subCategory": "Architecture",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "define",
+      "system",
+      "flow",
+      "from",
+      "user",
+      "interface",
+      "database",
+      "others",
+      "architecture"
+    ]
   },
   {
     "id": 99,
     "question": "What system did you design personally",
     "category": "Others",
     "subCategory": "Architecture",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "system",
+      "did",
+      "you",
+      "design",
+      "personally",
+      "others",
+      "architecture"
+    ]
   },
   {
     "id": 100,
     "question": "Explain one critical issue you handled",
     "category": "Others",
     "subCategory": "production issues",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "one",
+      "critical",
+      "issue",
+      "you",
+      "handled",
+      "others",
+      "production",
+      "issues"
+    ]
   },
   {
     "id": 101,
     "question": "How Kafka works internally",
     "category": "Kafka",
     "subCategory": "Internals",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "kafka",
+      "works",
+      "internally",
+      "internals"
+    ]
   },
   {
     "id": 102,
     "question": "Consumer crashes in Kafka",
     "category": "Kafka",
     "subCategory": "Consumer Management",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "consumer",
+      "crashes",
+      "kafka",
+      "management"
+    ]
   },
   {
     "id": 103,
     "question": "Impact of partitions in Kafka topics and use of partitions",
     "category": "Kafka",
     "subCategory": "Partitions",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "impact",
+      "partitions",
+      "kafka",
+      "topics",
+      "and",
+      "use"
+    ]
   },
   {
     "id": 104,
     "question": "What AWS services are used for project deployment",
     "category": "AWS",
     "subCategory": "Deployment",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "aws",
+      "services",
+      "are",
+      "used",
+      "for",
+      "project",
+      "deployment"
+    ]
   },
   {
     "id": 105,
     "question": "How integration testing is done",
     "category": "Testing",
     "subCategory": "Integration Testing",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "integration",
+      "testing",
+      "done"
+    ]
   },
   {
     "id": 106,
     "question": "How to ensure microservices are working fine",
     "category": "Microservices",
     "subCategory": "Monitoring",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "ensure",
+      "microservices",
+      "are",
+      "working",
+      "fine",
+      "monitoring"
+    ]
   },
   {
     "id": 107,
     "question": "Explain your role and responsibility",
     "category": "Others",
     "subCategory": "Experience",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "your",
+      "role",
+      "and",
+      "responsibility",
+      "others",
+      "experience"
+    ]
   },
   {
     "id": 108,
     "question": "How many microservices are in your project and which ones do you use?",
     "category": "Microservices",
     "subCategory": "Project Architecture",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "many",
+      "microservices",
+      "are",
+      "your",
+      "project",
+      "and",
+      "which",
+      "ones",
+      "you",
+      "use",
+      "architecture"
+    ]
   },
   {
     "id": 109,
     "question": "How do you deploy code on AWS?",
     "category": "Devops",
     "subCategory": "AWS",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "you",
+      "deploy",
+      "code",
+      "aws",
+      "devops"
+    ]
   },
   {
     "id": 110,
     "question": "How do you maintain consistency without distributed transactions?",
     "category": "Microservices",
     "subCategory": "Distributed Systems",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "you",
+      "maintain",
+      "consistency",
+      "without",
+      "distributed",
+      "transactions",
+      "microservices",
+      "systems"
+    ]
   },
   {
     "id": 111,
     "question": "How do you handle failures in distributed systems?",
     "category": "Microservices",
     "subCategory": "Distributed Systems",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "you",
+      "handle",
+      "failures",
+      "distributed",
+      "systems",
+      "microservices"
+    ]
   },
   {
     "id": 112,
     "question": "How do you ensure database consistency with retries and at-least-once delivery?",
     "category": "Microservices",
     "subCategory": "Distributed Systems",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "you",
+      "ensure",
+      "database",
+      "consistency",
+      "with",
+      "retries",
+      "and",
+      "least",
+      "once",
+      "delivery",
+      "microservices",
+      "distributed",
+      "systems"
+    ]
   },
   {
     "id": 113,
     "question": "How do you prevent duplicate processing in message-driven systems?",
     "category": "Kafka",
     "subCategory": "Message Processing",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "you",
+      "prevent",
+      "duplicate",
+      "processing",
+      "message",
+      "driven",
+      "systems",
+      "kafka"
+    ]
   },
   {
     "id": 114,
     "question": "How do you choose between Saga orchestration and choreography?",
     "category": "Microservices",
     "subCategory": "Distributed Transactions",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "you",
+      "choose",
+      "between",
+      "saga",
+      "orchestration",
+      "and",
+      "choreography",
+      "microservices",
+      "distributed",
+      "transactions"
+    ]
   },
   {
     "id": 115,
     "question": "How do you design compensating transactions?",
     "category": "Microservices",
     "subCategory": "Distributed Transactions",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "you",
+      "design",
+      "compensating",
+      "transactions",
+      "microservices",
+      "distributed"
+    ]
   },
   {
     "id": 116,
     "question": "How to authenticate and authorize payment service?",
     "category": "Spring Boot",
     "subCategory": "Spring Security",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "authenticate",
+      "and",
+      "authorize",
+      "payment",
+      "service",
+      "spring",
+      "boot",
+      "security"
+    ]
   },
   {
     "id": 117,
     "question": "OrderService creates 100 orders but payment succeeds for only 50. How will you revert failed orders in microservices architecture?",
     "category": "Microservices",
     "subCategory": "Distributed Transactions",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "orderservice",
+      "creates",
+      "100",
+      "orders",
+      "but",
+      "payment",
+      "succeeds",
+      "for",
+      "only",
+      "how",
+      "will",
+      "you",
+      "revert",
+      "failed",
+      "microservices",
+      "architecture",
+      "distributed",
+      "transactions"
+    ]
   },
   {
     "id": 118,
     "question": "Same order/payment failure scenario in monolithic architecture. How will you revert failed orders?",
     "category": "Microservices",
     "subCategory": "Distributed Transactions",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "same",
+      "order",
+      "payment",
+      "failure",
+      "scenario",
+      "monolithic",
+      "architecture",
+      "how",
+      "will",
+      "you",
+      "revert",
+      "failed",
+      "orders",
+      "microservices",
+      "distributed",
+      "transactions"
+    ]
   },
   {
     "id": 119,
     "question": "How do you define microservice boundaries to minimize chatty calls?",
     "category": "Microservices",
     "subCategory": "Architecture",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "you",
+      "define",
+      "microservice",
+      "boundaries",
+      "minimize",
+      "chatty",
+      "calls",
+      "microservices",
+      "architecture"
+    ]
   },
   {
     "id": 120,
     "question": "What is Eureka Server and how does it work?",
     "category": "Microservices",
     "subCategory": "Service Discovery",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "eureka",
+      "server",
+      "and",
+      "how",
+      "does",
+      "work",
+      "microservices",
+      "service",
+      "discovery"
+    ]
   },
   {
     "id": 121,
     "question": "Explain velocity and sizing in Agile",
     "category": "Agile",
     "subCategory": "Scrum",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "velocity",
+      "and",
+      "sizing",
+      "agile",
+      "scrum"
+    ]
   },
   {
     "id": 122,
     "question": "How do you estimate tasks?",
     "category": "Agile",
     "subCategory": "Estimation",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "you",
+      "estimate",
+      "tasks",
+      "agile",
+      "estimation"
+    ]
   },
   {
     "id": 123,
     "question": "Explain deployment process in production",
     "category": "DevOps",
     "subCategory": "Deployment",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "deployment",
+      "process",
+      "production",
+      "devops"
+    ]
   },
   {
     "id": 124,
     "question": "What is rollback plan if deployment fails?",
     "category": "DevOps",
     "subCategory": "Deployment",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "rollback",
+      "plan",
+      "deployment",
+      "fails",
+      "devops"
+    ]
   },
   {
     "id": 125,
     "question": "Are you following DevOps process?",
     "category": "DevOps",
     "subCategory": "Process",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "are",
+      "you",
+      "following",
+      "devops",
+      "process"
+    ]
   },
   {
     "id": 126,
     "question": "How do you ensure your code is deployed correctly?",
     "category": "DevOps",
     "subCategory": "Deployment",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "you",
+      "ensure",
+      "your",
+      "code",
+      "deployed",
+      "correctly",
+      "devops",
+      "deployment"
+    ]
   },
   {
     "id": 127,
     "question": "If production build fails, who reverts it and how?",
     "category": "DevOps",
     "subCategory": "Deployment",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "production",
+      "build",
+      "fails",
+      "who",
+      "reverts",
+      "and",
+      "how",
+      "devops",
+      "deployment"
+    ]
   },
   {
     "id": 128,
     "question": "How to ensure vulnerability fixes when generating code with GenAI?",
     "category": "Spring Boot",
     "subCategory": "Spring Security",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "ensure",
+      "vulnerability",
+      "fixes",
+      "when",
+      "generating",
+      "code",
+      "with",
+      "genai",
+      "spring",
+      "boot",
+      "security"
+    ]
   },
   {
     "id": 129,
     "question": "How to manage configurations and secrets across environments?",
     "category": "DevOps",
     "subCategory": "Configuration Management",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "manage",
+      "configurations",
+      "and",
+      "secrets",
+      "across",
+      "environments",
+      "devops",
+      "configuration",
+      "management"
+    ]
   },
   {
     "id": 130,
     "question": "Build a minimal data access layer and singleton design",
     "category": "Design Patterns",
     "subCategory": "Singleton Pattern",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "build",
+      "minimal",
+      "data",
+      "access",
+      "layer",
+      "and",
+      "singleton",
+      "design",
+      "patterns",
+      "pattern"
+    ]
   },
   {
     "id": 131,
     "question": "Design a parking lot microservice",
     "category": "Microservices",
     "subCategory": "Architecture",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "design",
+      "parking",
+      "lot",
+      "microservice",
+      "microservices",
+      "architecture"
+    ]
   },
   {
     "id": 132,
     "question": "Explain CAP theorem",
     "category": "Microservices",
     "subCategory": "Distributed Systems",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "cap",
+      "theorem",
+      "microservices",
+      "distributed",
+      "systems"
+    ]
   },
   {
     "id": 133,
     "question": "Explain CQRS pattern",
     "category": "Design Patterns",
     "subCategory": "CQRS",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "cqrs",
+      "pattern",
+      "design",
+      "patterns"
+    ]
   },
   {
     "id": 134,
     "question": "Explain event sourcing",
     "category": "Microservices",
     "subCategory": "Architecture",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "event",
+      "sourcing",
+      "microservices",
+      "architecture"
+    ]
   },
   {
     "id": 135,
     "question": "Explain distributed caching",
     "category": "Microservices",
     "subCategory": "Distributed Systems",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "distributed",
+      "caching",
+      "microservices",
+      "systems"
+    ]
   },
   {
     "id": 136,
     "question": "Explain service mesh",
     "category": "Microservices",
     "subCategory": "Architecture",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "service",
+      "mesh",
+      "microservices",
+      "architecture"
+    ]
   },
   {
     "id": 137,
     "question": "Explain blue-green deployment",
     "category": "DevOps",
     "subCategory": "Deployment",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "blue",
+      "green",
+      "deployment",
+      "devops"
+    ]
   },
   {
     "id": 138,
     "question": "Explain canary deployment",
     "category": "DevOps",
     "subCategory": "Deployment",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "canary",
+      "deployment",
+      "devops"
+    ]
   },
   {
     "id": 139,
     "question": "Explain sidecar pattern",
     "category": "Microservices",
     "subCategory": "Design Patterns",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "sidecar",
+      "pattern",
+      "microservices",
+      "design",
+      "patterns"
+    ]
   },
   {
     "id": 140,
     "question": "Explain bulkhead pattern",
     "category": "Microservices",
     "subCategory": "Design Patterns",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "bulkhead",
+      "pattern",
+      "microservices",
+      "design",
+      "patterns"
+    ]
   },
   {
     "id": 141,
     "question": "Explain retry pattern",
     "category": "Microservices",
     "subCategory": "Design Patterns",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "retry",
+      "pattern",
+      "microservices",
+      "design",
+      "patterns"
+    ]
   },
   {
     "id": 142,
     "question": "Explain API throttling",
     "category": "Microservices",
     "subCategory": "API Management",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "api",
+      "throttling",
+      "microservices",
+      "management"
+    ]
   },
   {
     "id": 143,
     "question": "Explain rate limiting in APIs",
     "category": "Microservices",
     "subCategory": "API Management",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "rate",
+      "limiting",
+      "apis",
+      "microservices",
+      "api",
+      "management"
+    ]
   },
   {
     "id": 144,
     "question": "What is eventual consistency?",
     "category": "Microservices",
     "subCategory": "Distributed Systems",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "eventual",
+      "consistency",
+      "microservices",
+      "distributed",
+      "systems"
+    ]
   },
   {
     "id": 145,
     "question": "How to handle schema evolution in Kafka?",
     "category": "Kafka",
     "subCategory": "Schema Management",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "handle",
+      "schema",
+      "evolution",
+      "kafka",
+      "management"
+    ]
   },
   {
     "id": 146,
     "question": "What is Kafka consumer group?",
     "category": "Kafka",
     "subCategory": "Consumers",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "kafka",
+      "consumer",
+      "group",
+      "consumers"
+    ]
   },
   {
     "id": 147,
     "question": "Explain Kafka offset management",
     "category": "Kafka",
     "subCategory": "Consumers",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "kafka",
+      "offset",
+      "management",
+      "consumers"
+    ]
   },
   {
     "id": 148,
     "question": "How does Kafka ensure message ordering?",
     "category": "Kafka",
     "subCategory": "Message Processing",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "does",
+      "kafka",
+      "ensure",
+      "message",
+      "ordering",
+      "processing"
+    ]
   },
   {
     "id": 149,
     "question": "What is ISR in Kafka?",
     "category": "Kafka",
     "subCategory": "Replication",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "isr",
+      "kafka",
+      "replication"
+    ]
   },
   {
     "id": 150,
     "question": "Leader vs follower in Kafka",
     "category": "Kafka",
     "subCategory": "Replication",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "leader",
+      "follower",
+      "kafka",
+      "replication"
+    ]
   },
   {
     "id": 151,
     "question": "What happens when Kafka broker goes down?",
     "category": "Kafka",
     "subCategory": "Fault Tolerance",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "happens",
+      "when",
+      "kafka",
+      "broker",
+      "goes",
+      "down",
+      "fault",
+      "tolerance"
+    ]
   },
   {
     "id": 152,
     "question": "How to avoid duplicate messages in Kafka consumers?",
     "category": "Kafka",
     "subCategory": "Message Processing",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "avoid",
+      "duplicate",
+      "messages",
+      "kafka",
+      "consumers",
+      "message",
+      "processing"
+    ]
   },
   {
     "id": 153,
     "question": "What is Dead Letter Queue (DLQ)?",
     "category": "Kafka",
     "subCategory": "Message Processing",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "dead",
+      "letter",
+      "queue",
+      "dlq",
+      "kafka",
+      "message",
+      "processing"
+    ]
   },
   {
     "id": 154,
     "question": "What is exactly-once processing in Kafka?",
     "category": "Kafka",
     "subCategory": "Message Processing",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "exactly",
+      "once",
+      "processing",
+      "kafka",
+      "message"
+    ]
   },
   {
     "id": 155,
     "question": "What is Kafka rebalance?",
     "category": "Kafka",
     "subCategory": "Consumers",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "kafka",
+      "rebalance",
+      "consumers"
+    ]
   },
   {
     "id": 156,
     "question": "How to improve Kafka consumer performance?",
     "category": "Kafka",
     "subCategory": "Performance",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "improve",
+      "kafka",
+      "consumer",
+      "performance"
+    ]
   },
   {
     "id": 157,
     "question": "How to improve Kafka producer throughput?",
     "category": "Kafka",
     "subCategory": "Performance",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "improve",
+      "kafka",
+      "producer",
+      "throughput",
+      "performance"
+    ]
   },
   {
     "id": 158,
     "question": "What is backpressure in distributed systems?",
     "category": "Microservices",
     "subCategory": "Distributed Systems",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "backpressure",
+      "distributed",
+      "systems",
+      "microservices"
+    ]
   },
   {
     "id": 159,
     "question": "How to handle high traffic in microservices?",
     "category": "Microservices",
     "subCategory": "Scalability",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "handle",
+      "high",
+      "traffic",
+      "microservices",
+      "scalability"
+    ]
   },
   {
     "id": 160,
     "question": "Explain horizontal scaling vs vertical scaling",
     "category": "Microservices",
     "subCategory": "Scalability",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "horizontal",
+      "scaling",
+      "vertical",
+      "microservices",
+      "scalability"
+    ]
   },
   {
     "id": 161,
     "question": "How does load balancer work?",
     "category": "Microservices",
     "subCategory": "Scalability",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "does",
+      "load",
+      "balancer",
+      "work",
+      "microservices",
+      "scalability"
+    ]
   },
   {
     "id": 162,
     "question": "What is sticky session?",
     "category": "Microservices",
     "subCategory": "Scalability",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "sticky",
+      "session",
+      "microservices",
+      "scalability"
+    ]
   },
   {
     "id": 163,
     "question": "Explain Redis caching",
     "category": "Caching",
     "subCategory": "Redis",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "redis",
+      "caching"
+    ]
   },
   {
     "id": 164,
     "question": "Cache aside vs write through caching",
     "category": "Caching",
     "subCategory": "Caching Strategies",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "cache",
+      "aside",
+      "write",
+      "through",
+      "caching",
+      "strategies"
+    ]
   },
   {
     "id": 165,
     "question": "How to avoid cache stampede?",
     "category": "Caching",
     "subCategory": "Caching Strategies",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "avoid",
+      "cache",
+      "stampede",
+      "caching",
+      "strategies"
+    ]
   },
   {
     "id": 166,
     "question": "What is cache eviction policy?",
     "category": "Caching",
     "subCategory": "Caching",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "cache",
+      "eviction",
+      "policy",
+      "caching"
+    ]
   },
   {
     "id": 167,
     "question": "Explain LRU cache",
     "category": "Caching",
     "subCategory": "Caching Algorithms",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "lru",
+      "cache",
+      "caching",
+      "algorithms"
+    ]
   },
   {
     "id": 168,
     "question": "How to secure REST APIs?",
     "category": "Spring Boot",
     "subCategory": "Spring Security",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "secure",
+      "rest",
+      "apis",
+      "spring",
+      "boot",
+      "security"
+    ]
   },
   {
     "id": 169,
     "question": "What is CORS?",
     "category": "Spring Boot",
     "subCategory": "Spring Security",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "cors",
+      "spring",
+      "boot",
+      "security"
+    ]
   },
   {
     "id": 170,
     "question": "Explain CSRF attack",
     "category": "Spring Boot",
     "subCategory": "Spring Security",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "csrf",
+      "attack",
+      "spring",
+      "boot",
+      "security"
+    ]
   },
   {
     "id": 171,
     "question": "What is XSS attack?",
     "category": "Spring Boot",
     "subCategory": "Spring Security",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "xss",
+      "attack",
+      "spring",
+      "boot",
+      "security"
+    ]
   },
   {
     "id": 172,
     "question": "How to prevent SQL injection?",
     "category": "Spring Boot",
     "subCategory": "Spring Security",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "prevent",
+      "sql",
+      "injection",
+      "spring",
+      "boot",
+      "security"
+    ]
   },
   {
     "id": 173,
     "question": "Explain OAuth2 authorization flow",
     "category": "Spring Boot",
     "subCategory": "Spring Security",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "oauth2",
+      "authorization",
+      "flow",
+      "spring",
+      "boot",
+      "security"
+    ]
   },
   {
     "id": 174,
     "question": "What is refresh token?",
     "category": "Spring Boot",
     "subCategory": "Spring Security",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "refresh",
+      "token",
+      "spring",
+      "boot",
+      "security"
+    ]
   },
   {
     "id": 175,
     "question": "Access token vs refresh token",
     "category": "Spring Boot",
     "subCategory": "Spring Security",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "access",
+      "token",
+      "refresh",
+      "spring",
+      "boot",
+      "security"
+    ]
   },
   {
     "id": 176,
     "question": "How JWT works internally?",
     "category": "Spring Boot",
     "subCategory": "Spring Security",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "jwt",
+      "works",
+      "internally",
+      "spring",
+      "boot",
+      "security"
+    ]
   },
   {
     "id": 177,
     "question": "What is SSL/TLS handshake?",
     "category": "HTTP/HTTPS",
     "subCategory": "https",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "ssl",
+      "tls",
+      "handshake",
+      "http",
+      "https"
+    ]
   },
   {
     "id": 178,
     "question": "What is HTTPS and how does it work?",
     "category": "HTTP/HTTPS",
     "subCategory": "https",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "https",
+      "and",
+      "how",
+      "does",
+      "work",
+      "http"
+    ]
   },
   {
     "id": 179,
     "question": "Explain symmetric vs asymmetric encryption",
     "category": "HTTP/HTTPS",
     "subCategory": "encryption",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "symmetric",
+      "asymmetric",
+      "encryption",
+      "http",
+      "https"
+    ]
   },
   {
     "id": 180,
     "question": "What is hashing and salting?",
     "category": "HTTP/HTTPS",
     "subCategory": "encryption",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "hashing",
+      "and",
+      "salting",
+      "http",
+      "https",
+      "encryption"
+    ]
   },
   {
     "id": 181,
     "question": "Explain bcrypt algorithm",
     "category": "Spring Boot",
     "subCategory": "Spring Security",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "bcrypt",
+      "algorithm",
+      "spring",
+      "boot",
+      "security"
+    ]
   },
   {
     "id": 182,
     "question": "How to store passwords securely?",
     "category": "Spring Boot",
     "subCategory": "Spring Security",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "store",
+      "passwords",
+      "securely",
+      "spring",
+      "boot",
+      "security"
+    ]
   },
   {
     "id": 183,
     "question": "What is RBAC?",
     "category": "Spring Boot",
     "subCategory": "Spring Security",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "rbac",
+      "spring",
+      "boot",
+      "security"
+    ]
   },
   {
     "id": 184,
     "question": "What is OAuth2 client credentials flow?",
     "category": "Spring Boot",
     "subCategory": "Spring Security",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "oauth2",
+      "client",
+      "credentials",
+      "flow",
+      "spring",
+      "boot",
+      "security"
+    ]
   },
   {
     "id": 185,
     "question": "How to secure Kafka communication?",
     "category": "Kafka",
     "subCategory": "Security",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "secure",
+      "kafka",
+      "communication",
+      "security"
+    ]
   },
   {
     "id": 186,
     "question": "How to encrypt sensitive data in database?",
     "category": "SQL",
     "subCategory": "Database Security",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "encrypt",
+      "sensitive",
+      "data",
+      "database",
+      "sql",
+      "security"
+    ]
   },
   {
     "id": 187,
     "question": "Explain API versioning strategies",
     "category": "Spring Boot",
     "subCategory": "version",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "api",
+      "versioning",
+      "strategies",
+      "spring",
+      "boot",
+      "version"
+    ]
   },
   {
     "id": 188,
     "question": "URI versioning vs header versioning",
     "category": "Spring Boot",
     "subCategory": "version",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "uri",
+      "versioning",
+      "header",
+      "spring",
+      "boot",
+      "version"
+    ]
   },
   {
     "id": 189,
     "question": "How to design backward compatible APIs?",
     "category": "Spring Boot",
     "subCategory": "REST",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "design",
+      "backward",
+      "compatible",
+      "apis",
+      "spring",
+      "boot",
+      "rest"
+    ]
   },
   {
     "id": 190,
     "question": "What are REST maturity levels?",
     "category": "Spring Boot",
     "subCategory": "REST",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "are",
+      "rest",
+      "maturity",
+      "levels",
+      "spring",
+      "boot"
+    ]
   },
   {
     "id": 191,
     "question": "What is HATEOAS?",
     "category": "Spring Boot",
     "subCategory": "REST",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "hateoas",
+      "spring",
+      "boot",
+      "rest"
+    ]
   },
   {
     "id": 192,
     "question": "Explain pagination in REST APIs",
     "category": "Spring Boot",
     "subCategory": "REST",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "pagination",
+      "rest",
+      "apis",
+      "spring",
+      "boot"
+    ]
   },
   {
     "id": 193,
     "question": "Offset pagination vs cursor pagination",
     "category": "Spring Boot",
     "subCategory": "REST",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "offset",
+      "pagination",
+      "cursor",
+      "spring",
+      "boot",
+      "rest"
+    ]
   },
   {
     "id": 194,
     "question": "How to handle API rate limiting?",
     "category": "Spring Boot",
     "subCategory": "REST",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "handle",
+      "api",
+      "rate",
+      "limiting",
+      "spring",
+      "boot",
+      "rest"
+    ]
   },
   {
     "id": 195,
     "question": "Explain GraphQL vs REST",
     "category": "Spring Boot",
     "subCategory": "REST",
-    "codeRequired": true,
-    "tableRequired": true
+    "keywords": [
+      "explain",
+      "graphql",
+      "rest",
+      "spring",
+      "boot"
+    ]
   },
   {
     "id": 196,
     "question": "What are WebSockets and when to use them?",
     "category": "Spring Boot",
     "subCategory": "REST",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "are",
+      "websockets",
+      "and",
+      "when",
+      "use",
+      "them",
+      "spring",
+      "boot",
+      "rest"
+    ]
   },
   {
     "id": 197,
     "question": "Explain Server-Sent Events (SSE)",
     "category": "Web",
     "subCategory": "Communication",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "server",
+      "sent",
+      "events",
+      "sse",
+      "web",
+      "communication"
+    ]
   },
   {
     "id": 198,
     "question": "What is polling and long polling?",
     "category": "Spring Boot",
     "subCategory": "REST",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "polling",
+      "and",
+      "long",
+      "spring",
+      "boot",
+      "rest"
+    ]
   },
   {
     "id": 199,
     "question": "What is WebFlux in Spring?",
     "category": "Spring Boot",
     "subCategory": "Reactive Programming",
-    "codeRequired": true,
-    "tableRequired": true
+    "keywords": [
+      "what",
+      "webflux",
+      "spring",
+      "boot",
+      "reactive",
+      "programming"
+    ]
   },
   {
     "id": 200,
     "question": "Reactive programming vs synchronous programming",
     "category": "Spring Boot",
     "subCategory": "Reactive Programming",
-    "codeRequired": true,
-    "tableRequired": true
+    "keywords": [
+      "reactive",
+      "programming",
+      "synchronous",
+      "spring",
+      "boot"
+    ]
   },
   {
     "id": 201,
     "question": "Mono vs Flux in Spring WebFlux",
     "category": "Spring Boot",
     "subCategory": "Reactive Programming",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "mono",
+      "flux",
+      "spring",
+      "webflux",
+      "boot",
+      "reactive",
+      "programming"
+    ]
   },
   {
     "id": 202,
     "question": "Explain backpressure in reactive programming",
     "category": "Spring Boot",
     "subCategory": "Reactive Programming",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "backpressure",
+      "reactive",
+      "programming",
+      "spring",
+      "boot"
+    ]
   },
   {
     "id": 203,
     "question": "How non-blocking IO works?",
     "category": "Spring Boot",
     "subCategory": "IO",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "non",
+      "blocking",
+      "works",
+      "spring",
+      "boot"
+    ]
   },
   {
     "id": 204,
     "question": "Thread per request model vs event loop model",
     "category": "Spring Boot",
     "subCategory": "Concurrency",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "thread",
+      "per",
+      "request",
+      "model",
+      "event",
+      "loop",
+      "spring",
+      "boot",
+      "concurrency"
+    ]
   },
   {
     "id": 205,
     "question": "What is Netty?",
     "category": "Spring Boot",
     "subCategory": "Networking",
-    "codeRequired": true,
-    "tableRequired": true
+    "keywords": [
+      "what",
+      "netty",
+      "spring",
+      "boot",
+      "networking"
+    ]
   },
   {
     "id": 206,
     "question": "How does Spring WebFlux work internally?",
     "category": "Spring Boot",
     "subCategory": "Reactive Programming",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "does",
+      "spring",
+      "webflux",
+      "work",
+      "internally",
+      "boot",
+      "reactive",
+      "programming"
+    ]
   },
   {
     "id": 207,
     "question": "Explain reactive streams specification",
     "category": "Spring Boot",
     "subCategory": "Reactive Programming",
-    "codeRequired": true,
-    "tableRequired": true
+    "keywords": [
+      "explain",
+      "reactive",
+      "streams",
+      "specification",
+      "spring",
+      "boot",
+      "programming"
+    ]
   },
   {
     "id": 208,
     "question": "What is Kubernetes?",
     "category": "DevOps",
     "subCategory": "Container Orchestration",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "kubernetes",
+      "devops",
+      "container",
+      "orchestration"
+    ]
   },
   {
     "id": 209,
     "question": "What is Docker and how does it work?",
     "category": "DevOps",
     "subCategory": "Containers",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "docker",
+      "and",
+      "how",
+      "does",
+      "work",
+      "devops",
+      "containers"
+    ]
   },
   {
     "id": 210,
     "question": "Docker vs Virtual Machine",
     "category": "DevOps",
     "subCategory": "Containers",
-    "codeRequired": false,
-    "tableRequired": true
+    "keywords": [
+      "docker",
+      "virtual",
+      "machine",
+      "devops",
+      "containers"
+    ]
   },
   {
     "id": 211,
     "question": "What is containerization?",
     "category": "DevOps",
     "subCategory": "Containers",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "containerization",
+      "devops",
+      "containers"
+    ]
   },
   {
     "id": 212,
     "question": "Explain Kubernetes pods and services",
     "category": "DevOps",
     "subCategory": "Kubernetes",
-    "codeRequired": true,
-    "tableRequired": true
+    "keywords": [
+      "explain",
+      "kubernetes",
+      "pods",
+      "and",
+      "services",
+      "devops"
+    ]
   },
   {
     "id": 213,
     "question": "What is Kubernetes deployment?",
     "category": "DevOps",
     "subCategory": "Kubernetes",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "kubernetes",
+      "deployment",
+      "devops"
+    ]
   },
   {
     "id": 214,
     "question": "What is ConfigMap in Kubernetes?",
     "category": "DevOps",
     "subCategory": "Kubernetes",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "configmap",
+      "kubernetes",
+      "devops"
+    ]
   },
   {
     "id": 215,
     "question": "What is Secret in Kubernetes?",
     "category": "DevOps",
     "subCategory": "Kubernetes",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "secret",
+      "kubernetes",
+      "devops"
+    ]
   },
   {
     "id": 216,
     "question": "What is ingress in Kubernetes?",
     "category": "DevOps",
     "subCategory": "Kubernetes",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "ingress",
+      "kubernetes",
+      "devops"
+    ]
   },
   {
     "id": 217,
     "question": "Explain service types in Kubernetes",
     "category": "DevOps",
     "subCategory": "Kubernetes",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "service",
+      "types",
+      "kubernetes",
+      "devops"
+    ]
   },
   {
     "id": 218,
     "question": "What is Helm chart?",
     "category": "DevOps",
     "subCategory": "Kubernetes",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "helm",
+      "chart",
+      "devops",
+      "kubernetes"
+    ]
   },
   {
     "id": 219,
     "question": "How to monitor Kubernetes applications?",
     "category": "DevOps",
     "subCategory": "Monitoring",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "monitor",
+      "kubernetes",
+      "applications",
+      "devops",
+      "monitoring"
+    ]
   },
   {
     "id": 220,
     "question": "Explain CI/CD pipeline",
     "category": "DevOps",
     "subCategory": "CI/CD",
-    "codeRequired": true,
-    "tableRequired": true
+    "keywords": [
+      "explain",
+      "pipeline",
+      "devops"
+    ]
   },
   {
     "id": 221,
     "question": "What is Jenkins and how does it work?",
     "category": "DevOps",
     "subCategory": "CI/CD",
-    "codeRequired": true,
-    "tableRequired": true
+    "keywords": [
+      "what",
+      "jenkins",
+      "and",
+      "how",
+      "does",
+      "work",
+      "devops"
+    ]
   },
   {
     "id": 222,
     "question": "What is Git branching strategy?",
     "category": "DevOps",
     "subCategory": "Version Control",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "git",
+      "branching",
+      "strategy",
+      "devops",
+      "version",
+      "control"
+    ]
   },
   {
     "id": 223,
     "question": "Explain blue-green deployment strategy",
     "category": "DevOps",
     "subCategory": "Deployment Strategies",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "blue",
+      "green",
+      "deployment",
+      "strategy",
+      "devops",
+      "strategies"
+    ]
   },
   {
     "id": 224,
     "question": "Explain canary release",
     "category": "DevOps",
     "subCategory": "Deployment Strategies",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "canary",
+      "release",
+      "devops",
+      "deployment",
+      "strategies"
+    ]
   },
   {
     "id": 225,
     "question": "How to rollback deployment in Kubernetes?",
     "category": "DevOps",
     "subCategory": "Kubernetes",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "rollback",
+      "deployment",
+      "kubernetes",
+      "devops"
+    ]
   },
   {
     "id": 226,
     "question": "What is Infrastructure as Code?",
     "category": "DevOps",
     "subCategory": "Infrastructure",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "infrastructure",
+      "code",
+      "devops"
+    ]
   },
   {
     "id": 227,
     "question": "Explain Terraform basics",
     "category": "DevOps",
     "subCategory": "Infrastructure",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "terraform",
+      "basics",
+      "devops",
+      "infrastructure"
+    ]
   },
   {
     "id": 228,
     "question": "What is Ansible?",
     "category": "DevOps",
     "subCategory": "Automation",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "ansible",
+      "devops",
+      "automation"
+    ]
   },
   {
     "id": 229,
     "question": "What is observability?",
     "category": "Monitoring",
     "subCategory": "Observability",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "observability",
+      "monitoring"
+    ]
   },
   {
     "id": 230,
     "question": "Logging vs monitoring vs tracing",
     "category": "Monitoring",
     "subCategory": "Observability",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "logging",
+      "monitoring",
+      "tracing",
+      "observability"
+    ]
   },
   {
     "id": 231,
     "question": "What is distributed tracing?",
     "category": "Monitoring",
     "subCategory": "Tracing",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "distributed",
+      "tracing",
+      "monitoring"
+    ]
   },
   {
     "id": 232,
     "question": "Explain Prometheus and Grafana",
     "category": "Monitoring",
     "subCategory": "Tools",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "prometheus",
+      "and",
+      "grafana",
+      "monitoring",
+      "tools"
+    ]
   },
   {
     "id": 233,
     "question": "What is ELK stack?",
     "category": "Monitoring",
     "subCategory": "Logging",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "elk",
+      "stack",
+      "monitoring",
+      "logging"
+    ]
   },
   {
     "id": 234,
     "question": "Explain OpenTelemetry",
     "category": "Monitoring",
     "subCategory": "Tracing",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "opentelemetry",
+      "monitoring",
+      "tracing"
+    ]
   },
   {
     "id": 235,
     "question": "How to troubleshoot memory leak in Java application?",
     "category": "Java",
     "subCategory": "Memory Management",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "troubleshoot",
+      "memory",
+      "leak",
+      "java",
+      "application",
+      "management"
+    ]
   },
   {
     "id": 236,
     "question": "Heap dump vs thread dump",
     "category": "Java",
     "subCategory": "Troubleshooting",
-    "codeRequired": false,
-    "tableRequired": true
+    "keywords": [
+      "heap",
+      "dump",
+      "thread",
+      "java",
+      "troubleshooting"
+    ]
   },
   {
     "id": 237,
     "question": "How to analyze thread dump?",
     "category": "Java",
     "subCategory": "Concurrency",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "analyze",
+      "thread",
+      "dump",
+      "java",
+      "concurrency"
+    ]
   },
   {
     "id": 238,
     "question": "How to tune JVM performance?",
     "category": "Java",
     "subCategory": "jvm",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "tune",
+      "jvm",
+      "performance",
+      "java"
+    ]
   },
   {
     "id": 239,
     "question": "What are JVM parameters commonly used in production?",
     "category": "Java",
     "subCategory": "JVM",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "are",
+      "jvm",
+      "parameters",
+      "commonly",
+      "used",
+      "production",
+      "java"
+    ]
   },
   {
     "id": 240,
     "question": "What is metaspace in Java?",
     "category": "Java",
     "subCategory": "Memory Management",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "metaspace",
+      "java",
+      "memory",
+      "management"
+    ]
   },
   {
     "id": 241,
     "question": "What is classloader in Java?",
     "category": "Java",
     "subCategory": "JVM",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "classloader",
+      "java",
+      "jvm"
+    ]
   },
   {
     "id": 242,
     "question": "Explain classloader hierarchy",
     "category": "Java",
     "subCategory": "JVM",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "classloader",
+      "hierarchy",
+      "java",
+      "jvm"
+    ]
   },
   {
     "id": 243,
     "question": "What is JIT compiler?",
     "category": "Java",
     "subCategory": "JVM",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "jit",
+      "compiler",
+      "java",
+      "jvm"
+    ]
   },
   {
     "id": 244,
     "question": "Interpreter vs JIT compiler",
     "category": "Java",
     "subCategory": "JVM",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "interpreter",
+      "jit",
+      "compiler",
+      "java",
+      "jvm"
+    ]
   },
   {
     "id": 245,
     "question": "Explain escape analysis in JVM",
     "category": "Java",
     "subCategory": "JVM",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "escape",
+      "analysis",
+      "jvm",
+      "java"
+    ]
   },
   {
     "id": 246,
     "question": "What is lock escalation?",
     "category": "SQL",
     "subCategory": "Concurrency",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "lock",
+      "escalation",
+      "sql",
+      "concurrency"
+    ]
   },
   {
     "id": 247,
     "question": "Optimistic locking vs pessimistic locking",
     "category": "SQL",
     "subCategory": "Concurrency",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "optimistic",
+      "locking",
+      "pessimistic",
+      "sql",
+      "concurrency"
+    ]
   },
   {
     "id": 248,
     "question": "What is MVCC in database?",
     "category": "SQL",
     "subCategory": "Concurrency",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "mvcc",
+      "database",
+      "sql",
+      "concurrency"
+    ]
   },
   {
     "id": 249,
     "question": "Explain normalization and denormalization",
     "category": "SQL",
     "subCategory": "Theory",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "normalization",
+      "and",
+      "denormalization",
+      "sql",
+      "theory"
+    ]
   },
   {
     "id": 250,
     "question": "What are database indexes and types of indexes?",
     "category": "SQL",
     "subCategory": "Indexing",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "are",
+      "database",
+      "indexes",
+      "and",
+      "types",
+      "sql",
+      "indexing"
+    ]
   },
   {
     "id": 251,
     "question": "Clustered index vs non-clustered index",
     "category": "SQL",
     "subCategory": "Indexing",
-    "codeRequired": false,
-    "tableRequired": true
+    "keywords": [
+      "clustered",
+      "index",
+      "non",
+      "sql",
+      "indexing"
+    ]
   },
   {
     "id": 252,
     "question": "What is query optimization?",
     "category": "SQL",
     "subCategory": "Performance",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "query",
+      "optimization",
+      "sql",
+      "performance"
+    ]
   },
   {
     "id": 253,
     "question": "Explain execution plan in SQL",
     "category": "SQL",
     "subCategory": "Performance",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "execution",
+      "plan",
+      "sql",
+      "performance"
+    ]
   },
   {
     "id": 254,
     "question": "How to optimize slow SQL queries?",
     "category": "SQL",
     "subCategory": "Performance",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "optimize",
+      "slow",
+      "sql",
+      "queries",
+      "performance"
+    ]
   },
   {
     "id": 255,
     "question": "Explain sharding in databases",
     "category": "SQL",
     "subCategory": "Scalability",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "sharding",
+      "databases",
+      "sql",
+      "scalability"
+    ]
   },
   {
     "id": 256,
     "question": "Replication vs sharding",
     "category": "SQL",
     "subCategory": "Scalability",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "replication",
+      "sharding",
+      "sql",
+      "scalability"
+    ]
   },
   {
     "id": 257,
     "question": "What is database partitioning?",
     "category": "SQL",
     "subCategory": "Scalability",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "database",
+      "partitioning",
+      "sql",
+      "scalability"
+    ]
   },
   {
     "id": 258,
     "question": "Vertical partitioning vs horizontal partitioning",
     "category": "SQL",
     "subCategory": "Partitioning",
-    "codeRequired": false,
-    "tableRequired": true
+    "keywords": [
+      "vertical",
+      "partitioning",
+      "horizontal",
+      "sql"
+    ]
   },
   {
     "id": 259,
     "question": "Explain CAP theorem in distributed databases",
     "category": "Microservices",
     "subCategory": "Distributed Systems",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "cap",
+      "theorem",
+      "distributed",
+      "databases",
+      "microservices",
+      "systems"
+    ]
   },
   {
     "id": 260,
     "question": "SQL vs NoSQL databases",
     "category": "SQL",
     "subCategory": "Theory",
-    "codeRequired": false,
-    "tableRequired": true
+    "keywords": [
+      "sql",
+      "nosql",
+      "databases",
+      "theory"
+    ]
   },
   {
     "id": 261,
     "question": "When to choose MongoDB over relational database?",
     "category": "SQL",
     "subCategory": "NoSQL",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "when",
+      "choose",
+      "mongodb",
+      "over",
+      "relational",
+      "database",
+      "sql",
+      "nosql"
+    ]
   },
   {
     "id": 262,
     "question": "What is eventual consistency in NoSQL?",
     "category": "SQL",
     "subCategory": "NoSQL",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "eventual",
+      "consistency",
+      "nosql",
+      "sql"
+    ]
   },
   {
     "id": 263,
     "question": "Explain Redis pub/sub mechanism",
     "category": "Redis",
     "subCategory": "Messaging",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "redis",
+      "pub",
+      "sub",
+      "mechanism",
+      "messaging"
+    ]
   },
   {
     "id": 264,
     "question": "What are Redis data structures?",
     "category": "Redis",
     "subCategory": "Data Structures",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "are",
+      "redis",
+      "data",
+      "structures"
+    ]
   },
   {
     "id": 265,
     "question": "How Redis persistence works?",
     "category": "Redis",
     "subCategory": "Persistence",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "redis",
+      "persistence",
+      "works"
+    ]
   },
   {
     "id": 266,
     "question": "RDB vs AOF in Redis",
     "category": "Redis",
     "subCategory": "Persistence",
-    "codeRequired": false,
-    "tableRequired": true
+    "keywords": [
+      "rdb",
+      "aof",
+      "redis",
+      "persistence"
+    ]
   },
   {
     "id": 267,
     "question": "What is Redis clustering?",
     "category": "Redis",
     "subCategory": "Scalability",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "redis",
+      "clustering",
+      "scalability"
+    ]
   },
   {
     "id": 268,
     "question": "Explain Redis Sentinel",
     "category": "Redis",
     "subCategory": "High Availability",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "redis",
+      "sentinel",
+      "high",
+      "availability"
+    ]
   },
   {
     "id": 269,
     "question": "How to handle distributed locking using Redis?",
     "category": "Redis",
     "subCategory": "Distributed Systems",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "handle",
+      "distributed",
+      "locking",
+      "using",
+      "redis",
+      "systems"
+    ]
   },
   {
     "id": 270,
     "question": "What is Bloom filter?",
     "category": "System Design",
     "subCategory": "Algorithms",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "bloom",
+      "filter",
+      "system",
+      "design",
+      "algorithms"
+    ]
   },
   {
     "id": 271,
     "question": "Explain consistent hashing",
     "category": "Distributed Systems",
     "subCategory": "Scalability",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "consistent",
+      "hashing",
+      "distributed",
+      "systems",
+      "scalability"
+    ]
   },
   {
     "id": 272,
     "question": "How CDN works?",
     "category": "System Design",
     "subCategory": "Infrastructure",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "cdn",
+      "works",
+      "system",
+      "design",
+      "infrastructure"
+    ]
   },
   {
     "id": 273,
     "question": "What is DNS and how does DNS resolution work?",
     "category": "Networking",
     "subCategory": "DNS",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "dns",
+      "and",
+      "how",
+      "does",
+      "resolution",
+      "work",
+      "networking"
+    ]
   },
   {
     "id": 274,
     "question": "TCP vs UDP",
     "category": "Networking",
     "subCategory": "Protocols",
-    "codeRequired": false,
-    "tableRequired": true
+    "keywords": [
+      "tcp",
+      "udp",
+      "networking",
+      "protocols"
+    ]
   },
   {
     "id": 275,
     "question": "Explain three-way handshake in TCP",
     "category": "Networking",
     "subCategory": "TCP",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "three",
+      "way",
+      "handshake",
+      "tcp",
+      "networking"
+    ]
   },
   {
     "id": 276,
     "question": "What is RESTful API?",
     "category": "REST APIs",
     "subCategory": "REST Principles",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "restful",
+      "api",
+      "rest",
+      "apis",
+      "principles"
+    ]
   },
   {
     "id": 277,
     "question": "SOAP vs REST",
     "category": "API",
     "subCategory": "Web Services",
-    "codeRequired": false,
-    "tableRequired": true
+    "keywords": [
+      "soap",
+      "rest",
+      "api",
+      "web",
+      "services"
+    ]
   },
   {
     "id": 278,
     "question": "What is idempotency in REST APIs?",
     "category": "REST APIs",
     "subCategory": "HTTP Methods",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "idempotency",
+      "rest",
+      "apis",
+      "http",
+      "methods"
+    ]
   },
   {
     "id": 279,
     "question": "PUT vs PATCH",
     "category": "REST APIs",
     "subCategory": "HTTP Methods",
-    "codeRequired": false,
-    "tableRequired": true
+    "keywords": [
+      "put",
+      "patch",
+      "rest",
+      "apis",
+      "http",
+      "methods"
+    ]
   },
   {
     "id": 280,
     "question": "Explain HTTP status codes",
     "category": "REST APIs",
     "subCategory": "HTTP",
-    "codeRequired": false,
-    "tableRequired": true
+    "keywords": [
+      "explain",
+      "http",
+      "status",
+      "codes",
+      "rest",
+      "apis"
+    ]
   },
   {
     "id": 281,
     "question": "What is content negotiation in REST APIs?",
     "category": "REST APIs",
     "subCategory": "HTTP",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "content",
+      "negotiation",
+      "rest",
+      "apis",
+      "http"
+    ]
   },
   {
     "id": 282,
     "question": "Explain ETag and caching in REST APIs",
     "category": "REST APIs",
     "subCategory": "Caching",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "etag",
+      "and",
+      "caching",
+      "rest",
+      "apis"
+    ]
   },
   {
     "id": 283,
     "question": "What is React and why is it used?",
     "category": "React",
     "subCategory": "Basics",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "react",
+      "and",
+      "why",
+      "used",
+      "basics"
+    ]
   },
   {
     "id": 284,
     "question": "What is Virtual DOM in React?",
     "category": "React",
     "subCategory": "Rendering",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "virtual",
+      "dom",
+      "react",
+      "rendering"
+    ]
   },
   {
     "id": 285,
     "question": "Difference between Virtual DOM and Real DOM",
     "category": "React",
     "subCategory": "Rendering",
-    "codeRequired": false,
-    "tableRequired": true
+    "keywords": [
+      "difference",
+      "between",
+      "virtual",
+      "dom",
+      "and",
+      "real",
+      "react",
+      "rendering"
+    ]
   },
   {
     "id": 286,
     "question": "What are React components?",
     "category": "React",
     "subCategory": "Components",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "are",
+      "react",
+      "components"
+    ]
   },
   {
     "id": 287,
     "question": "Functional component vs class component",
     "category": "React",
     "subCategory": "Components",
-    "codeRequired": false,
-    "tableRequired": true
+    "keywords": [
+      "functional",
+      "component",
+      "class",
+      "react",
+      "components"
+    ]
   },
   {
     "id": 288,
     "question": "What are props in React?",
     "category": "React",
     "subCategory": "Components",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "are",
+      "props",
+      "react",
+      "components"
+    ]
   },
   {
     "id": 289,
     "question": "What is state in React?",
     "category": "React",
     "subCategory": "State Management",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "state",
+      "react",
+      "management"
+    ]
   },
   {
     "id": 290,
     "question": "Explain useState hook",
     "category": "React",
     "subCategory": "Hooks",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "usestate",
+      "hook",
+      "react",
+      "hooks"
+    ]
   },
   {
     "id": 291,
     "question": "Explain useEffect hook",
     "category": "React",
     "subCategory": "Hooks",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "useeffect",
+      "hook",
+      "react",
+      "hooks"
+    ]
   },
   {
     "id": 292,
     "question": "What is dependency array in useEffect?",
     "category": "React",
     "subCategory": "Hooks",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "dependency",
+      "array",
+      "useeffect",
+      "react",
+      "hooks"
+    ]
   },
   {
     "id": 293,
     "question": "Controlled vs uncontrolled components",
     "category": "React",
     "subCategory": "Forms",
-    "codeRequired": false,
-    "tableRequired": true
+    "keywords": [
+      "controlled",
+      "uncontrolled",
+      "components",
+      "react",
+      "forms"
+    ]
   },
   {
     "id": 294,
     "question": "Explain controlled components in React",
     "category": "React",
     "subCategory": "Forms",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "controlled",
+      "components",
+      "react",
+      "forms"
+    ]
   },
   {
     "id": 295,
     "question": "What is lifting state up in React?",
     "category": "React",
     "subCategory": "State Management",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "lifting",
+      "state",
+      "react",
+      "management"
+    ]
   },
   {
     "id": 296,
     "question": "What is prop drilling?",
     "category": "React",
     "subCategory": "State Management",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "prop",
+      "drilling",
+      "react",
+      "state",
+      "management"
+    ]
   },
   {
     "id": 297,
     "question": "How to avoid prop drilling?",
     "category": "React",
     "subCategory": "State Management",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "avoid",
+      "prop",
+      "drilling",
+      "react",
+      "state",
+      "management"
+    ]
   },
   {
     "id": 298,
     "question": "What is Context API?",
     "category": "React",
     "subCategory": "State Management",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "context",
+      "api",
+      "react",
+      "state",
+      "management"
+    ]
   },
   {
     "id": 299,
     "question": "Redux vs Context API",
     "category": "React",
     "subCategory": "State Management",
-    "codeRequired": false,
-    "tableRequired": true
+    "keywords": [
+      "redux",
+      "context",
+      "api",
+      "react",
+      "state",
+      "management"
+    ]
   },
   {
     "id": 300,
     "question": "What is Redux?",
     "category": "React",
     "subCategory": "State Management",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "redux",
+      "react",
+      "state",
+      "management"
+    ]
   },
   {
     "id": 301,
     "question": "Explain Redux flow",
     "category": "React",
     "subCategory": "Redux",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "redux",
+      "flow",
+      "react"
+    ]
   },
   {
     "id": 302,
     "question": "What are reducers in Redux?",
     "category": "React",
     "subCategory": "Redux",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "are",
+      "reducers",
+      "redux",
+      "react"
+    ]
   },
   {
     "id": 303,
     "question": "What is middleware in Redux?",
     "category": "React",
     "subCategory": "Redux",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "middleware",
+      "redux",
+      "react"
+    ]
   },
   {
     "id": 304,
     "question": "What is React Router?",
     "category": "React",
     "subCategory": "Routing",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "react",
+      "router",
+      "routing"
+    ]
   },
   {
     "id": 305,
     "question": "How routing works in React?",
     "category": "React",
     "subCategory": "Routing",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "routing",
+      "works",
+      "react"
+    ]
   },
   {
     "id": 306,
     "question": "What are React hooks?",
     "category": "React",
     "subCategory": "Hooks",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "are",
+      "react",
+      "hooks"
+    ]
   },
   {
     "id": 307,
     "question": "Explain useMemo and useCallback",
     "category": "React",
     "subCategory": "Performance",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "explain",
+      "usememo",
+      "and",
+      "usecallback",
+      "react",
+      "performance"
+    ]
   },
   {
     "id": 308,
     "question": "What is React.memo?",
     "category": "React",
     "subCategory": "Performance",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "react",
+      "memo",
+      "performance"
+    ]
   },
   {
     "id": 309,
     "question": "How React rendering works internally?",
     "category": "React",
     "subCategory": "Rendering",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "react",
+      "rendering",
+      "works",
+      "internally"
+    ]
   },
   {
     "id": 310,
     "question": "What is reconciliation in React?",
     "category": "React",
     "subCategory": "Rendering",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "reconciliation",
+      "react",
+      "rendering"
+    ]
   },
   {
     "id": 311,
     "question": "Explain React lifecycle methods",
     "category": "React",
     "subCategory": "Lifecycle",
-    "codeRequired": false,
-    "tableRequired": true
+    "keywords": [
+      "explain",
+      "react",
+      "lifecycle",
+      "methods"
+    ]
   },
   {
     "id": 312,
     "question": "What is lazy loading in React?",
     "category": "React",
     "subCategory": "Performance",
-    "codeRequired": true,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "lazy",
+      "loading",
+      "react",
+      "performance"
+    ]
   },
   {
     "id": 313,
     "question": "Code splitting in React",
     "category": "React",
     "subCategory": "Performance",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "code",
+      "splitting",
+      "react",
+      "performance"
+    ]
   },
   {
     "id": 314,
     "question": "How to optimize React application performance?",
     "category": "React",
     "subCategory": "Performance",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "how",
+      "optimize",
+      "react",
+      "application",
+      "performance"
+    ]
   },
   {
     "id": 315,
     "question": "What is SSR in React?",
     "category": "React",
     "subCategory": "Rendering",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "ssr",
+      "react",
+      "rendering"
+    ]
   },
   {
     "id": 316,
     "question": "CSR vs SSR",
     "category": "React",
     "subCategory": "Rendering",
-    "codeRequired": false,
-    "tableRequired": true
+    "keywords": [
+      "csr",
+      "ssr",
+      "react",
+      "rendering"
+    ]
   },
   {
     "id": 317,
     "question": "What is hydration in React?",
     "category": "React",
     "subCategory": "Rendering",
-    "codeRequired": false,
-    "tableRequired": false
+    "keywords": [
+      "what",
+      "hydration",
+      "react",
+      "rendering"
+    ]
   }
-];
+]

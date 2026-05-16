@@ -1,0 +1,568 @@
+[
+  {
+    "id": 171,
+    "question": "What is XSS attack?",
+    "category": "Spring Boot",
+    "subCategory": "Spring Security",
+    "codeRequired": true,
+    "tableRequired": false,
+    "content": {
+      "explanation": "OAuth2 with JWT (JSON Web Token) is a modern authentication and authorization framework that enables secure API access without storing user credentials. OAuth2 provides authorization flows (authorization code, implicit, password, client credentials) while JWT serves as a compact, self-contained token for transmitting claims. The flow typically involves: user authenticates with authorization server, receives access token (JWT), client includes token in API requests, resource server validates token signature and claims. JWT contains header, payload (claims), and signature, signed with a secret or private key. Benefits include stateless authentication, cross-domain support, and reduced server load. Understanding OAuth2 with JWT is essential for building secure, scalable modern applications. In enterprise production systems, \"What is XSS attack?\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Spring Boot / Spring Security, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Spring Security",
+        "Category: Spring Boot",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"What is XSS attack?\" maps to concrete behavior in the Spring Boot stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Spring Security decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"What is XSS attack?\" by explaining fundamentals, production impact, and trade-offs in Spring Boot / Spring Security.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [
+      {
+        "title": "Example",
+        "language": "java",
+        "code": "// Implementation sketch for: What is XSS attack?\npublic class Example {\n  // TODO: domain logic\n}"
+      }
+    ],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 172,
+    "question": "How to prevent SQL injection?",
+    "category": "Spring Boot",
+    "subCategory": "Spring Security",
+    "codeRequired": true,
+    "tableRequired": false,
+    "content": {
+      "explanation": "Managing key rotation and secure authentication involves periodically changing cryptographic keys while maintaining system availability and security. Key rotation strategies include: 1) Time-based rotation (regular intervals), 2) Event-based rotation (after security incidents), 3) Manual rotation (on-demand). Implementation approaches: maintain multiple active keys with versioning, use key identifiers in tokens, gracefully transition between keys, and maintain key history for token validation. Best practices include using key management services (AWS KMS, HashiCorp Vault), automating rotation, monitoring key usage, and having rollback procedures. Understanding key rotation is crucial for maintaining security while minimizing service disruption. In enterprise production systems, \"How to prevent SQL injection?\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Spring Boot / Spring Security, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Spring Security",
+        "Category: Spring Boot",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"How to prevent SQL injection?\" maps to concrete behavior in the Spring Boot stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Spring Security decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"How to prevent SQL injection?\" by explaining fundamentals, production impact, and trade-offs in Spring Boot / Spring Security.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [
+      {
+        "title": "Example",
+        "language": "java",
+        "code": "// Implementation sketch for: How to prevent SQL injection?\npublic class Example {\n  // TODO: domain logic\n}"
+      }
+    ],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 173,
+    "question": "Explain OAuth2 authorization flow",
+    "category": "Spring Boot",
+    "subCategory": "Spring Security",
+    "codeRequired": true,
+    "tableRequired": false,
+    "content": {
+      "explanation": "RestTemplate is Spring's synchronous HTTP client for making RESTful API calls. It provides methods for common HTTP operations: getForObject(), getForEntity(), postForObject(), postForEntity(), exchange(), and execute(). RestTemplate supports various HTTP methods, request/response conversion, error handling, and interceptors. Key features include: automatic message conversion (JSON, XML), URI template support, request/response interceptors, and exception handling. While RestTemplate is being replaced by WebClient in reactive stacks, it remains widely used in traditional Spring applications. Understanding RestTemplate methods is essential for consuming REST APIs in Spring applications. In enterprise production systems, \"Explain OAuth2 authorization flow\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Spring Boot / Spring Security, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Spring Security",
+        "Category: Spring Boot",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"Explain OAuth2 authorization flow\" maps to concrete behavior in the Spring Boot stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Spring Security decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"Explain OAuth2 authorization flow\" by explaining fundamentals, production impact, and trade-offs in Spring Boot / Spring Security.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [
+      {
+        "title": "Solution",
+        "language": "java",
+        "code": "@Service\npublic class ApiService {\n    \n    private final RestTemplate restTemplate;\n    \n    public ApiService(RestTemplate restTemplate) {\n        this.restTemplate = restTemplate;\n    }\n    \n    // GET request returning object directly\n    public User getUserById(Long id) {\n        String url = \"https://api.example.com/users/{id}\";\n        return restTemplate.getForObject(url, User.class, id);\n    }\n    \n    // GET request returning ResponseEntity with full response\n    public ResponseEntity<User> getUserWithResponse(Long id) {\n        String url = \"https://api.example.com/users/{id}\";\n        return restTemplate.getForEntity(url, User.class, id);\n    }\n    \n    // POST request\n    public User createUser(User user) {\n        String url = \"https://api.example.com/users\";\n        return restTemplate.postForObject(url, user, User.class);\n    }\n    \n    // POST with headers\n    public User createUserWithHeaders(User user, String authToken) {\n        String url = \"https://api.example.com/users\";\n        \n        HttpHeaders headers = new HttpHeaders();\n        headers.setContentType(MediaType.APPLICATION_JSON);\n        headers.setBearerAuth(authToken);\n        \n        HttpEntity<User> request = new HttpEntity<>(user, headers);\n        \n        return restTemplate.postForObject(url, request, User.class);\n    }\n    \n    // PUT request\n    public void updateUser(Long id, User user) {\n        String url = \"https://api.example.com/users/{id}\";\n        restTemplate.put(url, user, id);\n    }\n    \n    // DELETE request\n    public void deleteUser(Long id) {\n        String url = \"https://api.example.com/users/{id}\";\n        restTemplate.delete(url, id);\n    }\n    \n    // Using exchange for full control\n    public User getUserWithExchange(Long id) {\n        String url = \"https://api.example.com/users/{id}\";\n        \n        HttpHeaders headers = new HttpHeaders();\n        headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));\n        \n        HttpEntity<?> entity = new HttpEntity<>(headers);\n        \n        ResponseEntity<User> response = restTemplate.exchange(\n            url, \n            HttpMethod.GET, \n            entity, \n            User.class, \n            id\n        );\n        \n        return response.getBody();\n    }\n    \n    // Error handling\n    public User getUserWithErrorHandling(Long id) {\n        try {\n            String url = \"https://api.example.com/users/{id}\";\n            return restTemplate.getForObject(url, User.class, id);\n        } catch (HttpClientErrorException e) {\n            if (e.getStatusCode() == HttpStatus.NOT_FOUND) {\n                throw new ResourceNotFoundException(\"User not found\");\n            }\n            throw e;\n        }\n    }\n}\n\n// RestTemplate configuration\n@Configuration\npublic class RestTemplateConfig {\n    \n    @Bean\n    public RestTemplate restTemplate() {\n        RestTemplate restTemplate = new RestTemplate();\n        \n        // Set timeout\n        restTemplate.setRequestFactory(new HttpComponentsClientHttpRequestFactory());\n        \n        // Add interceptors\n        restTemplate.setInterceptors(Arrays.asList(new LoggingInterceptor()));\n        \n        return restTemplate;\n    }\n}\n\n// Custom interceptor\npublic class LoggingInterceptor implements ClientHttpRequestInterceptor {\n    @Override\n    public ClientHttpResponse intercept(\n            HttpRequest request, \n            byte[] body, \n            ClientHttpRequestExecution execution) throws IOException {\n        \n        System.out.println(\"Request: \" + request.getMethod() + \" \" + request.getURI());\n        \n        ClientHttpResponse response = execution.execute(request, body);\n        \n        System.out.println(\"Response: \" + response.getStatusCode());\n        \n        return response;\n    }\n}"
+      }
+    ],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 174,
+    "question": "What is refresh token?",
+    "category": "Spring Boot",
+    "subCategory": "Spring Security",
+    "codeRequired": true,
+    "tableRequired": false,
+    "content": {
+      "explanation": "Securing microservices involves implementing multiple layers of security: authentication (verifying identity), authorization (controlling access), encryption (protecting data in transit and at rest), network security (firewalls, VPNs), and monitoring (detecting threats). Key approaches include: OAuth2/JWT for stateless authentication, API gateways for centralized security, service mesh for mTLS, secrets management for sensitive data, and rate limiting for DDoS protection. Each microservice should validate tokens, implement least privilege access, use secure communication channels, and log security events. Understanding microservices security is essential for building distributed systems that maintain security without compromising agility. In enterprise production systems, \"What is refresh token?\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Spring Boot / Spring Security, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Spring Security",
+        "Category: Spring Boot",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"What is refresh token?\" maps to concrete behavior in the Spring Boot stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Spring Security decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"What is refresh token?\" by explaining fundamentals, production impact, and trade-offs in Spring Boot / Spring Security.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [
+      {
+        "title": "Example",
+        "language": "java",
+        "code": "// Implementation sketch for: What is refresh token?\npublic class Example {\n  // TODO: domain logic\n}"
+      }
+    ],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 175,
+    "question": "Access token vs refresh token",
+    "category": "Spring Boot",
+    "subCategory": "Spring Security",
+    "codeRequired": true,
+    "tableRequired": false,
+    "content": {
+      "explanation": "Spring Bean lifecycle consists of several phases from instantiation to destruction. The lifecycle includes: 1) Instantiation (bean creation), 2) Population of properties (dependency injection), 3) BeanNameAware and BeanFactoryAware callbacks, 4) BeanPostProcessor pre-initialization, 5) InitializingBean and custom init-method, 6) BeanPostProcessor post-initialization, 7) Bean ready for use, 8) DisposableBean and custom destroy-method on shutdown. Understanding the bean lifecycle is crucial for customizing bean initialization and destruction logic, implementing cross-cutting concerns, and troubleshooting bean creation issues. Spring provides various callback interfaces and annotations for hooking into different lifecycle stages. In enterprise production systems, \"Access token vs refresh token\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Spring Boot / Spring Security, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Spring Security",
+        "Category: Spring Boot",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"Access token vs refresh token\" maps to concrete behavior in the Spring Boot stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Spring Security decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"Access token vs refresh token\" by explaining fundamentals, production impact, and trade-offs in Spring Boot / Spring Security.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [
+      {
+        "title": "Example",
+        "language": "java",
+        "code": "// Implementation sketch for: Access token vs refresh token\npublic class Example {\n  // TODO: domain logic\n}"
+      }
+    ],
+    "queryVariations": [],
+    "tables": [
+      {
+        "title": "Comparison Table",
+        "headers": [
+          "Phase",
+          "Description",
+          "Callback Method"
+        ],
+        "rows": [
+          [
+            "Instantiation",
+            "Bean object created",
+            "Constructor"
+          ],
+          [
+            "Property Population",
+            "Dependencies injected",
+            "@Autowired, setters"
+          ],
+          [
+            "Aware Callbacks",
+            "Bean context awareness",
+            "setBeanName(), setBeanFactory()"
+          ],
+          [
+            "Post-Process Before",
+            "Custom pre-init logic",
+            "BeanPostProcessor.postProcessBeforeInitialization()"
+          ],
+          [
+            "Initialization",
+            "Init logic",
+            "@PostConstruct, InitializingBean.afterPropertiesSet()"
+          ],
+          [
+            "Post-Process After",
+            "Custom post-init logic",
+            "BeanPostProcessor.postProcessAfterInitialization()"
+          ],
+          [
+            "Ready for Use",
+            "Bean available for use"
+          ],
+          [
+            "Destruction",
+            "Cleanup logic",
+            "@PreDestroy, DisposableBean.destroy()"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": 176,
+    "question": "How JWT works internally?",
+    "category": "Spring Boot",
+    "subCategory": "Spring Security",
+    "codeRequired": true,
+    "tableRequired": false,
+    "content": {
+      "explanation": "Validating and reviewing code is a critical quality assurance process that involves systematic examination of code for correctness, efficiency, security, and maintainability. Code review practices include: checking for bugs and logic errors, ensuring adherence to coding standards, verifying security vulnerabilities, assessing performance implications, evaluating test coverage, and checking documentation. Tools like SonarQube automate many checks, but manual review is essential for context-specific issues. Best practices include: small, focused pull requests, clear review criteria, constructive feedback, and timely reviews. Understanding code review processes is essential for maintaining code quality and team productivity in software development. In enterprise production systems, \"How JWT works internally?\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Spring Boot / Spring Security, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Spring Security",
+        "Category: Spring Boot",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"How JWT works internally?\" maps to concrete behavior in the Spring Boot stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Spring Security decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"How JWT works internally?\" by explaining fundamentals, production impact, and trade-offs in Spring Boot / Spring Security.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [
+      {
+        "title": "Example",
+        "language": "java",
+        "code": "// Implementation sketch for: How JWT works internally?\npublic class Example {\n  // TODO: domain logic\n}"
+      }
+    ],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 177,
+    "question": "What is SSL/TLS handshake?",
+    "category": "HTTP/HTTPS",
+    "subCategory": "https",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": "Common issues faced in SonarQube include code smells, bugs, vulnerabilities, and code duplications. Code smells indicate maintainability issues like long methods, complex classes, or duplicated code. Bugs represent potential errors like null pointer dereferences or resource leaks. Vulnerabilities identify security risks like SQL injection or weak encryption. Duplications highlight repeated code that should be refactored. Solutions include: refactoring complex methods, extracting common code, adding null checks, implementing proper resource management, using secure coding practices, and improving test coverage. Understanding SonarQube issues and their solutions is essential for maintaining code quality and security in development projects. In enterprise production systems, \"What is SSL/TLS handshake?\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For HTTP/HTTPS / https, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: https",
+        "Category: HTTP/HTTPS",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"What is SSL/TLS handshake?\" maps to concrete behavior in the HTTP/HTTPS stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where https decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"What is SSL/TLS handshake?\" by explaining fundamentals, production impact, and trade-offs in HTTP/HTTPS / https.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 178,
+    "question": "What is HTTPS and how does it work?",
+    "category": "HTTP/HTTPS",
+    "subCategory": "https",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": "Handling distributed transactions in microservices is challenging due to the lack of ACID guarantees across service boundaries. Approaches include: 1) Two-Phase Commit (2PC) - strong consistency but reduces availability, 2) Saga pattern - sequence of local transactions with compensating actions, 3) Eventual consistency - accepting temporary inconsistencies, 4) Outbox pattern - reliable event publishing, 5) TCC (Try-Confirm-Cancel) - three-phase commit. The Saga pattern is most common, using either choreography (events trigger next step) or orchestration (central coordinator). Understanding distributed transaction patterns is essential for building microservices that maintain data consistency while preserving autonomy and availability. In enterprise production systems, \"What is HTTPS and how does it work?\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For HTTP/HTTPS / https, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: https",
+        "Category: HTTP/HTTPS",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"What is HTTPS and how does it work?\" maps to concrete behavior in the HTTP/HTTPS stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where https decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"What is HTTPS and how does it work?\" by explaining fundamentals, production impact, and trade-offs in HTTP/HTTPS / https.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 179,
+    "question": "Explain symmetric vs asymmetric encryption",
+    "category": "HTTP/HTTPS",
+    "subCategory": "encryption",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": "The Saga design pattern manages distributed transactions by breaking them into a sequence of local transactions, each with a compensating transaction to undo changes if needed. Sagas can be choreography-based (events trigger next step) or orchestration-based (central coordinator coordinates steps). In choreography, each service publishes events that trigger the next service. In orchestration, a saga orchestrator manages the entire process. If a step fails, compensating transactions execute in reverse order to undo previous changes. Sagas provide eventual consistency rather than immediate consistency, making them suitable for microservices where availability and partition tolerance are prioritized over strong consistency. Understanding the Saga pattern is essential for managing complex business processes across multiple services. In enterprise production systems, \"Explain symmetric vs asymmetric encryption\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For HTTP/HTTPS / encryption, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: encryption",
+        "Category: HTTP/HTTPS",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"Explain symmetric vs asymmetric encryption\" maps to concrete behavior in the HTTP/HTTPS stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where encryption decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"Explain symmetric vs asymmetric encryption\" by explaining fundamentals, production impact, and trade-offs in HTTP/HTTPS / encryption.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 180,
+    "question": "What is hashing and salting?",
+    "category": "HTTP/HTTPS",
+    "subCategory": "encryption",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": "The Outbox pattern ensures reliable event publishing in distributed systems by storing events in an outbox table within the same transaction as the business data. A separate process polls the outbox table and publishes events to message brokers. This pattern guarantees that events are published exactly once and in order, even if the message broker is temporarily unavailable. The outbox table is part of the same database transaction, ensuring atomicity between data changes and event creation. A background worker or CDC (Change Data Capture) process reads from the outbox and publishes events. Understanding the Outbox pattern is essential for implementing reliable event-driven architectures and maintaining data consistency in distributed systems. In enterprise production systems, \"What is hashing and salting?\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For HTTP/HTTPS / encryption, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: encryption",
+        "Category: HTTP/HTTPS",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"What is hashing and salting?\" maps to concrete behavior in the HTTP/HTTPS stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where encryption decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"What is hashing and salting?\" by explaining fundamentals, production impact, and trade-offs in HTTP/HTTPS / encryption.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  }
+]

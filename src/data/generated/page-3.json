@@ -1,0 +1,619 @@
+[
+  {
+    "id": 21,
+    "question": "Explain locking in DB",
+    "category": "SQL",
+    "subCategory": "Theory",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": "Common database operation problems in production include slow queries due to missing indexes, deadlocks caused by long-running transactions, connection pool exhaustion, data inconsistency due to improper transaction management, and performance degradation from large table scans. Other issues include N+1 query problems in ORM frameworks, lock contention, insufficient connection pooling, and inadequate monitoring. Solutions involve proper indexing, query optimization, appropriate isolation levels, connection pool tuning, implementing caching strategies, and comprehensive monitoring. Understanding these common issues and their solutions is essential for maintaining database performance and reliability in production environments. Proactive monitoring and performance tuning can prevent many of these issues from becoming critical problems. In enterprise production systems, \"Explain locking in DB\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For SQL / Theory, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Theory",
+        "Category: SQL",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"Explain locking in DB\" maps to concrete behavior in the SQL stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Theory decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"Explain locking in DB\" by explaining fundamentals, production impact, and trade-offs in SQL / Theory.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 22,
+    "question": "What is the common problem we are getting in database operations in production",
+    "category": "SQL",
+    "subCategory": "Theory",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": "Finding employees whose salary is less than 50k department-wise is a SQL aggregation task that combines filtering with grouping. This query demonstrates the use of WHERE clauses for filtering, GROUP BY for aggregation, and aggregate functions like COUNT, SUM, AVG for department-wise statistics. The query typically joins employee and department tables, filters by salary condition, groups by department, and calculates relevant metrics. This type of query is essential for HR analytics, salary distribution analysis, and departmental reporting. Advanced variations might include HAVING clauses for post-aggregation filtering, ranking employees within departments, or calculating salary percentiles. Understanding GROUP BY with filtering is fundamental for data analysis and reporting in SQL. In enterprise production systems, \"What is the common problem we are getting in database operations in production\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For SQL / Theory, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Theory",
+        "Category: SQL",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"What is the common problem we are getting in database operations in production\" maps to concrete behavior in the SQL stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Theory decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"What is the common problem we are getting in database operations in production\" by explaining fundamentals, production impact, and trade-offs in SQL / Theory.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": [
+      {
+        "title": "Comparison Table",
+        "headers": [
+          "employee_id",
+          "employee_name",
+          "department_id",
+          "salary"
+        ],
+        "rows": [
+          [
+            "1001",
+            "John Doe",
+            "1",
+            "45000"
+          ],
+          [
+            "1002",
+            "Jane Smith",
+            "1",
+            "42000"
+          ],
+          [
+            "1003",
+            "Bob Johnson",
+            "2",
+            "38000"
+          ],
+          [
+            "1004",
+            "Alice Brown",
+            "2",
+            "35000"
+          ],
+          [
+            "1005",
+            "Charlie Davis",
+            "3",
+            "48000"
+          ],
+          [
+            "department_id",
+            "department_name"
+          ],
+          [
+            "1",
+            "Engineering"
+          ],
+          [
+            "2",
+            "Marketing"
+          ],
+          [
+            "3",
+            "Sales"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "question": "Find employee whose salary is less than 50k department wise",
+    "category": "SQL",
+    "subCategory": "Query",
+    "codeRequired": true,
+    "tableRequired": true,
+    "content": {
+      "explanation": "Managing history tables in a distributed e-commerce system is crucial for audit trails, data recovery, and compliance requirements. In a distributed environment, maintaining consistent history across multiple services requires careful design. Approaches include: 1) Event sourcing where all state changes are stored as immutable events, 2) Change Data Capture (CDC) to track database changes, 3) Application-level history tables with triggers or application logic, 4) Using temporal tables in databases that support them, 5) Implementing the Outbox pattern for reliable event publishing. Key considerations include eventual consistency, handling schema evolution, managing storage costs, and ensuring data integrity across services. History tables enable rollback capabilities, audit compliance, and analytics on historical data. Understanding these patterns is essential for building robust distributed systems that require comprehensive data tracking. In enterprise production systems, \"Find employee whose salary is less than 50k department wise\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For SQL / Query, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Query",
+        "Category: SQL",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"Find employee whose salary is less than 50k department wise\" maps to concrete behavior in the SQL stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Query decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"Find employee whose salary is less than 50k department wise\" by explaining fundamentals, production impact, and trade-offs in SQL / Query.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [
+      {
+        "title": "Example",
+        "language": "java",
+        "code": "// Implementation sketch for: Find employee whose salary is less than 50k department wise\npublic class Example {\n  // TODO: domain logic\n}"
+      }
+    ],
+    "queryVariations": [
+      {
+        "title": "Subquery Approach",
+        "language": "sql",
+        "query": "-- Subquery for: Find employee whose salary is less than 50k department wise\nSELECT *\nFROM employees e\nWHERE salary = (\n  SELECT MAX(salary) FROM employees WHERE salary < (SELECT MAX(salary) FROM employees)\n);"
+      },
+      {
+        "title": "Self Join Approach",
+        "language": "sql",
+        "query": "-- Self join\nSELECT DISTINCT e1.salary\nFROM employees e1\nJOIN employees e2 ON e1.salary < e2.salary\nORDER BY e1.salary DESC\nLIMIT 1;"
+      },
+      {
+        "title": "CTE Approach",
+        "language": "sql",
+        "query": "WITH ranked AS (\n  SELECT salary, DENSE_RANK() OVER (ORDER BY salary DESC) AS rnk\n  FROM employees\n)\nSELECT salary FROM ranked WHERE rnk = 2;"
+      },
+      {
+        "title": "Window Function Approach",
+        "language": "sql",
+        "query": "SELECT salary\nFROM (\n  SELECT salary, DENSE_RANK() OVER (ORDER BY salary DESC) AS dr\n  FROM employees\n) t\nWHERE dr = 2;"
+      },
+      {
+        "title": "Correlated Query",
+        "language": "sql",
+        "query": "SELECT e1.salary\nFROM employees e1\nWHERE 1 = (\n  SELECT COUNT(DISTINCT e2.salary)\n  FROM employees e2\n  WHERE e2.salary > e1.salary\n);"
+      },
+      {
+        "title": "Optimized Query",
+        "language": "sql",
+        "query": "-- Index-friendly (salary DESC index)\nSELECT salary\nFROM employees\nORDER BY salary DESC\nOFFSET 1 ROWS FETCH NEXT 1 ROW ONLY;"
+      }
+    ],
+    "tables": [
+      {
+        "title": "SQL Comparison",
+        "headers": [
+          "Aspect",
+          "Option A",
+          "Option B"
+        ],
+        "rows": [
+          [
+            "Use case",
+            "Structured transactional data",
+            "High-scale flexible schema"
+          ],
+          [
+            "Consistency",
+            "Strong (ACID)",
+            "Configurable / eventual"
+          ],
+          [
+            "Scalability",
+            "Vertical + read replicas",
+            "Horizontal sharding"
+          ],
+          [
+            "Complexity",
+            "JOINs & migrations",
+            "Denormalized documents"
+          ],
+          [
+            "Interview tip",
+            "Lead with requirements",
+            "Mention polyglot persistence"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "question": "How to manage history table in database for distributed e-commerce system",
+    "category": "microservices",
+    "subCategory": "transaction",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": "Database features for auditing tables include triggers, temporal tables, Change Data Capture (CDC), and application-level logging. Triggers can automatically insert records into audit tables when data changes occur, capturing old and new values, user information, and timestamps. Temporal tables (available in SQL Server, PostgreSQL, and Oracle) automatically maintain historical versions of data with system-versioning. CDC tracks row-level changes and makes them available for consumption. Application-level logging provides more control but requires explicit implementation. Choosing the right approach depends on database capabilities, performance requirements, and audit granularity needs. Proper auditing is essential for compliance, security monitoring, and data recovery in enterprise applications. In enterprise production systems, \"How to manage history table in database for distributed e-commerce system\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For microservices / transaction, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: transaction",
+        "Category: microservices",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"How to manage history table in database for distributed e-commerce system\" maps to concrete behavior in the microservices stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where transaction decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"How to manage history table in database for distributed e-commerce system\" by explaining fundamentals, production impact, and trade-offs in microservices / transaction.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 25,
+    "question": "What database feature can we use for auditing tables",
+    "category": "SQL",
+    "subCategory": "Theory",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": "Database indexes work internally as data structures that improve query performance by enabling faster data retrieval. Most commonly, indexes use B-Tree (Balanced Tree) structures, which maintain sorted data and allow logarithmic time complexity for searches, insertions, and deletions. When you create an index on a column, the database builds a separate data structure containing the indexed column values and pointers to the actual table rows. B-Trees keep data balanced, ensuring consistent performance regardless of data distribution. Other index types include Hash indexes (for equality comparisons), Bitmap indexes (for low-cardinality columns), and Full-text indexes (for text search). Understanding how indexes work internally helps in designing effective indexing strategies, choosing appropriate index types, and avoiding performance pitfalls like over-indexing or inappropriate index selection. In enterprise production systems, \"What database feature can we use for auditing tables\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For SQL / Theory, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Theory",
+        "Category: SQL",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"What database feature can we use for auditing tables\" maps to concrete behavior in the SQL stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Theory decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"What database feature can we use for auditing tables\" by explaining fundamentals, production impact, and trade-offs in SQL / Theory.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 26,
+    "question": "How index works internally",
+    "category": "SQL",
+    "subCategory": "Theory",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": "Hash collision occurs in hash-based data structures when two different keys produce the same hash value. In Java's HashMap, when collisions happen, the implementation uses separate chaining (linked lists) to store multiple entries at the same bucket position. Starting from Java 8, when a bucket's linked list size exceeds a threshold (TREEIFY_THRESHOLD = 8), it converts to a balanced tree (red-black tree) to improve lookup performance from O(n) to O(log n). Hash collisions degrade performance, so good hash functions are crucial to distribute keys evenly. Understanding hash collisions is important for implementing custom hash functions, choosing appropriate collection types, and optimizing performance in scenarios with many collisions. The balanced tree optimization in HashMap demonstrates how modern implementations handle edge cases to maintain performance. In enterprise production systems, \"How index works internally\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For SQL / Theory, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Theory",
+        "Category: SQL",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"How index works internally\" maps to concrete behavior in the SQL stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Theory decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"How index works internally\" by explaining fundamentals, production impact, and trade-offs in SQL / Theory.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 27,
+    "question": "How to create index in SQL",
+    "category": "SQL",
+    "subCategory": "Theory",
+    "codeRequired": true,
+    "tableRequired": false,
+    "content": {
+      "explanation": "When a query takes too much time in production, systematic troubleshooting is essential. Steps include: 1) Analyze the execution plan to identify bottlenecks, 2) Check for missing indexes and add appropriate ones, 3) Review query structure for optimization opportunities, 4) Examine statistics and update if outdated, 5) Consider partitioning large tables, 6) Implement caching for frequently accessed data, 7) Review database configuration and resource allocation, 8) Check for locking issues and long-running transactions, 9) Consider query rewriting or denormalization, 10) Use database monitoring tools to identify patterns. Understanding query optimization techniques and having a systematic approach to performance tuning is crucial for maintaining database performance in production environments. In enterprise production systems, \"How to create index in SQL\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For SQL / Theory, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Theory",
+        "Category: SQL",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"How to create index in SQL\" maps to concrete behavior in the SQL stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Theory decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"How to create index in SQL\" by explaining fundamentals, production impact, and trade-offs in SQL / Theory.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [
+      {
+        "title": "Example",
+        "language": "java",
+        "code": "// Implementation sketch for: How to create index in SQL\npublic class Example {\n  // TODO: domain logic\n}"
+      }
+    ],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 28,
+    "question": "Explain hash collision",
+    "category": "Java",
+    "subCategory": "Collections",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": "Data integrity in database context refers to the accuracy, consistency, and reliability of data stored in a database. It ensures that data remains valid and consistent throughout its lifecycle. Data integrity is enforced through constraints: NOT NULL (no null values), UNIQUE (no duplicate values), PRIMARY KEY (unique identifier), FOREIGN KEY (referential integrity), CHECK (custom validation rules), and DEFAULT (default values). Entity integrity ensures each row is uniquely identifiable, referential integrity maintains relationships between tables, and domain integrity ensures data values are valid. Understanding data integrity is fundamental for designing robust databases that prevent data corruption, maintain consistency, and support business rules effectively. In enterprise production systems, \"Explain hash collision\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Java / Collections, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Collections",
+        "Category: Java",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"Explain hash collision\" maps to concrete behavior in the Java stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Collections decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"Explain hash collision\" by explaining fundamentals, production impact, and trade-offs in Java / Collections.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 29,
+    "question": "If any query is taking too much time in production how do you solve it",
+    "category": "SQL",
+    "subCategory": "theory",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": "OutOfMemoryError in Java occurs when the Java Virtual Machine (JVM) cannot allocate an object because the heap is full. This can happen due to memory leaks, insufficient heap size, large object allocations, or improper data structure usage. When OutOfMemoryError occurs, the application typically crashes or becomes unresponsive. Common causes include: unclosed resources holding references, collections growing indefinitely, caching too much data, loading large files into memory, or recursive algorithms without proper termination. Solutions include increasing heap size with -Xmx parameter, fixing memory leaks by removing unnecessary references, using weak references for caches, implementing proper resource cleanup, and using streaming for large data processing. Understanding memory management and OutOfMemoryError is crucial for building stable Java applications. In enterprise production systems, \"If any query is taking too much time in production how do you solve it\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For SQL / theory, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: theory",
+        "Category: SQL",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"If any query is taking too much time in production how do you solve it\" maps to concrete behavior in the SQL stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where theory decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"If any query is taking too much time in production how do you solve it\" by explaining fundamentals, production impact, and trade-offs in SQL / theory.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 30,
+    "question": "Data integrity in database context",
+    "category": "SQL",
+    "subCategory": "theory",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": "Memory cleanup in Java is primarily handled by the Garbage Collector (GC), which automatically reclaims memory occupied by objects that are no longer reachable. However, developers can influence GC behavior through best practices: explicitly nullifying references when objects are no longer needed, using try-with-resources for automatic resource cleanup, avoiding memory leaks by removing references from collections, using weak references for caches, and choosing appropriate data structures. For manual memory management in specific scenarios, you can call System.gc() to suggest garbage collection (though not guaranteed), use memory-mapped files for large data, or implement object pooling for frequently created objects. Understanding when and how to assist memory cleanup is important for building efficient Java applications, especially in memory-constrained environments. In enterprise production systems, \"Data integrity in database context\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For SQL / theory, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: theory",
+        "Category: SQL",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"Data integrity in database context\" maps to concrete behavior in the SQL stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where theory decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"Data integrity in database context\" by explaining fundamentals, production impact, and trade-offs in SQL / theory.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  }
+]

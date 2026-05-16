@@ -1,0 +1,627 @@
+[
+  {
+    "id": 71,
+    "question": "How to secure microservices",
+    "category": "Microservices",
+    "subCategory": "spring-security",
+    "codeRequired": true,
+    "tableRequired": false,
+    "content": {
+      "explanation": "Streams vs Collections in Java represent different paradigms for data processing. Collections are data structures that store elements in memory and allow modification, while Streams are sequences of elements that support functional-style operations without storing data. Collections are eager (data is loaded immediately), mutable (can be modified), and support random access. Streams are lazy (operations are deferred), immutable (operations return new Streams), and support sequential and parallel processing. Collections are ideal for storing and accessing data, while Streams excel at data transformation and processing pipelines. Understanding the differences helps in choosing the right tool for specific tasks and writing more efficient, readable code. In enterprise production systems, \"How to secure microservices\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Microservices / spring-security, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: spring-security",
+        "Category: Microservices",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"How to secure microservices\" maps to concrete behavior in the Microservices stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where spring-security decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"How to secure microservices\" by explaining fundamentals, production impact, and trade-offs in Microservices / spring-security.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [
+      {
+        "title": "Example",
+        "language": "java",
+        "code": "// Implementation sketch for: How to secure microservices\npublic class Example {\n  // TODO: domain logic\n}"
+      }
+    ],
+    "queryVariations": [],
+    "tables": [
+      {
+        "title": "Comparison Table",
+        "headers": [
+          "Aspect",
+          "Collections",
+          "Streams"
+        ],
+        "rows": [
+          [
+            "Data Storage",
+            "Stores data in memory",
+            "Doesn't store data"
+          ],
+          [
+            "Evaluation",
+            "Eager",
+            "Lazy"
+          ],
+          [
+            "Mutability",
+            "Mutable",
+            "Immutable"
+          ],
+          [
+            "Operations",
+            "Add, remove, modify",
+            "Map, filter, reduce"
+          ],
+          [
+            "Traversal",
+            "Iterator, for-each",
+            "forEach, terminal ops"
+          ],
+          [
+            "Parallel",
+            "Manual threading",
+            "Built-in parallel()"
+          ],
+          [
+            "Reuse",
+            "Can traverse multiple times",
+            "Can only traverse once"
+          ],
+          [
+            "Memory",
+            "Holds all elements",
+            "Processes on-demand"
+          ],
+          [
+            "Use Case",
+            "Data storage",
+            "Data processing"
+          ],
+          [
+            "Example",
+            "List, Set, Map",
+            "stream(), parallelStream()"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": 72,
+    "question": "Explain Spring Bean lifecycle",
+    "category": "Spring",
+    "subCategory": "spring-core",
+    "codeRequired": true,
+    "tableRequired": true,
+    "content": {
+      "explanation": "Lambda expressions in Java (introduced in Java 8) enable functional programming by allowing you to treat functionality as a method argument or code as data. Lambdas provide a concise way to implement functional interfaces (interfaces with a single abstract method). They reduce boilerplate code compared to anonymous inner classes, improve readability, and enable more expressive code. Lambdas capture variables from their enclosing scope (effectively final only), can be used with Stream API operations, and enable method references for even more concise syntax. Key use cases include: event handlers, callback functions, Stream operations, and functional interfaces like Predicate, Function, and Consumer. Understanding lambdas is essential for modern Java development and writing clean, functional-style code. In enterprise production systems, \"Explain Spring Bean lifecycle\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Spring / spring-core, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: spring-core",
+        "Category: Spring",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"Explain Spring Bean lifecycle\" maps to concrete behavior in the Spring stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where spring-core decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"Explain Spring Bean lifecycle\" by explaining fundamentals, production impact, and trade-offs in Spring / spring-core.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [
+      {
+        "title": "Solution",
+        "language": "java",
+        "code": "// Lambda expression syntax\n(parameters) -> expression\n(parameters) -> { statements; }\n\n// Basic lambda\nRunnable runnable = () -> System.out.println(\"Hello\");\n\n// Lambda with parameters\nPredicate<Integer> isEven = n -> n % 2 == 0;\n\n// Lambda with block\nConsumer<String> printer = str -> {\n    System.out.println(\"Printing: \" + str);\n    System.out.println(\"Length: \" + str.length());\n};\n\n// Lambda in Stream API\nList<String> names = Arrays.asList(\"Alice\", \"Bob\", \"Charlie\");\nList<String> upperNames = names.stream()\n    .map(name -> name.toUpperCase())\n    .collect(Collectors.toList());\n\n// Method references (more concise)\nList<String> upperNames = names.stream()\n    .map(String::toUpperCase)\n    .collect(Collectors.toList());\n\n// Lambda with multiple parameters\nBiFunction<Integer, Integer, Integer> add = (a, b) -> a + b;\n\n// Lambda in functional interfaces\nFunction<String, Integer> stringLength = s -> s.length();\nPredicate<String> startsWithA = s -> s.startsWith(\"A\");\nConsumer<String> print = s -> System.out.println(s);\n\n// Capturing variables (effectively final)\nint threshold = 5;\nPredicate<Integer> isGreaterThan = n -> n > threshold;"
+      }
+    ],
+    "queryVariations": [],
+    "tables": [
+      {
+        "title": "Spring Comparison",
+        "headers": [
+          "Aspect",
+          "Option A",
+          "Option B"
+        ],
+        "rows": [
+          [
+            "Use case",
+            "Structured transactional data",
+            "High-scale flexible schema"
+          ],
+          [
+            "Consistency",
+            "Strong (ACID)",
+            "Configurable / eventual"
+          ],
+          [
+            "Scalability",
+            "Vertical + read replicas",
+            "Horizontal sharding"
+          ],
+          [
+            "Complexity",
+            "JOINs & migrations",
+            "Denormalized documents"
+          ],
+          [
+            "Interview tip",
+            "Lead with requirements",
+            "Mention polyglot persistence"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": 73,
+    "question": "How validating and reviewing the code",
+    "category": "Others",
+    "subCategory": "Code Review",
+    "codeRequired": false,
+    "tableRequired": true,
+    "content": {
+      "explanation": "Functional programming in Java offers several benefits: immutability reduces side effects and makes code easier to reason about, pure functions are easier to test and debug, higher-order functions enable code reuse and abstraction, lazy evaluation improves performance by avoiding unnecessary computations, and declarative code is more readable and expressive. Java 8 introduced functional programming features like lambda expressions, Stream API, and functional interfaces. These features enable more concise code, better parallel processing capabilities, and reduced boilerplate. Functional programming also promotes better separation of concerns and makes code more maintainable. Understanding these benefits helps in writing cleaner, more efficient Java code and leveraging the full power of modern Java features. In enterprise production systems, \"How validating and reviewing the code\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Others / Code Review, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Code Review",
+        "Category: Others",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"How validating and reviewing the code\" maps to concrete behavior in the Others stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Code Review decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"How validating and reviewing the code\" by explaining fundamentals, production impact, and trade-offs in Others / Code Review.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": [
+      {
+        "title": "Others Comparison",
+        "headers": [
+          "Aspect",
+          "Option A",
+          "Option B"
+        ],
+        "rows": [
+          [
+            "Use case",
+            "Structured transactional data",
+            "High-scale flexible schema"
+          ],
+          [
+            "Consistency",
+            "Strong (ACID)",
+            "Configurable / eventual"
+          ],
+          [
+            "Scalability",
+            "Vertical + read replicas",
+            "Horizontal sharding"
+          ],
+          [
+            "Complexity",
+            "JOINs & migrations",
+            "Denormalized documents"
+          ],
+          [
+            "Interview tip",
+            "Lead with requirements",
+            "Mention polyglot persistence"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": 74,
+    "question": "Common issues faced in Sonar and how to solve them",
+    "category": "Others",
+    "subCategory": "Code Quality",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": "Inter-thread communication in Java happens through wait(), notify(), and notifyAll() methods defined in the Object class. These methods allow threads to coordinate their actions by waiting for conditions and signaling when conditions change. wait() causes the current thread to release the lock and wait until another thread calls notify() or notifyAll(). notify() wakes up a single waiting thread, while notifyAll() wakes up all waiting threads. These methods must be called within synchronized blocks or methods on the same object. Proper inter-thread communication is essential for producer-consumer problems, resource pooling, and coordinating complex workflows. Understanding these mechanisms is crucial for writing correct concurrent programs that avoid race conditions and deadlocks. In enterprise production systems, \"Common issues faced in Sonar and how to solve them\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Others / Code Quality, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Code Quality",
+        "Category: Others",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"Common issues faced in Sonar and how to solve them\" maps to concrete behavior in the Others stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Code Quality decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"Common issues faced in Sonar and how to solve them\" by explaining fundamentals, production impact, and trade-offs in Others / Code Quality.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 75,
+    "question": "How to handle distributed transactions in microservices",
+    "category": "Microservices",
+    "subCategory": "Distributed Transactions",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": "Making Thread 1's output become Thread 2's input requires inter-thread communication mechanisms. Several approaches exist: 1) Using shared data structures with synchronized access, 2) Using BlockingQueue for thread-safe data transfer, 3) Using PipedInputStream/PipedOutputStream for stream-based communication, 4) Using wait/notify on shared objects, 5) Using Exchanger for direct data exchange between threads. The BlockingQueue approach is often preferred as it's thread-safe by design and handles blocking automatically. This pattern is common in producer-consumer scenarios where one thread generates data and another processes it. Understanding these communication patterns is essential for building multi-threaded applications where threads need to coordinate and share data safely. In enterprise production systems, \"How to handle distributed transactions in microservices\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Microservices / Distributed Transactions, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Distributed Transactions",
+        "Category: Microservices",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"How to handle distributed transactions in microservices\" maps to concrete behavior in the Microservices stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Distributed Transactions decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"How to handle distributed transactions in microservices\" by explaining fundamentals, production impact, and trade-offs in Microservices / Distributed Transactions.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 76,
+    "question": "Explain Saga design pattern",
+    "category": "Microservices",
+    "subCategory": "Distributed Transactions",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": "Choosing between abstract class and interface depends on your design requirements. Use an abstract class when you want to share code among closely related classes, need non-public members, or want to declare non-static/non-final fields. Use an interface when you want to define a contract for unrelated classes, need multiple inheritance of type, or want to achieve polymorphism across different class hierarchies. Key differences: abstract classes can have constructors, instance variables, and implemented methods, while interfaces can only have constants and abstract methods (prior to Java 8). From Java 8, interfaces can have default and static methods. From Java 9, interfaces can have private methods. Understanding these distinctions helps in making appropriate design decisions and creating flexible, maintainable code architectures. In enterprise production systems, \"Explain Saga design pattern\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Microservices / Distributed Transactions, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Distributed Transactions",
+        "Category: Microservices",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"Explain Saga design pattern\" maps to concrete behavior in the Microservices stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Distributed Transactions decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"Explain Saga design pattern\" by explaining fundamentals, production impact, and trade-offs in Microservices / Distributed Transactions.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 77,
+    "question": "What is Outbox pattern",
+    "category": "Microservices",
+    "subCategory": "Distributed Transactions",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": "Yes, you can extend an abstract class to another abstract class. This is a common pattern in Java for creating hierarchical class structures where each level adds more specific behavior. The child abstract class can implement some abstract methods from the parent while leaving others abstract for concrete classes to implement. This allows for incremental implementation and code reuse across the hierarchy. The child abstract class can also add new abstract methods that concrete subclasses must implement. This pattern is useful for building complex class hierarchies with shared functionality at different levels of abstraction. Understanding this capability helps in designing flexible class hierarchies that promote code reuse while maintaining appropriate abstraction levels. In enterprise production systems, \"What is Outbox pattern\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Microservices / Distributed Transactions, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Distributed Transactions",
+        "Category: Microservices",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"What is Outbox pattern\" maps to concrete behavior in the Microservices stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Distributed Transactions decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"What is Outbox pattern\" by explaining fundamentals, production impact, and trade-offs in Microservices / Distributed Transactions.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 78,
+    "question": "How to decide between monolithic and microservices architecture",
+    "category": "Microservices",
+    "subCategory": "Architecture",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": "Yes, you can extend one functional interface from another functional interface, but with an important constraint: the resulting interface must still be a functional interface (have exactly one abstract method). If the parent functional interface has an abstract method, and the child adds another abstract method, the child is no longer a functional interface. However, if the child only adds default methods, static methods, or overrides existing methods, it remains a functional interface. This allows for building hierarchies of functional interfaces with shared default behaviors. Understanding this constraint is important when designing functional interface hierarchies for lambda expressions and method references. In enterprise production systems, \"How to decide between monolithic and microservices architecture\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Microservices / Architecture, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Architecture",
+        "Category: Microservices",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"How to decide between monolithic and microservices architecture\" maps to concrete behavior in the Microservices stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Architecture decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"How to decide between monolithic and microservices architecture\" by explaining fundamentals, production impact, and trade-offs in Microservices / Architecture.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 79,
+    "question": "What is an idempotent API",
+    "category": "Microservices",
+    "subCategory": "API Design",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": "Creating a custom marker interface in Java is straightforward - it's an interface with no methods. Marker interfaces are used to tag classes to indicate that they belong to a certain category or have certain capabilities. Examples in Java include Serializable, Cloneable, and Remote. To create a custom marker interface, simply define an interface with no methods. Classes then implement this interface to mark themselves. Marker interfaces can be checked using instanceof operator at runtime. While annotations have largely replaced marker interfaces in modern Java, marker interfaces are still useful for type safety and compile-time checking. Understanding marker interfaces helps in designing type-safe APIs and understanding Java's built-in marker interfaces. In enterprise production systems, \"What is an idempotent API\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Microservices / API Design, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: API Design",
+        "Category: Microservices",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"What is an idempotent API\" maps to concrete behavior in the Microservices stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where API Design decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"What is an idempotent API\" by explaining fundamentals, production impact, and trade-offs in Microservices / API Design.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 80,
+    "question": "What are Correlation IDs",
+    "category": "Microservices",
+    "subCategory": "Observability",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": "The N+1 query problem in SQL occurs when a query fetches N parent records and then executes N additional queries to fetch related child records for each parent. This happens due to improper join strategies or lack of proper query optimization. Solutions include: 1) Using proper JOINs to fetch related data in a single query, 2) Using subqueries with IN clauses, 3) Using window functions for correlated data, 4) Using EXISTS instead of IN for better performance, 5) Proper indexing on join columns, 6) Using materialized views for complex queries, 7) Query batching to combine multiple queries. Understanding and preventing the N+1 problem is crucial for database performance, especially in applications with complex data relationships. In enterprise production systems, \"What are Correlation IDs\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Microservices / Observability, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Observability",
+        "Category: Microservices",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"What are Correlation IDs\" maps to concrete behavior in the Microservices stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Observability decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"What are Correlation IDs\" by explaining fundamentals, production impact, and trade-offs in Microservices / Observability.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  }
+]
