@@ -1,0 +1,518 @@
+[
+  {
+    "id": 261,
+    "question": "When to choose MongoDB over relational database?",
+    "category": "SQL",
+    "subCategory": "NoSQL",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": " In enterprise production systems, \"When to choose MongoDB over relational database?\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For SQL / NoSQL, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: NoSQL",
+        "Category: SQL",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"When to choose MongoDB over relational database?\" maps to concrete behavior in the SQL stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where NoSQL decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"When to choose MongoDB over relational database?\" by explaining fundamentals, production impact, and trade-offs in SQL / NoSQL.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 262,
+    "question": "What is eventual consistency in NoSQL?",
+    "category": "SQL",
+    "subCategory": "NoSQL",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": " In enterprise production systems, \"What is eventual consistency in NoSQL?\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For SQL / NoSQL, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: NoSQL",
+        "Category: SQL",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"What is eventual consistency in NoSQL?\" maps to concrete behavior in the SQL stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where NoSQL decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"What is eventual consistency in NoSQL?\" by explaining fundamentals, production impact, and trade-offs in SQL / NoSQL.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 263,
+    "question": "Explain Redis pub/sub mechanism",
+    "category": "Redis",
+    "subCategory": "Messaging",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": " In enterprise production systems, \"Explain Redis pub/sub mechanism\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Redis / Messaging, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Messaging",
+        "Category: Redis",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"Explain Redis pub/sub mechanism\" maps to concrete behavior in the Redis stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Messaging decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"Explain Redis pub/sub mechanism\" by explaining fundamentals, production impact, and trade-offs in Redis / Messaging.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 264,
+    "question": "What are Redis data structures?",
+    "category": "Redis",
+    "subCategory": "Data Structures",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": " In enterprise production systems, \"What are Redis data structures?\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Redis / Data Structures, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Data Structures",
+        "Category: Redis",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"What are Redis data structures?\" maps to concrete behavior in the Redis stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Data Structures decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"What are Redis data structures?\" by explaining fundamentals, production impact, and trade-offs in Redis / Data Structures.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 265,
+    "question": "How Redis persistence works?",
+    "category": "Redis",
+    "subCategory": "Persistence",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": " In enterprise production systems, \"How Redis persistence works?\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Redis / Persistence, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Persistence",
+        "Category: Redis",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"How Redis persistence works?\" maps to concrete behavior in the Redis stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Persistence decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"How Redis persistence works?\" by explaining fundamentals, production impact, and trade-offs in Redis / Persistence.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 266,
+    "question": "RDB vs AOF in Redis",
+    "category": "Redis",
+    "subCategory": "Persistence",
+    "codeRequired": false,
+    "tableRequired": true,
+    "content": {
+      "explanation": " In enterprise production systems, \"RDB vs AOF in Redis\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Redis / Persistence, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Persistence",
+        "Category: Redis",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"RDB vs AOF in Redis\" maps to concrete behavior in the Redis stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Persistence decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"RDB vs AOF in Redis\" by explaining fundamentals, production impact, and trade-offs in Redis / Persistence.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": [
+      {
+        "title": "Redis Comparison",
+        "headers": [
+          "Aspect",
+          "Option A",
+          "Option B"
+        ],
+        "rows": [
+          [
+            "Use case",
+            "Structured transactional data",
+            "High-scale flexible schema"
+          ],
+          [
+            "Consistency",
+            "Strong (ACID)",
+            "Configurable / eventual"
+          ],
+          [
+            "Scalability",
+            "Vertical + read replicas",
+            "Horizontal sharding"
+          ],
+          [
+            "Complexity",
+            "JOINs & migrations",
+            "Denormalized documents"
+          ],
+          [
+            "Interview tip",
+            "Lead with requirements",
+            "Mention polyglot persistence"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": 267,
+    "question": "What is Redis clustering?",
+    "category": "Redis",
+    "subCategory": "Scalability",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": " In enterprise production systems, \"What is Redis clustering?\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Redis / Scalability, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Scalability",
+        "Category: Redis",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"What is Redis clustering?\" maps to concrete behavior in the Redis stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Scalability decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"What is Redis clustering?\" by explaining fundamentals, production impact, and trade-offs in Redis / Scalability.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 268,
+    "question": "Explain Redis Sentinel",
+    "category": "Redis",
+    "subCategory": "High Availability",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": " In enterprise production systems, \"Explain Redis Sentinel\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Redis / High Availability, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: High Availability",
+        "Category: Redis",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"Explain Redis Sentinel\" maps to concrete behavior in the Redis stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where High Availability decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"Explain Redis Sentinel\" by explaining fundamentals, production impact, and trade-offs in Redis / High Availability.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 269,
+    "question": "How to handle distributed locking using Redis?",
+    "category": "Redis",
+    "subCategory": "Distributed Systems",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": " In enterprise production systems, \"How to handle distributed locking using Redis?\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Redis / Distributed Systems, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Distributed Systems",
+        "Category: Redis",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"How to handle distributed locking using Redis?\" maps to concrete behavior in the Redis stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Distributed Systems decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"How to handle distributed locking using Redis?\" by explaining fundamentals, production impact, and trade-offs in Redis / Distributed Systems.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 270,
+    "question": "What is Bloom filter?",
+    "category": "System Design",
+    "subCategory": "Algorithms",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": " In enterprise production systems, \"What is Bloom filter?\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For System Design / Algorithms, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Algorithms",
+        "Category: System Design",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"What is Bloom filter?\" maps to concrete behavior in the System Design stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Algorithms decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"What is Bloom filter?\" by explaining fundamentals, production impact, and trade-offs in System Design / Algorithms.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  }
+]

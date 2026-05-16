@@ -1,0 +1,620 @@
+[
+  {
+    "id": 201,
+    "question": "Mono vs Flux in Spring WebFlux",
+    "category": "Spring Boot",
+    "subCategory": "Reactive Programming",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": " In enterprise production systems, \"Mono vs Flux in Spring WebFlux\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Spring Boot / Reactive Programming, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Reactive Programming",
+        "Category: Spring Boot",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"Mono vs Flux in Spring WebFlux\" maps to concrete behavior in the Spring Boot stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Reactive Programming decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"Mono vs Flux in Spring WebFlux\" by explaining fundamentals, production impact, and trade-offs in Spring Boot / Reactive Programming.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 202,
+    "question": "Explain backpressure in reactive programming",
+    "category": "Spring Boot",
+    "subCategory": "Reactive Programming",
+    "codeRequired": true,
+    "tableRequired": false,
+    "content": {
+      "explanation": " In enterprise production systems, \"Explain backpressure in reactive programming\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Spring Boot / Reactive Programming, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Reactive Programming",
+        "Category: Spring Boot",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"Explain backpressure in reactive programming\" maps to concrete behavior in the Spring Boot stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Reactive Programming decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"Explain backpressure in reactive programming\" by explaining fundamentals, production impact, and trade-offs in Spring Boot / Reactive Programming.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [
+      {
+        "title": "Example",
+        "language": "java",
+        "code": "// Implementation sketch for: Explain backpressure in reactive programming\npublic class Example {\n  // TODO: domain logic\n}"
+      }
+    ],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 203,
+    "question": "How non-blocking IO works?",
+    "category": "Spring Boot",
+    "subCategory": "IO",
+    "codeRequired": true,
+    "tableRequired": false,
+    "content": {
+      "explanation": " In enterprise production systems, \"How non-blocking IO works?\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Spring Boot / IO, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: IO",
+        "Category: Spring Boot",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"How non-blocking IO works?\" maps to concrete behavior in the Spring Boot stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where IO decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"How non-blocking IO works?\" by explaining fundamentals, production impact, and trade-offs in Spring Boot / IO.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [
+      {
+        "title": "Example",
+        "language": "java",
+        "code": "// Implementation sketch for: How non-blocking IO works?\npublic class Example {\n  // TODO: domain logic\n}"
+      }
+    ],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 204,
+    "question": "Thread per request model vs event loop model",
+    "category": "Spring Boot",
+    "subCategory": "Concurrency",
+    "codeRequired": true,
+    "tableRequired": false,
+    "content": {
+      "explanation": " In enterprise production systems, \"Thread per request model vs event loop model\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Spring Boot / Concurrency, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Concurrency",
+        "Category: Spring Boot",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"Thread per request model vs event loop model\" maps to concrete behavior in the Spring Boot stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Concurrency decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"Thread per request model vs event loop model\" by explaining fundamentals, production impact, and trade-offs in Spring Boot / Concurrency.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [
+      {
+        "title": "Example",
+        "language": "java",
+        "code": "// Implementation sketch for: Thread per request model vs event loop model\npublic class Example {\n  // TODO: domain logic\n}"
+      }
+    ],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 205,
+    "question": "What is Netty?",
+    "category": "Spring Boot",
+    "subCategory": "Networking",
+    "codeRequired": true,
+    "tableRequired": true,
+    "content": {
+      "explanation": " In enterprise production systems, \"What is Netty?\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Spring Boot / Networking, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Networking",
+        "Category: Spring Boot",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"What is Netty?\" maps to concrete behavior in the Spring Boot stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Networking decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"What is Netty?\" by explaining fundamentals, production impact, and trade-offs in Spring Boot / Networking.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [
+      {
+        "title": "Example",
+        "language": "java",
+        "code": "// Implementation sketch for: What is Netty?\npublic class Example {\n  // TODO: domain logic\n}"
+      }
+    ],
+    "queryVariations": [],
+    "tables": [
+      {
+        "title": "Spring Boot Comparison",
+        "headers": [
+          "Aspect",
+          "Option A",
+          "Option B"
+        ],
+        "rows": [
+          [
+            "Use case",
+            "Structured transactional data",
+            "High-scale flexible schema"
+          ],
+          [
+            "Consistency",
+            "Strong (ACID)",
+            "Configurable / eventual"
+          ],
+          [
+            "Scalability",
+            "Vertical + read replicas",
+            "Horizontal sharding"
+          ],
+          [
+            "Complexity",
+            "JOINs & migrations",
+            "Denormalized documents"
+          ],
+          [
+            "Interview tip",
+            "Lead with requirements",
+            "Mention polyglot persistence"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": 206,
+    "question": "How does Spring WebFlux work internally?",
+    "category": "Spring Boot",
+    "subCategory": "Reactive Programming",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": " In enterprise production systems, \"How does Spring WebFlux work internally?\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Spring Boot / Reactive Programming, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Reactive Programming",
+        "Category: Spring Boot",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"How does Spring WebFlux work internally?\" maps to concrete behavior in the Spring Boot stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Reactive Programming decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"How does Spring WebFlux work internally?\" by explaining fundamentals, production impact, and trade-offs in Spring Boot / Reactive Programming.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 207,
+    "question": "Explain reactive streams specification",
+    "category": "Spring Boot",
+    "subCategory": "Reactive Programming",
+    "codeRequired": true,
+    "tableRequired": true,
+    "content": {
+      "explanation": " In enterprise production systems, \"Explain reactive streams specification\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Spring Boot / Reactive Programming, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Reactive Programming",
+        "Category: Spring Boot",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"Explain reactive streams specification\" maps to concrete behavior in the Spring Boot stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Reactive Programming decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"Explain reactive streams specification\" by explaining fundamentals, production impact, and trade-offs in Spring Boot / Reactive Programming.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [
+      {
+        "title": "Example",
+        "language": "java",
+        "code": "// Implementation sketch for: Explain reactive streams specification\npublic class Example {\n  // TODO: domain logic\n}"
+      }
+    ],
+    "queryVariations": [],
+    "tables": [
+      {
+        "title": "Spring Boot Comparison",
+        "headers": [
+          "Aspect",
+          "Option A",
+          "Option B"
+        ],
+        "rows": [
+          [
+            "Use case",
+            "Structured transactional data",
+            "High-scale flexible schema"
+          ],
+          [
+            "Consistency",
+            "Strong (ACID)",
+            "Configurable / eventual"
+          ],
+          [
+            "Scalability",
+            "Vertical + read replicas",
+            "Horizontal sharding"
+          ],
+          [
+            "Complexity",
+            "JOINs & migrations",
+            "Denormalized documents"
+          ],
+          [
+            "Interview tip",
+            "Lead with requirements",
+            "Mention polyglot persistence"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": 208,
+    "question": "What is Kubernetes?",
+    "category": "DevOps",
+    "subCategory": "Container Orchestration",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": " In enterprise production systems, \"What is Kubernetes?\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For DevOps / Container Orchestration, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Container Orchestration",
+        "Category: DevOps",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"What is Kubernetes?\" maps to concrete behavior in the DevOps stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Container Orchestration decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"What is Kubernetes?\" by explaining fundamentals, production impact, and trade-offs in DevOps / Container Orchestration.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 209,
+    "question": "What is Docker and how does it work?",
+    "category": "DevOps",
+    "subCategory": "Containers",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": " In enterprise production systems, \"What is Docker and how does it work?\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For DevOps / Containers, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Containers",
+        "Category: DevOps",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"What is Docker and how does it work?\" maps to concrete behavior in the DevOps stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Containers decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"What is Docker and how does it work?\" by explaining fundamentals, production impact, and trade-offs in DevOps / Containers.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 210,
+    "question": "Docker vs Virtual Machine",
+    "category": "DevOps",
+    "subCategory": "Containers",
+    "codeRequired": false,
+    "tableRequired": true,
+    "content": {
+      "explanation": " In enterprise production systems, \"Docker vs Virtual Machine\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For DevOps / Containers, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Containers",
+        "Category: DevOps",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"Docker vs Virtual Machine\" maps to concrete behavior in the DevOps stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Containers decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"Docker vs Virtual Machine\" by explaining fundamentals, production impact, and trade-offs in DevOps / Containers.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": [
+      {
+        "title": "DevOps Comparison",
+        "headers": [
+          "Aspect",
+          "Option A",
+          "Option B"
+        ],
+        "rows": [
+          [
+            "Use case",
+            "Structured transactional data",
+            "High-scale flexible schema"
+          ],
+          [
+            "Consistency",
+            "Strong (ACID)",
+            "Configurable / eventual"
+          ],
+          [
+            "Scalability",
+            "Vertical + read replicas",
+            "Horizontal sharding"
+          ],
+          [
+            "Complexity",
+            "JOINs & migrations",
+            "Denormalized documents"
+          ],
+          [
+            "Interview tip",
+            "Lead with requirements",
+            "Mention polyglot persistence"
+          ]
+        ]
+      }
+    ]
+  }
+]

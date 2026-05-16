@@ -53,10 +53,20 @@
 }
 
 .code-content {
-  padding: 16px;
+  padding: 12px 14px;
   background: #1e1e1e;
-  overflow: auto;
-  height: 280px;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.code-animation-compact .code-content {
+  height: auto;
+  max-height: none;
+}
+
+.code-animation-compact .code-text {
+  font-size: 10px;
+  line-height: 1.45;
 }
 
 .code-text {
@@ -84,6 +94,26 @@
   50% {
     opacity: 0;
   }
+}
+
+.code-output-bar {
+  padding: 8px 14px;
+  background: #161616;
+  border-top: 1px solid #3d3d3d;
+  overflow: hidden;
+}
+
+.code-output-text {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  line-height: 1.4;
+  color: #27c93f;
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.code-animation-compact .phase-indicator {
+  padding: 6px 0 0;
 }
 
 .terminal-window {
@@ -148,19 +178,7 @@
 }
 
 @media (max-width: 768px) {
-  .code-content {
-    height: 200px;
-  }
-  
-  .terminal-content {
-    height: 100px;
-  }
-  
-  .code-text {
-    font-size: 10px;
-  }
-  
-  .terminal-text {
+  .code-animation-compact .code-text {
     font-size: 9px;
   }
 }

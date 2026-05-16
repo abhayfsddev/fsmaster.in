@@ -2,13 +2,80 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
-  background: var(--bg-color);
-  color: var(--text-color);
+  color: var(--text);
+}
+
+.qd-section {
+  background: var(--card-bg);
+  padding: 1.25rem 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.25rem;
+  border: 1px solid var(--border);
+}
+
+.qd-section h2,
+.qd-section h3 {
+  margin-top: 0;
+  color: var(--brand);
+}
+
+.qd-section p {
+  line-height: 1.65;
+  color: var(--text);
+}
+
+.qd-list {
+  margin: 0.5rem 0 0 1.25rem;
+  line-height: 1.6;
+}
+
+.query-tabs .query-tab-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.query-tab {
+  padding: 0.4rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.query-tab.active {
+  background: var(--brand);
+  color: #fff;
+  border-color: var(--brand);
+}
+
+.code-header h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.code-lang {
+  font-size: 0.75rem;
+  color: var(--text2);
+  text-transform: uppercase;
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+.empty-msg {
+  padding: 2rem;
+  color: var(--text2);
+  text-align: center;
 }
 
 .back-button {
   padding: 0.5rem 1rem;
-  background: var(--accent-color);
+  background: var(--brand);
   color: white;
   border: none;
   border-radius: 4px;
@@ -29,7 +96,7 @@
 }
 
 .question-id {
-  background: var(--accent-color);
+  background: var(--brand);
   color: white;
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
@@ -56,7 +123,7 @@
 .question-title {
   font-size: 2rem;
   margin-bottom: 1.5rem;
-  color: var(--text-color);
+  color: var(--text);
 }
 
 .question-explanation {
@@ -69,7 +136,7 @@
 
 .question-explanation h2 {
   margin-top: 0;
-  color: var(--accent-color);
+  color: var(--brand);
 }
 
 .question-explanation p {
@@ -94,7 +161,7 @@
 
 .code-header h3 {
   margin: 0;
-  color: var(--accent-color);
+  color: var(--brand);
 }
 
 .copy-button {
@@ -137,7 +204,7 @@
 
 .table-container h3 {
   margin-top: 0;
-  color: var(--accent-color);
+  color: var(--brand);
 }
 
 .table-container table {
@@ -154,7 +221,7 @@
 }
 
 .table-container th {
-  background: var(--accent-color);
+  background: var(--brand);
   color: white;
   font-weight: bold;
 }

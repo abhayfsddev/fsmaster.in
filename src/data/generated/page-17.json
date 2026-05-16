@@ -1,0 +1,500 @@
+[
+  {
+    "id": 161,
+    "question": "How does load balancer work?",
+    "category": "Microservices",
+    "subCategory": "Scalability",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": " In enterprise production systems, \"How does load balancer work?\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Microservices / Scalability, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Scalability",
+        "Category: Microservices",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"How does load balancer work?\" maps to concrete behavior in the Microservices stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Scalability decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"How does load balancer work?\" by explaining fundamentals, production impact, and trade-offs in Microservices / Scalability.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 162,
+    "question": "What is sticky session?",
+    "category": "Microservices",
+    "subCategory": "Scalability",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": " In enterprise production systems, \"What is sticky session?\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Microservices / Scalability, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Scalability",
+        "Category: Microservices",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"What is sticky session?\" maps to concrete behavior in the Microservices stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Scalability decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"What is sticky session?\" by explaining fundamentals, production impact, and trade-offs in Microservices / Scalability.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 163,
+    "question": "Explain Redis caching",
+    "category": "Caching",
+    "subCategory": "Redis",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": " In enterprise production systems, \"Explain Redis caching\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Caching / Redis, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Redis",
+        "Category: Caching",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"Explain Redis caching\" maps to concrete behavior in the Caching stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Redis decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"Explain Redis caching\" by explaining fundamentals, production impact, and trade-offs in Caching / Redis.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 164,
+    "question": "Cache aside vs write through caching",
+    "category": "Caching",
+    "subCategory": "Caching Strategies",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": " In enterprise production systems, \"Cache aside vs write through caching\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Caching / Caching Strategies, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Caching Strategies",
+        "Category: Caching",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"Cache aside vs write through caching\" maps to concrete behavior in the Caching stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Caching Strategies decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"Cache aside vs write through caching\" by explaining fundamentals, production impact, and trade-offs in Caching / Caching Strategies.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 165,
+    "question": "How to avoid cache stampede?",
+    "category": "Caching",
+    "subCategory": "Caching Strategies",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": " In enterprise production systems, \"How to avoid cache stampede?\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Caching / Caching Strategies, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Caching Strategies",
+        "Category: Caching",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"How to avoid cache stampede?\" maps to concrete behavior in the Caching stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Caching Strategies decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"How to avoid cache stampede?\" by explaining fundamentals, production impact, and trade-offs in Caching / Caching Strategies.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 166,
+    "question": "What is cache eviction policy?",
+    "category": "Caching",
+    "subCategory": "Caching",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": " In enterprise production systems, \"What is cache eviction policy?\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Caching / Caching, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Caching",
+        "Category: Caching",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"What is cache eviction policy?\" maps to concrete behavior in the Caching stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Caching decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"What is cache eviction policy?\" by explaining fundamentals, production impact, and trade-offs in Caching / Caching.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 167,
+    "question": "Explain LRU cache",
+    "category": "Caching",
+    "subCategory": "Caching Algorithms",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": " In enterprise production systems, \"Explain LRU cache\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Caching / Caching Algorithms, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Caching Algorithms",
+        "Category: Caching",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"Explain LRU cache\" maps to concrete behavior in the Caching stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Caching Algorithms decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"Explain LRU cache\" by explaining fundamentals, production impact, and trade-offs in Caching / Caching Algorithms.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 168,
+    "question": "How to secure REST APIs?",
+    "category": "Spring Boot",
+    "subCategory": "Spring Security",
+    "codeRequired": true,
+    "tableRequired": false,
+    "content": {
+      "explanation": "Validating request body on the server side in Spring Boot is essential for ensuring data integrity and preventing invalid data from being processed. Spring Boot provides validation support through the Jakarta Bean Validation API (JSR 380). You can add validation annotations like @NotNull, @NotBlank, @Size, @Min, @Max, @Email, @Pattern, and @Valid to your DTO classes. To enable validation, add @Valid or @Validated annotation to controller method parameters. Validation errors are automatically caught and can be handled using @ExceptionHandler or by returning a BindingResult. Understanding server-side validation is crucial for building robust APIs that reject invalid input early and provide meaningful error messages. In enterprise production systems, \"How to secure REST APIs?\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Spring Boot / Spring Security, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Spring Security",
+        "Category: Spring Boot",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"How to secure REST APIs?\" maps to concrete behavior in the Spring Boot stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Spring Security decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"How to secure REST APIs?\" by explaining fundamentals, production impact, and trade-offs in Spring Boot / Spring Security.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [
+      {
+        "title": "Solution",
+        "language": "java",
+        "code": "// DTO with validation annotations\npublic class UserDTO {\n    @NotNull(message = \"Name is required\")\n    @Size(min = 2, max = 50, message = \"Name must be between 2 and 50 characters\")\n    private String name;\n    \n    @NotBlank(message = \"Email is required\")\n    @Email(message = \"Invalid email format\")\n    private String email;\n    \n    @NotNull(message = \"Age is required\")\n    @Min(value = 18, message = \"Age must be at least 18\")\n    @Max(value = 120, message = \"Age must not exceed 120\")\n    private Integer age;\n    \n    @Pattern(regexp = \"^[A-Za-z0-9]+$\", message = \"Username must be alphanumeric\")\n    private String username;\n    \n    // Getters and setters\n}\n\n// Controller with validation\n@RestController\n@RequestMapping(\"/api/users\")\npublic class UserController {\n    \n    @PostMapping\n    public ResponseEntity<?> createUser(@Valid @RequestBody UserDTO userDTO) {\n        // If validation fails, MethodArgumentNotValidException is thrown\n        User user = userService.createUser(userDTO);\n        return ResponseEntity.status(HttpStatus.CREATED).body(user);\n    }\n    \n    // Alternative: Using BindingResult\n    @PostMapping(\"/alternative\")\n    public ResponseEntity<?> createUserAlternative(\n            @Valid @RequestBody UserDTO userDTO,\n            BindingResult bindingResult) {\n        \n        if (bindingResult.hasErrors()) {\n            List<String> errors = bindingResult.getFieldErrors()\n                .stream()\n                .map(error -> error.getField() + \": \" + error.getDefaultMessage())\n                .collect(Collectors.toList());\n            return ResponseEntity.badRequest().body(errors);\n        }\n        \n        User user = userService.createUser(userDTO);\n        return ResponseEntity.status(HttpStatus.CREATED).body(user);\n    }\n}\n\n// Custom validation annotation\n@Target({ElementType.FIELD})\n@Retention(RetentionPolicy.RUNTIME)\n@Constraint(validatedBy = PasswordValidator.class)\npublic @interface ValidPassword {\n    String message() default \"Invalid password\";\n    Class<?>[] groups() default {};\n    Class<? extends Payload>[] payload() default {};\n}\n\n// Validator implementation\npublic class PasswordValidator implements ConstraintValidator<ValidPassword, String> {\n    @Override\n    public boolean isValid(String password, ConstraintValidatorContext context) {\n        // Custom validation logic\n        return password != null && password.length() >= 8 \n            && password.matches(\".*[A-Z].*\") \n            && password.matches(\".*[0-9].*\");\n    }\n}\n\n// Global exception handler\n@RestControllerAdvice\npublic class GlobalExceptionHandler {\n    \n    @ExceptionHandler(MethodArgumentNotValidException.class)\n    public ResponseEntity<Map<String, String>> handleValidationExceptions(\n            MethodArgumentNotValidException ex) {\n        \n        Map<String, String> errors = new HashMap<>();\n        ex.getBindingResult().getFieldErrors().forEach(error -> \n            errors.put(error.getField(), error.getDefaultMessage())\n        );\n        \n        return ResponseEntity.badRequest().body(errors);\n    }\n}"
+      }
+    ],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 169,
+    "question": "What is CORS?",
+    "category": "Spring Boot",
+    "subCategory": "Spring Security",
+    "codeRequired": true,
+    "tableRequired": false,
+    "content": {
+      "explanation": "Throwing proper custom errors in Spring Boot involves creating custom exception classes, using @ResponseStatus or @ExceptionHandler to handle them, and returning meaningful error responses to clients. Spring Boot provides several ways to handle exceptions: @ResponseStatus for simple status codes, @ExceptionHandler in controllers or @ControllerAdvice for global handling, and ResponseEntity for custom responses. Best practices include: creating specific exception classes for different error scenarios, including error codes and messages, using appropriate HTTP status codes, and providing consistent error response formats. Understanding exception handling is crucial for building user-friendly APIs that communicate errors effectively and help clients handle failures gracefully. In enterprise production systems, \"What is CORS?\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Spring Boot / Spring Security, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Spring Security",
+        "Category: Spring Boot",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"What is CORS?\" maps to concrete behavior in the Spring Boot stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Spring Security decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"What is CORS?\" by explaining fundamentals, production impact, and trade-offs in Spring Boot / Spring Security.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [
+      {
+        "title": "Solution",
+        "language": "java",
+        "code": "// Custom exception class\n@ResponseStatus(HttpStatus.NOT_FOUND)\npublic class ResourceNotFoundException extends RuntimeException {\n    public ResourceNotFoundException(String message) {\n        super(message);\n    }\n}\n\n@ResponseStatus(HttpStatus.BAD_REQUEST)\npublic class ValidationException extends RuntimeException {\n    private List<String> errors;\n    \n    public ValidationException(List<String> errors) {\n        super(\"Validation failed\");\n        this.errors = errors;\n    }\n    \n    public List<String> getErrors() {\n        return errors;\n    }\n}\n\n// Error response DTO\npublic class ErrorResponse {\n    private int status;\n    private String message;\n    private LocalDateTime timestamp;\n    private String path;\n    \n    // Constructor, getters, setters\n}\n\n// Global exception handler with @ControllerAdvice\n@RestControllerAdvice\npublic class GlobalExceptionHandler {\n    \n    @ExceptionHandler(ResourceNotFoundException.class)\n    public ResponseEntity<ErrorResponse> handleResourceNotFound(\n            ResourceNotFoundException ex,\n            WebRequest request) {\n        \n        ErrorResponse error = new ErrorResponse(\n            HttpStatus.NOT_FOUND.value(),\n            ex.getMessage(),\n            LocalDateTime.now(),\n            request.getDescription(false).replace(\"uri=\", \"\")\n        );\n        \n        return new ResponseEntity<>(error, HttpStatus.NOT_FOUND);\n    }\n    \n    @ExceptionHandler(ValidationException.class)\n    public ResponseEntity<ErrorResponse> handleValidationException(\n            ValidationException ex,\n            WebRequest request) {\n        \n        ErrorResponse error = new ErrorResponse(\n            HttpStatus.BAD_REQUEST.value(),\n            String.join(\", \", ex.getErrors()),\n            LocalDateTime.now(),\n            request.getDescription(false).replace(\"uri=\", \"\")\n        );\n        \n        return new ResponseEntity<>(error, HttpStatus.BAD_REQUEST);\n    }\n    \n    @ExceptionHandler(Exception.class)\n    public ResponseEntity<ErrorResponse> handleGlobalException(\n            Exception ex,\n            WebRequest request) {\n        \n        ErrorResponse error = new ErrorResponse(\n            HttpStatus.INTERNAL_SERVER_ERROR.value(),\n            \"An unexpected error occurred\",\n            LocalDateTime.now(),\n            request.getDescription(false).replace(\"uri=\", \"\")\n        );\n        \n        return new ResponseEntity<>(error, HttpStatus.INTERNAL_SERVER_ERROR);\n    }\n}\n\n// Throwing custom exceptions in service\n@Service\npublic class UserService {\n    \n    public User findById(Long id) {\n        return userRepository.findById(id)\n            .orElseThrow(() -> new ResourceNotFoundException(\n                \"User not found with id: \" + id\n            ));\n    }\n    \n    public void createUser(UserDTO userDTO) {\n        List<String> errors = validateUser(userDTO);\n        if (!errors.isEmpty()) {\n            throw new ValidationException(errors);\n        }\n        // Create user logic\n    }\n}"
+      }
+    ],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 170,
+    "question": "Explain CSRF attack",
+    "category": "Spring Boot",
+    "subCategory": "Spring Security",
+    "codeRequired": true,
+    "tableRequired": false,
+    "content": {
+      "explanation": "Upgrading from Spring Boot 2.x to Spring 3.x requires careful planning due to significant changes. Major considerations include: 1) Java 17+ is required (Spring Boot 3 doesn't support Java 8 or 11), 2) Jakarta EE 9+ namespace changes (javax.* to jakarta.*), 3) Spring Framework 6 changes, 4) Hibernate 6+ updates, 5) Configuration property changes, 6) Deprecated feature removals, 7) Security configuration updates, 8) Testing framework changes. The upgrade process involves updating dependencies, refactoring code for namespace changes, updating configuration, and thorough testing. Understanding these changes is crucial for successful migration and avoiding runtime issues after upgrade. In enterprise production systems, \"Explain CSRF attack\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Spring Boot / Spring Security, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Spring Security",
+        "Category: Spring Boot",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"Explain CSRF attack\" maps to concrete behavior in the Spring Boot stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Spring Security decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"Explain CSRF attack\" by explaining fundamentals, production impact, and trade-offs in Spring Boot / Spring Security.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [
+      {
+        "title": "Example",
+        "language": "java",
+        "code": "// Implementation sketch for: Explain CSRF attack\npublic class Example {\n  // TODO: domain logic\n}"
+      }
+    ],
+    "queryVariations": [],
+    "tables": []
+  }
+]

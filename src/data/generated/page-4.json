@@ -1,0 +1,747 @@
+[
+  {
+    "id": 31,
+    "question": "What happens if we get OutOfMemoryError",
+    "category": "Java",
+    "subCategory": "Memory-Management",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": "Common exceptions faced in Java projects include NullPointerException (NPE) when accessing methods on null objects, ArrayIndexOutOfBoundsException when accessing invalid array indices, ClassCastException when improper type casting occurs, IllegalArgumentException when invalid arguments are passed, NumberFormatException when parsing invalid numbers, and IOException for I/O operations. Other common exceptions include SQLException for database errors, ConcurrentModificationException when modifying collections during iteration, and IllegalStateException for invalid method calls. Understanding these exceptions, their causes, and proper handling strategies is essential for building robust applications. Best practices include validating inputs, using Optional to avoid NPE, proper exception handling with try-catch-finally, and logging exceptions for debugging. In enterprise production systems, \"What happens if we get OutOfMemoryError\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Java / Memory-Management, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Memory-Management",
+        "Category: Java",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"What happens if we get OutOfMemoryError\" maps to concrete behavior in the Java stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Memory-Management decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"What happens if we get OutOfMemoryError\" by explaining fundamentals, production impact, and trade-offs in Java / Memory-Management.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 32,
+    "question": "How to perform memory cleanup",
+    "category": "Java",
+    "subCategory": "Memory-Management",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": "Reading a file from a remote location that might not be available at runtime requires robust error handling to prevent application crashes. The solution involves using try-catch blocks to handle FileNotFoundException, IOException, and other potential exceptions. Best practices include: checking if the file exists before reading, using proper resource management with try-with-resources, implementing retry logic for transient failures, providing meaningful error messages, and having fallback mechanisms. For remote files, consider using URL connections with timeouts, handling network exceptions, and implementing circuit breakers for repeated failures. This pattern is essential for building resilient applications that can handle external dependencies gracefully without crashing. In enterprise production systems, \"How to perform memory cleanup\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Java / Memory-Management, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Memory-Management",
+        "Category: Java",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"How to perform memory cleanup\" maps to concrete behavior in the Java stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Memory-Management decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"How to perform memory cleanup\" by explaining fundamentals, production impact, and trade-offs in Java / Memory-Management.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 33,
+    "question": "What exceptions have you faced in your project",
+    "category": "Java",
+    "subCategory": "Exception Handling",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": "Try-with-resources is a Java 7 feature that automatically closes resources that implement AutoCloseable interface, ensuring proper resource cleanup even when exceptions occur. It eliminates the need for explicit finally blocks to close resources, reducing boilerplate code and preventing resource leaks. The syntax uses try-with-resources statement where resources are declared in the try statement and are automatically closed when the block exits, whether normally or due to an exception. Multiple resources can be declared separated by semicolons. Resources are closed in the reverse order of their creation. This feature is essential for writing robust code that handles I/O operations, database connections, and other resources that require proper cleanup to prevent leaks and ensure system stability. In enterprise production systems, \"What exceptions have you faced in your project\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Java / Exception Handling, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Exception Handling",
+        "Category: Java",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"What exceptions have you faced in your project\" maps to concrete behavior in the Java stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Exception Handling decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"What exceptions have you faced in your project\" by explaining fundamentals, production impact, and trade-offs in Java / Exception Handling.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 34,
+    "question": "Write code to read file from remote location but file is not available at runtime and code should not break",
+    "category": "Java-coding",
+    "subCategory": "File Handling",
+    "codeRequired": true,
+    "tableRequired": false,
+    "content": {
+      "explanation": "The Object class in Java is the root of the class hierarchy and provides several fundamental methods that all classes inherit. Key methods include: getClass() returns the runtime class of the object, hashCode() returns a hash code value for the object, equals() indicates whether some other object is \"equal to\" this one, clone() creates and returns a copy of the object, toString() returns a string representation of the object, notify() wakes up a single thread waiting on the object's monitor, notifyAll() wakes up all threads waiting on the object's monitor, wait() causes the current thread to wait until another thread invokes notify() or notifyAll(), and finalize() is called by the garbage collector before an object is reclaimed. Understanding these methods is crucial for implementing proper object behavior, especially equals() and hashCode() for collections, and toString() for debugging. In enterprise production systems, \"Write code to read file from remote location but file is not available at runtime and code should not break\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Java-coding / File Handling, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: File Handling",
+        "Category: Java-coding",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example",
+        "Time: O(n) typical",
+        "Space: O(n) for auxiliary structures",
+        "Edge cases: empty input, duplicates"
+      ],
+      "internalWorking": "At runtime, \"Write code to read file from remote location but file is not available at runtime and code should not break\" maps to concrete behavior in the Java-coding stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where File Handling decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"Write code to read file from remote location but file is not available at runtime and code should not break\" by explaining fundamentals, production impact, and trade-offs in Java-coding / File Handling.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [
+      {
+        "title": "Complete Solution",
+        "language": "java",
+        "code": "public class Example {\n    private int id;\n    private String name;\n    \n    // getClass() - returns runtime class\n    public void printClass() {\n        System.out.println(this.getClass().getName());\n    }\n    \n    // equals() - should be overridden with hashCode()\n    @Override\n    public boolean equals(Object obj) {\n        if (this == obj) return true;\n        if (obj == null || getClass() != obj.getClass()) return false;\n        Example example = (Example) obj;\n        return id == example.id && Objects.equals(name, example.name);\n    }\n    \n    // hashCode() - should be overridden with equals()\n    @Override\n    public int hashCode() {\n        return Objects.hash(id, name);\n    }\n    \n    // toString() - for debugging\n    @Override\n    public String toString() {\n        return \"Example{id=\" + id + \", name='\" + name + \"'}\";\n    }\n    \n    // clone() - must implement Cloneable\n    @Override\n    protected Object clone() throws CloneNotSupportedException {\n        return super.clone();\n    }\n    \n    // Thread communication methods\n    public synchronized void waitForSignal() throws InterruptedException {\n        wait(); // releases lock\n    }\n    \n    public synchronized void sendSignal() {\n        notify(); // wakes up one waiting thread\n    }\n    \n    public synchronized void sendSignalToAll() {\n        notifyAll(); // wakes up all waiting threads\n    }\n}"
+      }
+    ],
+    "queryVariations": [],
+    "tables": [
+      {
+        "title": "Comparison Table",
+        "headers": [
+          "Method",
+          "Purpose",
+          "Override Required"
+        ],
+        "rows": [
+          [
+            "getClass()",
+            "Get runtime class",
+            "No"
+          ],
+          [
+            "hashCode()",
+            "Get hash code",
+            "Yes (with equals)"
+          ],
+          [
+            "equals()",
+            "Compare objects",
+            "Yes (with hashCode)"
+          ],
+          [
+            "clone()",
+            "Create copy",
+            "Yes (implement Cloneable)"
+          ],
+          [
+            "toString()",
+            "String representation",
+            "Recommended"
+          ],
+          [
+            "notify()",
+            "Wake one thread",
+            "No"
+          ],
+          [
+            "notifyAll()",
+            "Wake all threads",
+            "No"
+          ],
+          [
+            "wait()",
+            "Wait for signal",
+            "No"
+          ],
+          [
+            "finalize()",
+            "Cleanup before GC",
+            "Deprecated"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "question": "Explain try with resources",
+    "category": "Java",
+    "subCategory": "Exception Handling",
+    "codeRequired": true,
+    "tableRequired": false,
+    "content": {
+      "explanation": "The contract between equals() and hashCode() in Java is a fundamental requirement for objects used in hash-based collections like HashMap, HashSet, and Hashtable. The contract states that if two objects are equal according to equals(), they must return the same hashCode(). However, two objects with the same hashCode() are not necessarily equal. Violating this contract leads to unpredictable behavior in collections, such as duplicate entries in sets or inability to retrieve values from maps. When overriding equals(), you must also override hashCode() to maintain this contract. The hashCode() method should use the same fields that equals() uses for comparison. Understanding this contract is essential for implementing custom classes that work correctly with Java's collection framework. In enterprise production systems, \"Explain try with resources\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Java / Exception Handling, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Exception Handling",
+        "Category: Java",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"Explain try with resources\" maps to concrete behavior in the Java stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Exception Handling decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"Explain try with resources\" by explaining fundamentals, production impact, and trade-offs in Java / Exception Handling.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [
+      {
+        "title": "Example",
+        "language": "java",
+        "code": "// Implementation sketch for: Explain try with resources\npublic class Example {\n  // TODO: domain logic\n}"
+      }
+    ],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 36,
+    "question": "Explain available methods inside Object class",
+    "category": "Java",
+    "subCategory": "OOPS",
+    "codeRequired": true,
+    "tableRequired": true,
+    "content": {
+      "explanation": "The difference between == and equals() in Java is a fundamental concept that often confuses beginners. The == operator compares object references, checking if two references point to the same object in memory (reference equality). The equals() method compares object contents, checking if two objects are logically equivalent (value equality). For primitive types, == compares values directly. For objects, == compares references unless the class overrides equals() to compare contents. The String class overrides equals() to compare character sequences, so \"hello\".equals(\"hello\") returns true even if they're different objects. Understanding this distinction is crucial for proper object comparison and avoiding bugs in conditional logic and collection operations. In enterprise production systems, \"Explain available methods inside Object class\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Java / OOPS, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: OOPS",
+        "Category: Java",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"Explain available methods inside Object class\" maps to concrete behavior in the Java stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where OOPS decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"Explain available methods inside Object class\" by explaining fundamentals, production impact, and trade-offs in Java / OOPS.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [
+      {
+        "title": "Example",
+        "language": "java",
+        "code": "// Implementation sketch for: Explain available methods inside Object class\npublic class Example {\n  // TODO: domain logic\n}"
+      }
+    ],
+    "queryVariations": [],
+    "tables": [
+      {
+        "title": "Comparison Table",
+        "headers": [
+          "Aspect",
+          "== Operator",
+          "equals() Method"
+        ],
+        "rows": [
+          [
+            "Comparison Type",
+            "Reference equality",
+            "Value equality"
+          ],
+          [
+            "Primitives",
+            "Compares values",
+            "Not applicable"
+          ],
+          [
+            "Objects",
+            "Compares references",
+            "Compares contents (if overridden)"
+          ],
+          [
+            "String",
+            "Compares references",
+            "Compares characters"
+          ],
+          [
+            "Override",
+            "Cannot override",
+            "Can override"
+          ],
+          [
+            "Default Behavior",
+            "Reference comparison",
+            "Reference comparison (Object class)"
+          ],
+          [
+            "Use Case",
+            "Null checks, singleton",
+            "Content comparison"
+          ],
+          [
+            "Example",
+            "str1 == str2",
+            "str1.equals(str2)"
+          ]
+        ]
+      },
+      {
+        "title": "Java Comparison",
+        "headers": [
+          "Aspect",
+          "Option A",
+          "Option B"
+        ],
+        "rows": [
+          [
+            "Use case",
+            "Structured transactional data",
+            "High-scale flexible schema"
+          ],
+          [
+            "Consistency",
+            "Strong (ACID)",
+            "Configurable / eventual"
+          ],
+          [
+            "Scalability",
+            "Vertical + read replicas",
+            "Horizontal sharding"
+          ],
+          [
+            "Complexity",
+            "JOINs & migrations",
+            "Denormalized documents"
+          ],
+          [
+            "Interview tip",
+            "Lead with requirements",
+            "Mention polyglot persistence"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "question": "Explain contract between equals and hashCode",
+    "category": "Java",
+    "subCategory": "OOPs",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": "An immutable class in Java is a class whose instances cannot be modified after creation. Once an immutable object is created, its state remains constant throughout its lifetime. Key characteristics include: all fields are final and private, no setter methods, defensive copying of mutable fields in constructors and getters, the class is declared final to prevent subclassing, and proper equals() and hashCode() implementation. Immutable objects are thread-safe by design, have no synchronization overhead, can be safely shared, and make good map keys and set elements. Examples include String, Integer, and other wrapper classes. Understanding immutability is important for designing thread-safe applications and reducing bugs related to unexpected state changes. In enterprise production systems, \"Explain contract between equals and hashCode\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Java / OOPs, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: OOPs",
+        "Category: Java",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"Explain contract between equals and hashCode\" maps to concrete behavior in the Java stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where OOPs decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"Explain contract between equals and hashCode\" by explaining fundamentals, production impact, and trade-offs in Java / OOPs.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 38,
+    "question": "Explain difference between == and equals method",
+    "category": "Java",
+    "subCategory": "OOPs",
+    "codeRequired": false,
+    "tableRequired": true,
+    "content": {
+      "explanation": "Creating a custom immutable class in Java requires following specific design patterns to ensure true immutability. The class should be declared final to prevent inheritance, all fields should be private and final, the constructor should initialize all fields (including defensive copies of mutable objects), getter methods should return defensive copies of mutable fields, and there should be no setter methods. Additionally, properly override equals(), hashCode(), and toString() methods. This pattern ensures thread safety, prevents accidental modification, and makes the class suitable for use as keys in collections. Understanding how to create immutable classes is essential for building robust, thread-safe applications. In enterprise production systems, \"Explain difference between == and equals method\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Java / OOPs, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: OOPs",
+        "Category: Java",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"Explain difference between == and equals method\" maps to concrete behavior in the Java stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where OOPs decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"Explain difference between == and equals method\" by explaining fundamentals, production impact, and trade-offs in Java / OOPs.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": [
+      {
+        "title": "Java Comparison",
+        "headers": [
+          "Aspect",
+          "Option A",
+          "Option B"
+        ],
+        "rows": [
+          [
+            "Use case",
+            "Structured transactional data",
+            "High-scale flexible schema"
+          ],
+          [
+            "Consistency",
+            "Strong (ACID)",
+            "Configurable / eventual"
+          ],
+          [
+            "Scalability",
+            "Vertical + read replicas",
+            "Horizontal sharding"
+          ],
+          [
+            "Complexity",
+            "JOINs & migrations",
+            "Denormalized documents"
+          ],
+          [
+            "Interview tip",
+            "Lead with requirements",
+            "Mention polyglot persistence"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "question": "Explain immutable class",
+    "category": "Java",
+    "subCategory": "OOPs",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": "String, StringBuffer, and StringBuilder in Java are all used for string manipulation but have different characteristics. String is immutable, meaning once created, its value cannot be changed. String operations create new String objects, which can be inefficient for frequent modifications. StringBuffer is mutable and thread-safe due to synchronized methods, making it suitable for multi-threaded environments but with performance overhead. StringBuilder is mutable like StringBuffer but not thread-safe, making it faster for single-threaded scenarios. StringBuffer and StringBuilder both provide methods like append(), insert(), delete(), and reverse() for in-place modifications. Choosing the right class depends on whether immutability is needed (String), thread safety is required (StringBuffer), or performance is critical in single-threaded context (StringBuilder). In enterprise production systems, \"Explain immutable class\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Java / OOPs, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: OOPs",
+        "Category: Java",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"Explain immutable class\" maps to concrete behavior in the Java stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where OOPs decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"Explain immutable class\" by explaining fundamentals, production impact, and trade-offs in Java / OOPs.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": [
+      {
+        "title": "Comparison Table",
+        "headers": [
+          "Feature",
+          "String",
+          "StringBuffer",
+          "StringBuilder"
+        ],
+        "rows": [
+          [
+            "Mutability",
+            "Immutable",
+            "Mutable",
+            "Mutable"
+          ],
+          [
+            "Thread Safety",
+            "Thread-safe",
+            "Thread-safe",
+            "Not thread-safe"
+          ],
+          [
+            "Performance",
+            "Slow for modifications",
+            "Moderate",
+            "Fast"
+          ],
+          [
+            "Synchronization",
+            "N/A",
+            "Yes",
+            "No"
+          ],
+          [
+            "Use Case",
+            "Constants, keys",
+            "Multi-threaded",
+            "Single-threaded"
+          ],
+          [
+            "Memory",
+            "Creates new objects",
+            "Modifies in-place",
+            "Modifies in-place"
+          ],
+          [
+            "Introduced",
+            "Java 1.0",
+            "Java 1.0",
+            "Java 1.5"
+          ],
+          [
+            "Example",
+            "String s = \"hello\"",
+            "StringBuffer sb = new StringBuffer()",
+            "StringBuilder sb = new StringBuilder()"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "question": "Write custom immutable class",
+    "category": "Java",
+    "subCategory": "OOPs",
+    "codeRequired": true,
+    "tableRequired": false,
+    "content": {
+      "explanation": "Note: This question ID was skipped in the original data. Please verify the correct question ID. In enterprise production systems, \"Write custom immutable class\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Java / OOPs, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: OOPs",
+        "Category: Java",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"Write custom immutable class\" maps to concrete behavior in the Java stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where OOPs decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"Write custom immutable class\" by explaining fundamentals, production impact, and trade-offs in Java / OOPs.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [
+      {
+        "title": "Example",
+        "language": "java",
+        "code": "// Implementation sketch for: Write custom immutable class\npublic class Example {\n  // TODO: domain logic\n}"
+      }
+    ],
+    "queryVariations": [],
+    "tables": []
+  }
+]

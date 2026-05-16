@@ -1,0 +1,572 @@
+[
+  {
+    "id": 281,
+    "question": "What is content negotiation in REST APIs?",
+    "category": "REST APIs",
+    "subCategory": "HTTP",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": " In enterprise production systems, \"What is content negotiation in REST APIs?\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For REST APIs / HTTP, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: HTTP",
+        "Category: REST APIs",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"What is content negotiation in REST APIs?\" maps to concrete behavior in the REST APIs stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where HTTP decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"What is content negotiation in REST APIs?\" by explaining fundamentals, production impact, and trade-offs in REST APIs / HTTP.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 282,
+    "question": "Explain ETag and caching in REST APIs",
+    "category": "REST APIs",
+    "subCategory": "Caching",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": " In enterprise production systems, \"Explain ETag and caching in REST APIs\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For REST APIs / Caching, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Caching",
+        "Category: REST APIs",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"Explain ETag and caching in REST APIs\" maps to concrete behavior in the REST APIs stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Caching decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"Explain ETag and caching in REST APIs\" by explaining fundamentals, production impact, and trade-offs in REST APIs / Caching.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 283,
+    "question": "What is React and why is it used?",
+    "category": "React",
+    "subCategory": "Basics",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": " In enterprise production systems, \"What is React and why is it used?\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For React / Basics, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Basics",
+        "Category: React",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"What is React and why is it used?\" maps to concrete behavior in the React stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Basics decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"What is React and why is it used?\" by explaining fundamentals, production impact, and trade-offs in React / Basics.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 284,
+    "question": "What is Virtual DOM in React?",
+    "category": "React",
+    "subCategory": "Rendering",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": " In enterprise production systems, \"What is Virtual DOM in React?\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For React / Rendering, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Rendering",
+        "Category: React",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"What is Virtual DOM in React?\" maps to concrete behavior in the React stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Rendering decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"What is Virtual DOM in React?\" by explaining fundamentals, production impact, and trade-offs in React / Rendering.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 285,
+    "question": "Difference between Virtual DOM and Real DOM",
+    "category": "React",
+    "subCategory": "Rendering",
+    "codeRequired": false,
+    "tableRequired": true,
+    "content": {
+      "explanation": " In enterprise production systems, \"Difference between Virtual DOM and Real DOM\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For React / Rendering, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Rendering",
+        "Category: React",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"Difference between Virtual DOM and Real DOM\" maps to concrete behavior in the React stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Rendering decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"Difference between Virtual DOM and Real DOM\" by explaining fundamentals, production impact, and trade-offs in React / Rendering.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": [
+      {
+        "title": "React Comparison",
+        "headers": [
+          "Aspect",
+          "Option A",
+          "Option B"
+        ],
+        "rows": [
+          [
+            "Use case",
+            "Structured transactional data",
+            "High-scale flexible schema"
+          ],
+          [
+            "Consistency",
+            "Strong (ACID)",
+            "Configurable / eventual"
+          ],
+          [
+            "Scalability",
+            "Vertical + read replicas",
+            "Horizontal sharding"
+          ],
+          [
+            "Complexity",
+            "JOINs & migrations",
+            "Denormalized documents"
+          ],
+          [
+            "Interview tip",
+            "Lead with requirements",
+            "Mention polyglot persistence"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": 286,
+    "question": "What are React components?",
+    "category": "React",
+    "subCategory": "Components",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": " In enterprise production systems, \"What are React components?\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For React / Components, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Components",
+        "Category: React",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"What are React components?\" maps to concrete behavior in the React stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Components decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"What are React components?\" by explaining fundamentals, production impact, and trade-offs in React / Components.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 287,
+    "question": "Functional component vs class component",
+    "category": "React",
+    "subCategory": "Components",
+    "codeRequired": false,
+    "tableRequired": true,
+    "content": {
+      "explanation": " In enterprise production systems, \"Functional component vs class component\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For React / Components, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Components",
+        "Category: React",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"Functional component vs class component\" maps to concrete behavior in the React stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Components decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"Functional component vs class component\" by explaining fundamentals, production impact, and trade-offs in React / Components.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": [
+      {
+        "title": "React Comparison",
+        "headers": [
+          "Aspect",
+          "Option A",
+          "Option B"
+        ],
+        "rows": [
+          [
+            "Use case",
+            "Structured transactional data",
+            "High-scale flexible schema"
+          ],
+          [
+            "Consistency",
+            "Strong (ACID)",
+            "Configurable / eventual"
+          ],
+          [
+            "Scalability",
+            "Vertical + read replicas",
+            "Horizontal sharding"
+          ],
+          [
+            "Complexity",
+            "JOINs & migrations",
+            "Denormalized documents"
+          ],
+          [
+            "Interview tip",
+            "Lead with requirements",
+            "Mention polyglot persistence"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": 288,
+    "question": "What are props in React?",
+    "category": "React",
+    "subCategory": "Components",
+    "codeRequired": true,
+    "tableRequired": false,
+    "content": {
+      "explanation": " In enterprise production systems, \"What are props in React?\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For React / Components, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Components",
+        "Category: React",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"What are props in React?\" maps to concrete behavior in the React stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Components decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"What are props in React?\" by explaining fundamentals, production impact, and trade-offs in React / Components.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [
+      {
+        "title": "Example",
+        "language": "java",
+        "code": "// Implementation sketch for: What are props in React?\npublic class Example {\n  // TODO: domain logic\n}"
+      }
+    ],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 289,
+    "question": "What is state in React?",
+    "category": "React",
+    "subCategory": "State Management",
+    "codeRequired": true,
+    "tableRequired": false,
+    "content": {
+      "explanation": " In enterprise production systems, \"What is state in React?\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For React / State Management, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: State Management",
+        "Category: React",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"What is state in React?\" maps to concrete behavior in the React stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where State Management decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"What is state in React?\" by explaining fundamentals, production impact, and trade-offs in React / State Management.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [
+      {
+        "title": "Example",
+        "language": "java",
+        "code": "// Implementation sketch for: What is state in React?\npublic class Example {\n  // TODO: domain logic\n}"
+      }
+    ],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 290,
+    "question": "Explain useState hook",
+    "category": "React",
+    "subCategory": "Hooks",
+    "codeRequired": true,
+    "tableRequired": false,
+    "content": {
+      "explanation": " In enterprise production systems, \"Explain useState hook\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For React / Hooks, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Hooks",
+        "Category: React",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"Explain useState hook\" maps to concrete behavior in the React stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Hooks decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"Explain useState hook\" by explaining fundamentals, production impact, and trade-offs in React / Hooks.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [
+      {
+        "title": "Example",
+        "language": "java",
+        "code": "// Implementation sketch for: Explain useState hook\npublic class Example {\n  // TODO: domain logic\n}"
+      }
+    ],
+    "queryVariations": [],
+    "tables": []
+  }
+]

@@ -1,117 +1,72 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/JavaCodeAnimation.css';
 
-const javaCode = `public class HelloWorld {
-    public static void main(String[] args) {
-        System.out.println("Hello, World!");
-        
-        // Create a simple object
-        Person person = new Person("Abhay");
-        person.greet();
-        
-        // Using Stream API
-        List<String> names = Arrays.asList("Java", "Spring", "React");
-        names.stream()
-             .filter(name -> name.length() > 4)
-             .forEach(System.out::println);
-    }
-}
-
-class Person {
-    private String name;
-    
-    public Person(String name) {
-        this.name = name;
-    }
-    
-    public void greet() {
-        System.out.println("Hello, " + name + "!");
-    }
+const javaCode = `public class Main {
+  public static void main(String[] args) {
+    String name = "Abhay";
+    System.out.println("Hello, " + name + "!");
+    System.out.println("FS Master — Java Prep");
+  }
 }`;
+
+const runOutput = 'Hello, Abhay!\nFS Master — Java Prep\nProcess finished. exit 0';
 
 export default function JavaCodeAnimation() {
   const [displayedCode, setDisplayedCode] = useState('');
-  const [phase, setPhase] = useState('typing'); // typing, compiling, running
+  const [phase, setPhase] = useState('typing');
   const [output, setOutput] = useState('');
 
   useEffect(() => {
-    let charIndex = 0;
-    let outputIndex = 0;
-
     if (phase === 'typing') {
+      let i = 0;
       const typingInterval = setInterval(() => {
-        if (charIndex < javaCode.length) {
-          setDisplayedCode((prev) => prev + javaCode[charIndex]);
-          charIndex++;
+        if (i < javaCode.length) {
+          setDisplayedCode(javaCode.slice(0, i + 1));
+          i += 1;
         } else {
           clearInterval(typingInterval);
-          setPhase('compiling');
-          setTimeout(() => setPhase('running'), 1500);
+          setTimeout(() => setPhase('running'), 600);
         }
-      }, 15);
-
+      }, 25);
       return () => clearInterval(typingInterval);
-    } else if (phase === 'running') {
-      const runOutput = [
-        'Compiling...',
-        'Build Success!',
-        'Running HelloWorld...',
-        'Hello, World!',
-        'Hello, Abhay!',
-        'Spring',
-        'Program exited with code 0'
-      ];
+    }
 
-      const outputInterval = setInterval(() => {
-        if (outputIndex < runOutput.length) {
-          setOutput((prev) => prev + runOutput[outputIndex] + '\n');
-          outputIndex++;
-        } else {
-          clearInterval(outputInterval);
-          // Reset after a delay
-          setTimeout(() => {
-            setDisplayedCode('');
-            setOutput('');
-            setPhase('typing');
-          }, 3000);
-        }
-      }, 500);
-
-      return () => clearInterval(outputInterval);
+    if (phase === 'running') {
+      setOutput(runOutput);
+      const resetTimer = setTimeout(() => {
+        setDisplayedCode('');
+        setOutput('');
+        setPhase('typing');
+      }, 2800);
+      return () => clearTimeout(resetTimer);
     }
   }, [phase]);
 
   return (
-    <div className="code-animation-container">
+    <div className="code-animation-container code-animation-compact">
       <div className="code-window">
         <div className="code-window-header">
           <div className="window-dots">
-            <span className="dot red"></span>
-            <span className="dot yellow"></span>
-            <span className="dot green"></span>
+            <span className="dot red" />
+            <span className="dot yellow" />
+            <span className="dot green" />
           </div>
-          <span className="window-title">HelloWorld.java</span>
+          <span className="window-title">Main.java</span>
         </div>
         <div className="code-content">
           <pre className="code-text">
             <code>{displayedCode}</code>
-            <span className="cursor">|</span>
+            {phase === 'typing' && <span className="cursor">|</span>}
           </pre>
         </div>
+        {phase === 'running' && (
+          <div className="code-output-bar">
+            <pre className="code-output-text">{output}</pre>
+          </div>
+        )}
       </div>
-      {phase === 'running' && (
-        <div className="terminal-window">
-          <div className="terminal-header">
-            <span className="terminal-title">Terminal</span>
-          </div>
-          <div className="terminal-content">
-            <pre className="terminal-text">{output}</pre>
-          </div>
-        </div>
-      )}
       <div className="phase-indicator">
         <span className={`phase ${phase === 'typing' ? 'active' : ''}`}>Typing</span>
-        <span className={`phase ${phase === 'compiling' ? 'active' : ''}`}>Compiling</span>
         <span className={`phase ${phase === 'running' ? 'active' : ''}`}>Running</span>
       </div>
     </div>

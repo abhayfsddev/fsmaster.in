@@ -1,0 +1,640 @@
+[
+  {
+    "id": 11,
+    "question": "Hibernate VS JPA",
+    "category": "Hibernate",
+    "subCategory": "ORM",
+    "codeRequired": false,
+    "tableRequired": true,
+    "content": {
+      "explanation": "In Hibernate, methods like findByName() or findByNameAndSalary() will work if you're using Spring Data JPA's query derivation mechanism. Spring Data JPA can automatically generate query implementations based on method names following specific naming conventions. For findByName(), it generates a query that finds entities by the name field. For findByNameAndSalary(), it generates a query with AND conditions for both fields. This works as long as the entity has corresponding fields with those names. The method name must start with find, read, query, count, or get, followed by the field names. You can also add keywords like And, Or, Between, LessThan, GreaterThan, Like, etc., to build complex queries. This feature reduces boilerplate code and makes repository interfaces more declarative and readable. In enterprise production systems, \"Hibernate VS JPA\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Hibernate / ORM, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: ORM",
+        "Category: Hibernate",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"Hibernate VS JPA\" maps to concrete behavior in the Hibernate stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where ORM decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"Hibernate VS JPA\" by explaining fundamentals, production impact, and trade-offs in Hibernate / ORM.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": [
+      {
+        "title": "Hibernate Comparison",
+        "headers": [
+          "Aspect",
+          "Option A",
+          "Option B"
+        ],
+        "rows": [
+          [
+            "Use case",
+            "Structured transactional data",
+            "High-scale flexible schema"
+          ],
+          [
+            "Consistency",
+            "Strong (ACID)",
+            "Configurable / eventual"
+          ],
+          [
+            "Scalability",
+            "Vertical + read replicas",
+            "Horizontal sharding"
+          ],
+          [
+            "Complexity",
+            "JOINs & migrations",
+            "Denormalized documents"
+          ],
+          [
+            "Interview tip",
+            "Lead with requirements",
+            "Mention polyglot persistence"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "question": "FindByName() or FindByNameAndSalary() will work in hibernate or not",
+    "category": "Hibernate",
+    "subCategory": "Repository Methods",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": "Connecting Spring Boot with a database is straightforward thanks to Spring Boot's auto-configuration and starter dependencies. The process involves adding the appropriate database driver dependency (like MySQL, PostgreSQL, H2), configuring database connection properties in application.properties or application.yml, and using Spring Data JPA repositories for data access. Spring Boot automatically configures the DataSource, EntityManagerFactory, and TransactionManager based on the dependencies and configuration. You can use H2 for in-memory databases during development and switch to production databases like MySQL or PostgreSQL with minimal configuration changes. Spring Boot also supports connection pooling via HikariCP (default) or other pooling libraries. Understanding database configuration in Spring Boot is essential for building data-driven applications and managing database connections efficiently. In enterprise production systems, \"FindByName() or FindByNameAndSalary() will work in hibernate or not\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Hibernate / Repository Methods, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Repository Methods",
+        "Category: Hibernate",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"FindByName() or FindByNameAndSalary() will work in hibernate or not\" maps to concrete behavior in the Hibernate stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Repository Methods decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"FindByName() or FindByNameAndSalary() will work in hibernate or not\" by explaining fundamentals, production impact, and trade-offs in Hibernate / Repository Methods.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 13,
+    "question": "How to connect Spring boot with database",
+    "category": "Spring Boot",
+    "subCategory": "JPA",
+    "codeRequired": true,
+    "tableRequired": false,
+    "content": {
+      "explanation": "The Criteria API in JPA provides a programmatic way to build type-safe queries without writing JPQL strings. It's particularly useful when you need to build dynamic queries based on user input or complex conditions. The Criteria API uses a set of Java classes to construct queries programmatically, allowing you to build queries step by step with compile-time checking. This eliminates the risk of SQL injection and makes refactoring easier since field names are checked at compile time. The API includes CriteriaBuilder for creating criteria queries, CriteriaQuery for defining the query structure, Root for specifying the entity type, and various expression methods for building conditions. While more verbose than JPQL, the Criteria API offers better type safety and is ideal for complex, dynamic query scenarios. In enterprise production systems, \"How to connect Spring boot with database\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Spring Boot / JPA, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: JPA",
+        "Category: Spring Boot",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"How to connect Spring boot with database\" maps to concrete behavior in the Spring Boot stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where JPA decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"How to connect Spring boot with database\" by explaining fundamentals, production impact, and trade-offs in Spring Boot / JPA.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [
+      {
+        "title": "Solution",
+        "language": "java",
+        "code": "// Criteria API Example\n@Repository\npublic class EmployeeRepositoryImpl {\n    \n    @PersistenceContext\n    private EntityManager entityManager;\n    \n    public List<Employee> findEmployeesByCriteria(String name, BigDecimal minSalary) {\n        CriteriaBuilder cb = entityManager.getCriteriaBuilder();\n        CriteriaQuery<Employee> query = cb.createQuery(Employee.class);\n        Root<Employee> employee = query.from(Employee.class);\n        \n        List<Predicate> predicates = new ArrayList<>();\n        \n        if (name != null && !name.isEmpty()) {\n            predicates.add(cb.like(\n                cb.lower(employee.get(\"name\")), \n                \"%\" + name.toLowerCase() + \"%\"\n            ));\n        }\n        \n        if (minSalary != null) {\n            predicates.add(cb.greaterThanOrEqualTo(\n                employee.get(\"salary\"), \n                minSalary\n            ));\n        }\n        \n        query.where(predicates.toArray(new Predicate[0]));\n        \n        return entityManager.createQuery(query).getResultList();\n    }\n    \n    public List<Employee> findEmployeesWithJoinFetch() {\n        CriteriaBuilder cb = entityManager.getCriteriaBuilder();\n        CriteriaQuery<Employee> query = cb.createQuery(Employee.class);\n        Root<Employee> employee = query.from(Employee.class);\n        \n        employee.fetch(\"department\", JoinType.INNER);\n        \n        return entityManager.createQuery(query).getResultList();\n    }\n    \n    public Long countEmployeesByDepartment(Long departmentId) {\n        CriteriaBuilder cb = entityManager.getCriteriaBuilder();\n        CriteriaQuery<Long> query = cb.createQuery(Long.class);\n        Root<Employee> employee = query.from(Employee.class);\n        \n        query.select(cb.count(employee))\n             .where(cb.equal(employee.get(\"department\").get(\"id\"), departmentId));\n        \n        return entityManager.createQuery(query).getSingleResult();\n    }\n}"
+      }
+    ],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 14,
+    "question": "Explain Criteria API",
+    "category": "Spring Boot",
+    "subCategory": "JPA",
+    "codeRequired": true,
+    "tableRequired": false,
+    "content": {
+      "explanation": "Writing native SQL queries in JPA is sometimes necessary when you need to use database-specific features, optimize performance, or execute complex queries that are difficult to express in JPQL. JPA provides the @NamedNativeQuery annotation for defining native queries at the entity level, and the createNativeQuery() method in EntityManager for dynamic native queries. Native queries can return entities, scalar values, or custom result sets using @SqlResultSetMapping. While native queries offer flexibility and performance benefits, they lose database portability and type safety. It's important to use native queries judiciously and prefer JPQL or Criteria API when possible. When using native queries, be aware of SQL injection risks and use parameter binding instead of string concatenation. In enterprise production systems, \"Explain Criteria API\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Spring Boot / JPA, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: JPA",
+        "Category: Spring Boot",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"Explain Criteria API\" maps to concrete behavior in the Spring Boot stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where JPA decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"Explain Criteria API\" by explaining fundamentals, production impact, and trade-offs in Spring Boot / JPA.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [
+      {
+        "title": "Solution",
+        "language": "sql",
+        "code": "// Using @NamedNativeQuery\n@Entity\n@NamedNativeQuery(\n    name = \"Employee.findHighSalary\",\n    query = \"SELECT * FROM employees WHERE salary > ?1\",\n    resultClass = Employee.class\n)\npublic class Employee {\n    @Id\n    private Long id;\n    private String name;\n    private BigDecimal salary;\n}\n\n// Using EntityManager.createNativeQuery()\n@Repository\npublic class EmployeeRepository {\n    \n    @PersistenceContext\n    private EntityManager entityManager;\n    \n    public List<Employee> findHighSalaryEmployees(BigDecimal threshold) {\n        String sql = \"SELECT * FROM employees WHERE salary > :threshold\";\n        Query query = entityManager.createNativeQuery(sql, Employee.class);\n        query.setParameter(\"threshold\", threshold);\n        return query.getResultList();\n    }\n    \n    public List<Object[]> getEmployeeStatistics() {\n        String sql = \"SELECT department_id, COUNT(*), AVG(salary) \" +\n                    \"FROM employees GROUP BY department_id\";\n        Query query = entityManager.createNativeQuery(sql);\n        return query.getResultList();\n    }\n    \n    // Using @SqlResultSetMapping for custom results\n    @SqlResultSetMapping(\n        name = \"EmployeeStatsMapping\",\n        classes = {\n            @ConstructorResult(\n                targetClass = EmployeeStats.class,\n                columns = {\n                    @ColumnResult(name = \"dept_id\", type = Long.class),\n                    @ColumnResult(name = \"emp_count\", type = Long.class),\n                    @ColumnResult(name = \"avg_salary\", type = BigDecimal.class)\n                }\n            )\n        }\n    )\n    \n    public List<EmployeeStats> getEmployeeStatsWithMapping() {\n        String sql = \"SELECT department_id as dept_id, \" +\n                    \"COUNT(*) as emp_count, AVG(salary) as avg_salary \" +\n                    \"FROM employees GROUP BY department_id\";\n        \n        Query query = entityManager.createNativeQuery(sql, \"EmployeeStatsMapping\");\n        return query.getResultList();\n    }\n}"
+      }
+    ],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 15,
+    "question": "How to write native query in JPA",
+    "category": "Spring Boot",
+    "subCategory": "JPA",
+    "codeRequired": true,
+    "tableRequired": false,
+    "content": {
+      "explanation": "Connecting to multiple databases in a single Spring Boot service is a common requirement for applications that need to access data from different data sources, such as legacy databases, reporting databases, or microservices architectures. Spring Boot supports multiple DataSources through configuration classes that define separate DataSource beans, EntityManagerFactory beans, and TransactionManager beans for each database. Each repository needs to be associated with a specific EntityManager using the @EnableJpaRepositories annotation. This approach allows you to partition your repositories by database and manage transactions separately for each data source. Key considerations include transaction management across multiple databases, connection pooling configuration, and ensuring proper isolation between different data sources. Understanding multi-database configuration is essential for complex enterprise applications. In enterprise production systems, \"How to write native query in JPA\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Spring Boot / JPA, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: JPA",
+        "Category: Spring Boot",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"How to write native query in JPA\" maps to concrete behavior in the Spring Boot stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where JPA decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"How to write native query in JPA\" by explaining fundamentals, production impact, and trade-offs in Spring Boot / JPA.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [
+      {
+        "title": "Solution",
+        "language": "java",
+        "code": "// Primary Database Configuration\n@Configuration\n@EnableJpaRepositories(\n    basePackages = \"com.example.repository.primary\",\n    entityManagerFactoryRef = \"primaryEntityManagerFactory\",\n    transactionManagerRef = \"primaryTransactionManager\"\n)\npublic class PrimaryDbConfig {\n    \n    @Primary\n    @Bean\n    @ConfigurationProperties(prefix = \"spring.datasource.primary\")\n    public DataSource primaryDataSource() {\n        return DataSourceBuilder.create().build();\n    }\n    \n    @Primary\n    @Bean\n    public LocalContainerEntityManagerFactoryBean primaryEntityManagerFactory(\n            DataSource primaryDataSource) {\n        \n        LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();\n        em.setDataSource(primaryDataSource);\n        em.setPackagesToScan(\"com.example.entity.primary\");\n        em.setJpaVendorAdapter(new HibernateJpaVendorAdapter());\n        return em;\n    }\n    \n    @Primary\n    @Bean\n    public PlatformTransactionManager primaryTransactionManager(\n            EntityManagerFactory primaryEntityManagerFactory) {\n        return new JpaTransactionManager(primaryEntityManagerFactory);\n    }\n}\n\n// Secondary Database Configuration\n@Configuration\n@EnableJpaRepositories(\n    basePackages = \"com.example.repository.secondary\",\n    entityManagerFactoryRef = \"secondaryEntityManagerFactory\",\n    transactionManagerRef = \"secondaryTransactionManager\"\n)\npublic class SecondaryDbConfig {\n    \n    @Bean\n    @ConfigurationProperties(prefix = \"spring.datasource.secondary\")\n    public DataSource secondaryDataSource() {\n        return DataSourceBuilder.create().build();\n    }\n    \n    @Bean\n    public LocalContainerEntityManagerFactoryBean secondaryEntityManagerFactory(\n            DataSource secondaryDataSource) {\n        \n        LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();\n        em.setDataSource(secondaryDataSource);\n        em.setPackagesToScan(\"com.example.entity.secondary\");\n        em.setJpaVendorAdapter(new HibernateJpaVendorAdapter());\n        return em;\n    }\n    \n    @Bean\n    public PlatformTransactionManager secondaryTransactionManager(\n            EntityManagerFactory secondaryEntityManagerFactory) {\n        return new JpaTransactionManager(secondaryEntityManagerFactory);\n    }\n}\n\n// application.properties\nspring.datasource.primary.url=jdbc:mysql://localhost:3306/primary_db\nspring.datasource.primary.username=root\nspring.datasource.primary.password=password\n\nspring.datasource.secondary.url=jdbc:postgresql://localhost:5432/secondary_db\nspring.datasource.secondary.username=postgres\nspring.datasource.secondary.password=password"
+      }
+    ],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 16,
+    "question": "How to connect two database in one service please explain",
+    "category": "Spring Boot",
+    "subCategory": "JPA",
+    "codeRequired": true,
+    "tableRequired": false,
+    "content": {
+      "explanation": "The isolation property in @Transactional annotation controls the transaction isolation level, which determines how transactions interact with each other when accessing the same data. Isolation levels include READ_UNCOMMITTED (lowest isolation, allows dirty reads), READ_COMMITTED (prevents dirty reads), REPEATABLE_READ (prevents dirty and non-repeatable reads), and SERIALIZABLE (highest isolation, prevents all concurrency issues). The default isolation level depends on the database. Choosing the right isolation level is crucial for balancing data consistency and performance. Higher isolation levels provide stronger consistency guarantees but can lead to more locking and reduced concurrency. Lower isolation levels improve performance but may allow inconsistent reads. Understanding isolation levels is essential for designing transactional systems that maintain data integrity while maintaining acceptable performance. In enterprise production systems, \"How to connect two database in one service please explain\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Spring Boot / JPA, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: JPA",
+        "Category: Spring Boot",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"How to connect two database in one service please explain\" maps to concrete behavior in the Spring Boot stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where JPA decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"How to connect two database in one service please explain\" by explaining fundamentals, production impact, and trade-offs in Spring Boot / JPA.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [
+      {
+        "title": "Example",
+        "language": "java",
+        "code": "// Implementation sketch for: How to connect two database in one service please explain\npublic class Example {\n  // TODO: domain logic\n}"
+      }
+    ],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 17,
+    "question": "Explain operational isolation property in @Transactional",
+    "category": "Spring",
+    "subCategory": "Transactions",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": "A deadlock in databases occurs when two or more transactions are waiting for each other to release locks, creating a circular dependency that prevents any of them from proceeding. For example, Transaction A holds a lock on Table X and needs a lock on Table Y, while Transaction B holds a lock on Table Y and needs a lock on Table X. Neither can proceed, resulting in a deadlock. Deadlocks typically occur due to inconsistent ordering of resource access, long-running transactions, or lack of proper indexing. Database systems detect deadlocks and automatically kill one transaction to resolve the deadlock. To prevent deadlocks, ensure consistent ordering of resource access, keep transactions short, use appropriate isolation levels, and implement proper retry logic. Understanding deadlocks is crucial for designing robust database applications and handling concurrency issues effectively. In enterprise production systems, \"Explain operational isolation property in @Transactional\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Spring / Transactions, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Transactions",
+        "Category: Spring",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"Explain operational isolation property in @Transactional\" maps to concrete behavior in the Spring stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Transactions decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"Explain operational isolation property in @Transactional\" by explaining fundamentals, production impact, and trade-offs in Spring / Transactions.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 18,
+    "question": "What is deadlock and how it comes in database",
+    "category": "SQL",
+    "subCategory": "Theory",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": "Automatically storing insert or update timestamps according to database time is a common requirement for auditing and tracking data modifications. Most databases provide built-in features for this: MySQL uses DEFAULT CURRENT_TIMESTAMP and ON UPDATE CURRENT_TIMESTAMP, PostgreSQL uses DEFAULT NOW() and triggers, Oracle uses DEFAULT SYSDATE and triggers, and SQL Server uses DEFAULT GETDATE() and triggers. In JPA/Hibernate, you can use @CreationTimestamp and @UpdateTimestamp annotations, or @PrePersist and @PreUpdate lifecycle callbacks. Using database-level timestamps ensures consistency even when data is modified outside the application. This approach is essential for audit trails, data synchronization, and tracking record lifecycles. Understanding timestamp management is important for building applications that require accurate time tracking and audit capabilities. In enterprise production systems, \"What is deadlock and how it comes in database\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For SQL / Theory, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Theory",
+        "Category: SQL",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"What is deadlock and how it comes in database\" maps to concrete behavior in the SQL stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Theory decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"What is deadlock and how it comes in database\" by explaining fundamentals, production impact, and trade-offs in SQL / Theory.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": [
+      {
+        "title": "Comparison Table",
+        "headers": [
+          "Database",
+          "Insert Timestamp",
+          "Update Timestamp",
+          "Trigger Required"
+        ],
+        "rows": [
+          [
+            "MySQL",
+            "DEFAULT CURRENT_TIMESTAMP",
+            "ON UPDATE CURRENT_TIMESTAMP",
+            "No"
+          ],
+          [
+            "PostgreSQL",
+            "DEFAULT NOW()",
+            "Trigger",
+            "Yes"
+          ],
+          [
+            "Oracle",
+            "DEFAULT SYSDATE",
+            "Trigger",
+            "Yes"
+          ],
+          [
+            "SQL Server",
+            "DEFAULT GETDATE()",
+            "Trigger",
+            "Yes"
+          ],
+          [
+            "JPA",
+            "@CreationTimestamp",
+            "@UpdateTimestamp",
+            "No"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "question": "How to store insert or update timestamp automatically according to database time",
+    "category": "SQL",
+    "subCategory": "Theory",
+    "codeRequired": true,
+    "tableRequired": true,
+    "content": {
+      "explanation": "Finding the 2nd highest number from an array without using predefined functions is a fundamental algorithmic problem that tests your understanding of array traversal and comparison logic. The approach involves iterating through the array once while maintaining two variables: the highest and second highest numbers. For each element, we compare it with the current highest and second highest values, updating them accordingly. This algorithm runs in O(n) time complexity with O(1) space complexity, making it efficient for large arrays. Edge cases to consider include arrays with fewer than 2 elements, duplicate values, and negative numbers. This problem is often asked in interviews to assess basic programming skills and algorithmic thinking without relying on built-in sorting or max functions. In enterprise production systems, \"How to store insert or update timestamp automatically according to database time\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For SQL / Theory, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Theory",
+        "Category: SQL",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"How to store insert or update timestamp automatically according to database time\" maps to concrete behavior in the SQL stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Theory decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"How to store insert or update timestamp automatically according to database time\" by explaining fundamentals, production impact, and trade-offs in SQL / Theory.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [
+      {
+        "title": "Solution",
+        "language": "java",
+        "code": "// Java 8 Solution using Stream\nimport java.util.*;\nimport java.util.stream.*;\n\npublic class Solution {\n    public static int findSecondHighest(int[] arr) {\n        if (arr.length < 2) return -1;\n        \n        return Arrays.stream(arr)\n            .distinct()\n            .boxed()\n            .sorted(Comparator.reverseOrder())\n            .skip(1)\n            .findFirst()\n            .orElse(-1);\n    }\n}\n\n// Without Java 8 Solution\npublic class Solution {\n    public static int findSecondHighest(int[] arr) {\n        if (arr.length < 2) return -1;\n        \n        int first = Integer.MIN_VALUE;\n        int second = Integer.MIN_VALUE;\n        \n        for (int i = 0; i < arr.length; i++) {\n            if (arr[i] > first) {\n                second = first;\n                first = arr[i];\n            } else if (arr[i] > second && arr[i] != first) {\n                second = arr[i];\n            }\n        }\n        \n        return second == Integer.MIN_VALUE ? -1 : second;\n    }\n    \n    public static void main(String[] args) {\n        int[] arr = {12, 35, 1, 10, 34, 1};\n        System.out.println(\"Second Highest: \" + findSecondHighest(arr));\n    }\n}\n\n// Alternative without Java 8 (handling duplicates)\npublic class Solution {\n    public static int findSecondHighest(int[] arr) {\n        if (arr == null || arr.length < 2) {\n            throw new IllegalArgumentException(\"Array must have at least 2 elements\");\n        }\n        \n        int max1 = arr[0];\n        int max2 = Integer.MIN_VALUE;\n        \n        for (int i = 1; i < arr.length; i++) {\n            if (arr[i] > max1) {\n                max2 = max1;\n                max1 = arr[i];\n            } else if (arr[i] > max2 && arr[i] != max1) {\n                max2 = arr[i];\n            }\n        }\n        \n        if (max2 == Integer.MIN_VALUE) {\n            throw new RuntimeException(\"No second highest element found\");\n        }\n        \n        return max2;\n    }\n}"
+      }
+    ],
+    "queryVariations": [],
+    "tables": [
+      {
+        "title": "SQL Comparison",
+        "headers": [
+          "Aspect",
+          "Option A",
+          "Option B"
+        ],
+        "rows": [
+          [
+            "Use case",
+            "Structured transactional data",
+            "High-scale flexible schema"
+          ],
+          [
+            "Consistency",
+            "Strong (ACID)",
+            "Configurable / eventual"
+          ],
+          [
+            "Scalability",
+            "Vertical + read replicas",
+            "Horizontal sharding"
+          ],
+          [
+            "Complexity",
+            "JOINs & migrations",
+            "Denormalized documents"
+          ],
+          [
+            "Interview tip",
+            "Lead with requirements",
+            "Mention polyglot persistence"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "question": "Find 2nd highest number from an array without predefined functions",
+    "category": "Java-coding",
+    "subCategory": "Array",
+    "codeRequired": true,
+    "tableRequired": false,
+    "content": {
+      "explanation": "Locking in databases is a mechanism to manage concurrent access to data, ensuring data integrity and consistency when multiple transactions try to access the same data simultaneously. Database locks can be categorized into several types: shared locks (for read operations, allowing multiple readers), exclusive locks (for write operations, preventing other transactions from accessing), intent locks (for hierarchical locking), and row-level vs table-level locks. Locks can be optimistic (no locking during read, check for conflicts on write) or pessimistic (locking during read to prevent conflicts). Understanding locking is crucial for designing high-concurrency applications, preventing deadlocks, and choosing appropriate isolation levels. Proper lock management ensures data consistency while maintaining acceptable performance in multi-user environments. In enterprise production systems, \"Find 2nd highest number from an array without predefined functions\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Java-coding / Array, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Array",
+        "Category: Java-coding",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example",
+        "Time: O(n) typical",
+        "Space: O(n) for auxiliary structures",
+        "Edge cases: empty input, duplicates"
+      ],
+      "internalWorking": "At runtime, \"Find 2nd highest number from an array without predefined functions\" maps to concrete behavior in the Java-coding stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Array decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"Find 2nd highest number from an array without predefined functions\" by explaining fundamentals, production impact, and trade-offs in Java-coding / Array.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [
+      {
+        "title": "Java 8 / Stream API",
+        "language": "java",
+        "code": "// Find 2nd highest number from an array without predefined functions\nimport java.util.*;\nimport java.util.stream.*;\n\npublic class Solution {\n    public static void main(String[] args) {\n        // Stream-based approach\n        List<String> data = List.of(\"a\", \"b\", \"c\");\n        data.stream().filter(s -> !s.isBlank()).forEach(System.out::println);\n    }\n}"
+      },
+      {
+        "title": "Traditional (Non-Stream)",
+        "language": "java",
+        "code": "// Find 2nd highest number from an array without predefined functions\nimport java.util.*;\n\npublic class Solution {\n    public static void main(String[] args) {\n        List<String> data = Arrays.asList(\"a\", \"b\", \"c\");\n        for (String s : data) {\n            if (s != null && !s.isBlank()) System.out.println(s);\n        }\n    }\n}"
+      }
+    ],
+    "queryVariations": [],
+    "tables": []
+  }
+]

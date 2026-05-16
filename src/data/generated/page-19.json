@@ -1,0 +1,530 @@
+[
+  {
+    "id": 181,
+    "question": "Explain bcrypt algorithm",
+    "category": "Spring Boot",
+    "subCategory": "Spring Security",
+    "codeRequired": true,
+    "tableRequired": false,
+    "content": {
+      "explanation": "Deciding between monolithic and microservices architecture depends on various factors: team size and expertise, application complexity, scalability requirements, deployment frequency, and organizational structure. Monolithic architecture is simpler for small teams, easier to develop initially, has lower operational overhead, and is suitable for applications with clear boundaries. Microservices offer independent scaling, fault isolation, technology diversity, and faster deployment cycles but add complexity in communication, data consistency, and operations. Consider microservices when: team is large enough to own services, domains are well-separated, independent scaling is needed, and rapid deployment is required. Choose monolithic when: team is small, application is simple, tight coupling is acceptable, and operational complexity must be minimized. In enterprise production systems, \"Explain bcrypt algorithm\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Spring Boot / Spring Security, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Spring Security",
+        "Category: Spring Boot",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"Explain bcrypt algorithm\" maps to concrete behavior in the Spring Boot stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Spring Security decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"Explain bcrypt algorithm\" by explaining fundamentals, production impact, and trade-offs in Spring Boot / Spring Security.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [
+      {
+        "title": "Example",
+        "language": "java",
+        "code": "// Implementation sketch for: Explain bcrypt algorithm\npublic class Example {\n  // TODO: domain logic\n}"
+      }
+    ],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 182,
+    "question": "How to store passwords securely?",
+    "category": "Spring Boot",
+    "subCategory": "Spring Security",
+    "codeRequired": true,
+    "tableRequired": false,
+    "content": {
+      "explanation": "An idempotent API is one that can be called multiple times with the same parameters and produce the same result without causing unintended side effects. Idempotency is crucial for reliable distributed systems where requests might be retried due to network failures. HTTP methods like GET, PUT, and DELETE are idempotent by design, while POST is not. To make POST idempotent, use idempotency keys (unique identifiers sent by clients) that the server tracks to detect duplicate requests. Implement idempotency by: storing request identifiers, checking for duplicates before processing, and returning cached results for repeated requests. Understanding idempotency is essential for building robust APIs that handle retries and network failures gracefully. In enterprise production systems, \"How to store passwords securely?\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Spring Boot / Spring Security, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Spring Security",
+        "Category: Spring Boot",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"How to store passwords securely?\" maps to concrete behavior in the Spring Boot stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Spring Security decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"How to store passwords securely?\" by explaining fundamentals, production impact, and trade-offs in Spring Boot / Spring Security.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [
+      {
+        "title": "Example",
+        "language": "java",
+        "code": "// Implementation sketch for: How to store passwords securely?\npublic class Example {\n  // TODO: domain logic\n}"
+      }
+    ],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 183,
+    "question": "What is RBAC?",
+    "category": "Spring Boot",
+    "subCategory": "Spring Security",
+    "codeRequired": true,
+    "tableRequired": false,
+    "content": {
+      "explanation": "Correlation IDs are unique identifiers that are passed through all components in a distributed system to track a request across multiple services. They enable tracing of requests as they flow through microservices, making it possible to debug issues, analyze performance, and understand the complete request lifecycle. Correlation IDs are typically generated at the entry point (API gateway) and propagated via HTTP headers, message metadata, or tracing contexts. They're essential for distributed tracing, logging aggregation, and monitoring. Tools like Zipkin, Jaeger, and AWS X-Ray use correlation IDs to build request traces. Understanding correlation IDs is crucial for observability in microservices architectures. In enterprise production systems, \"What is RBAC?\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Spring Boot / Spring Security, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Spring Security",
+        "Category: Spring Boot",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"What is RBAC?\" maps to concrete behavior in the Spring Boot stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Spring Security decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"What is RBAC?\" by explaining fundamentals, production impact, and trade-offs in Spring Boot / Spring Security.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [
+      {
+        "title": "Example",
+        "language": "java",
+        "code": "// Implementation sketch for: What is RBAC?\npublic class Example {\n  // TODO: domain logic\n}"
+      }
+    ],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 184,
+    "question": "What is OAuth2 client credentials flow?",
+    "category": "Spring Boot",
+    "subCategory": "Spring Security",
+    "codeRequired": true,
+    "tableRequired": false,
+    "content": {
+      "explanation": "Microservices communicate through synchronous and asynchronous patterns. Synchronous communication includes HTTP/REST (direct service-to-service calls), gRPC (high-performance RPC), and GraphQL (flexible data fetching). Asynchronous communication includes message brokers (Kafka, RabbitMQ), event buses, and message queues. Synchronous is simpler but creates tight coupling and blocking. Asynchronous provides loose coupling and better scalability but adds complexity with eventual consistency. Hybrid approaches are common: synchronous for request-response, asynchronous for events and notifications. Choosing the right communication pattern depends on requirements like latency, consistency, scalability, and complexity tolerance. In enterprise production systems, \"What is OAuth2 client credentials flow?\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Spring Boot / Spring Security, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Spring Security",
+        "Category: Spring Boot",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"What is OAuth2 client credentials flow?\" maps to concrete behavior in the Spring Boot stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Spring Security decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"What is OAuth2 client credentials flow?\" by explaining fundamentals, production impact, and trade-offs in Spring Boot / Spring Security.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [
+      {
+        "title": "Example",
+        "language": "java",
+        "code": "// Implementation sketch for: What is OAuth2 client credentials flow?\npublic class Example {\n  // TODO: domain logic\n}"
+      }
+    ],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 185,
+    "question": "How to secure Kafka communication?",
+    "category": "Kafka",
+    "subCategory": "Security",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": "Design patterns for large-scale enterprise applications include architectural patterns like Layered Architecture, Hexagonal Architecture (Ports and Adapters), Clean Architecture, and Microservices. Common patterns include: CQRS (Command Query Responsibility Segregation) for separating read/write operations, Event Sourcing for storing events instead of state, Saga for distributed transactions, Circuit Breaker for fault tolerance, Bulkhead for resource isolation, and Sidecar for cross-cutting concerns. These patterns address challenges like scalability, maintainability, testability, and resilience. Understanding enterprise design patterns is essential for architecting systems that can handle complex business requirements and scale effectively. In enterprise production systems, \"How to secure Kafka communication?\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Kafka / Security, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Security",
+        "Category: Kafka",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"How to secure Kafka communication?\" maps to concrete behavior in the Kafka stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Security decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"How to secure Kafka communication?\" by explaining fundamentals, production impact, and trade-offs in Kafka / Security.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 186,
+    "question": "How to encrypt sensitive data in database?",
+    "category": "SQL",
+    "subCategory": "Database Security",
+    "codeRequired": true,
+    "tableRequired": false,
+    "content": {
+      "explanation": "API management tools in cloud services like AWS provide comprehensive solutions for managing APIs at scale. AWS API Gateway offers features like request/response transformation, authentication (Cognito, Lambda Authorizer), authorization (IAM policies), rate limiting, caching, monitoring (CloudWatch), and integration with various backend services. Other AWS services include: AppSync for GraphQL APIs, EventBridge for event-driven APIs, and PrivateLink for private API access. These tools simplify API management, provide security, enable monetization, and offer analytics. Understanding cloud API management is essential for building scalable, secure APIs in cloud environments. In enterprise production systems, \"How to encrypt sensitive data in database?\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For SQL / Database Security, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Database Security",
+        "Category: SQL",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"How to encrypt sensitive data in database?\" maps to concrete behavior in the SQL stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Database Security decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"How to encrypt sensitive data in database?\" by explaining fundamentals, production impact, and trade-offs in SQL / Database Security.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [
+      {
+        "title": "Example",
+        "language": "java",
+        "code": "// Implementation sketch for: How to encrypt sensitive data in database?\npublic class Example {\n  // TODO: domain logic\n}"
+      }
+    ],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 187,
+    "question": "Explain API versioning strategies",
+    "category": "Spring Boot",
+    "subCategory": "version",
+    "codeRequired": true,
+    "tableRequired": false,
+    "content": {
+      "explanation": "When API latency suddenly increases, systematic troubleshooting is required. Steps include: 1) Check monitoring dashboards for anomalies, 2) Analyze application metrics (CPU, memory, I/O), 3) Review database performance (slow queries, connection pool), 4) Check external dependencies (third-party APIs, message brokers), 5) Examine network issues (bandwidth, latency), 6) Review recent deployments or configuration changes, 7) Check for caching issues (cache misses, stampede), 8) Analyze logs for errors or warnings, 9) Implement temporary mitigations (circuit breakers, rate limiting), 10) Scale resources if needed. Understanding performance troubleshooting is crucial for maintaining service availability and user experience. In enterprise production systems, \"Explain API versioning strategies\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Spring Boot / version, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: version",
+        "Category: Spring Boot",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"Explain API versioning strategies\" maps to concrete behavior in the Spring Boot stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where version decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"Explain API versioning strategies\" by explaining fundamentals, production impact, and trade-offs in Spring Boot / version.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [
+      {
+        "title": "Example",
+        "language": "java",
+        "code": "// Implementation sketch for: Explain API versioning strategies\npublic class Example {\n  // TODO: domain logic\n}"
+      }
+    ],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 188,
+    "question": "URI versioning vs header versioning",
+    "category": "Spring Boot",
+    "subCategory": "version",
+    "codeRequired": true,
+    "tableRequired": false,
+    "content": {
+      "explanation": "Designing APIs to handle huge traffic requires multiple strategies: horizontal scaling (load balancers, auto-scaling), caching (CDN, application cache, database cache), rate limiting (prevent abuse), asynchronous processing (message queues), database optimization (read replicas, sharding), CDN for static content, connection pooling, and implementing circuit breakers. Architecture patterns include: API Gateway for routing, microservices for independent scaling, event-driven architecture for decoupling, and edge computing for reduced latency. Monitoring and auto-scaling are essential for handling traffic spikes. Understanding scalability patterns is crucial for building APIs that can handle growth and traffic surges. In enterprise production systems, \"URI versioning vs header versioning\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Spring Boot / version, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: version",
+        "Category: Spring Boot",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"URI versioning vs header versioning\" maps to concrete behavior in the Spring Boot stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where version decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"URI versioning vs header versioning\" by explaining fundamentals, production impact, and trade-offs in Spring Boot / version.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [
+      {
+        "title": "Example",
+        "language": "java",
+        "code": "// Implementation sketch for: URI versioning vs header versioning\npublic class Example {\n  // TODO: domain logic\n}"
+      }
+    ],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 189,
+    "question": "How to design backward compatible APIs?",
+    "category": "Spring Boot",
+    "subCategory": "REST",
+    "codeRequired": true,
+    "tableRequired": false,
+    "content": {
+      "explanation": "Architecting large-scale enterprise applications requires considering multiple design patterns and principles. Key patterns include: Layered Architecture (separation of concerns), Domain-Driven Design (bounded contexts), Microservices (independent deployable units), Event-Driven Architecture (loose coupling), CQRS (separate read/write models), Event Sourcing (event-based state), Saga (distributed transactions), and Circuit Breaker (fault tolerance). Principles include: SOLID principles, DRY (Don't Repeat Yourself), separation of concerns, and CAP theorem considerations. Understanding these patterns and principles is essential for designing systems that are maintainable, scalable, and aligned with business requirements. In enterprise production systems, \"How to design backward compatible APIs?\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Spring Boot / REST, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: REST",
+        "Category: Spring Boot",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"How to design backward compatible APIs?\" maps to concrete behavior in the Spring Boot stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where REST decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"How to design backward compatible APIs?\" by explaining fundamentals, production impact, and trade-offs in Spring Boot / REST.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [
+      {
+        "title": "Example",
+        "language": "java",
+        "code": "// Implementation sketch for: How to design backward compatible APIs?\npublic class Example {\n  // TODO: domain logic\n}"
+      }
+    ],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 190,
+    "question": "What are REST maturity levels?",
+    "category": "Spring Boot",
+    "subCategory": "REST",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": "AWS API management tools include API Gateway for REST and WebSocket APIs, AppSync for GraphQL APIs, and EventBridge for event-driven APIs. API Gateway provides features like request/response transformation, authentication/authorization, rate limiting, caching, monitoring, and integration with Lambda, EC2, and other AWS services. It supports regional and edge-optimized endpoints for low latency. AppSync offers real-time subscriptions, offline capabilities, and integration with DynamoDB. EventBridge enables event-driven architectures with event buses and rules. These tools provide comprehensive API management capabilities including security, monitoring, and analytics. Understanding AWS API services is essential for building scalable APIs on AWS. In enterprise production systems, \"What are REST maturity levels?\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Spring Boot / REST, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: REST",
+        "Category: Spring Boot",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"What are REST maturity levels?\" maps to concrete behavior in the Spring Boot stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where REST decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"What are REST maturity levels?\" by explaining fundamentals, production impact, and trade-offs in Spring Boot / REST.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  }
+]

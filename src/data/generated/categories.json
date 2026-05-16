@@ -1,0 +1,370 @@
+[
+  {
+    "id": "agile",
+    "label": "Agile",
+    "icon": "📘",
+    "color": "#10b981",
+    "subs": [
+      "Estimation",
+      "Scrum"
+    ]
+  },
+  {
+    "id": "api",
+    "label": "API",
+    "icon": "📘",
+    "color": "#06a8e9",
+    "subs": [
+      "Web Services"
+    ]
+  },
+  {
+    "id": "architecture",
+    "label": "Architecture",
+    "icon": "📘",
+    "color": "#06a8e9",
+    "subs": [
+      "Design Patterns",
+      "Enterprise Design"
+    ]
+  },
+  {
+    "id": "aws",
+    "label": "AWS",
+    "icon": "📘",
+    "color": "#ff9900",
+    "subs": [
+      "API Management",
+      "Deployment"
+    ]
+  },
+  {
+    "id": "caching",
+    "label": "Caching",
+    "icon": "📘",
+    "color": "#06a8e9",
+    "subs": [
+      "Caching",
+      "Caching Algorithms",
+      "Caching Strategies",
+      "Redis"
+    ]
+  },
+  {
+    "id": "design-patterns",
+    "label": "Design Patterns",
+    "icon": "📘",
+    "color": "#06a8e9",
+    "subs": [
+      "CQRS",
+      "Singleton Pattern"
+    ]
+  },
+  {
+    "id": "devops",
+    "label": "Devops",
+    "icon": "📘",
+    "color": "#06a8e9",
+    "subs": [
+      "Automation",
+      "AWS",
+      "CI/CD",
+      "Configuration Management",
+      "Container Orchestration",
+      "Containers",
+      "Deployment",
+      "Deployment Strategies",
+      "Infrastructure",
+      "Kubernetes",
+      "Monitoring",
+      "Process",
+      "Version Control"
+    ]
+  },
+  {
+    "id": "distributed-systems",
+    "label": "Distributed Systems",
+    "icon": "📘",
+    "color": "#06a8e9",
+    "subs": [
+      "Scalability"
+    ]
+  },
+  {
+    "id": "hibernate",
+    "label": "Hibernate",
+    "icon": "📦",
+    "color": "#8b5cf6",
+    "subs": [
+      "Fetching",
+      "ORM",
+      "Performance",
+      "Repository Methods"
+    ]
+  },
+  {
+    "id": "httphttps",
+    "label": "HTTP/HTTPS",
+    "icon": "📘",
+    "color": "#06a8e9",
+    "subs": [
+      "encryption",
+      "https"
+    ]
+  },
+  {
+    "id": "java",
+    "label": "Java",
+    "icon": "☕",
+    "color": "#f97316",
+    "subs": [
+      "Collections",
+      "Concurrency",
+      "Exception Handling",
+      "java-8",
+      "jvm",
+      "JVM",
+      "Memory Management",
+      "Memory-Management",
+      "OOPs",
+      "OOPS",
+      "Streams API",
+      "String",
+      "Troubleshooting"
+    ]
+  },
+  {
+    "id": "java-coding",
+    "label": "Java-coding",
+    "icon": "💻",
+    "color": "#06a8e9",
+    "subs": [
+      "Array",
+      "File Handling",
+      "Stream"
+    ]
+  },
+  {
+    "id": "kafka",
+    "label": "Kafka",
+    "icon": "📨",
+    "color": "#f59e0b",
+    "subs": [
+      "Consumer Management",
+      "Consumers",
+      "Fault Tolerance",
+      "Internals",
+      "Message Processing",
+      "Partitions",
+      "Performance",
+      "Replication",
+      "Schema Management",
+      "Security"
+    ]
+  },
+  {
+    "id": "microservices",
+    "label": "microservices",
+    "icon": "🔗",
+    "color": "#a855f7",
+    "subs": [
+      "API Design",
+      "API Management",
+      "Architecture",
+      "Communication",
+      "Debugging",
+      "Design Patterns",
+      "Distributed Systems",
+      "Distributed Transactions",
+      "Fault Tolerance",
+      "Gateway",
+      "Implementation",
+      "Monitoring",
+      "Observability",
+      "Performance",
+      "Project Architecture",
+      "Scalability",
+      "Service Discovery",
+      "spring-security",
+      "transaction"
+    ]
+  },
+  {
+    "id": "monitoring",
+    "label": "Monitoring",
+    "icon": "📘",
+    "color": "#06a8e9",
+    "subs": [
+      "API Monitoring",
+      "Logging",
+      "Observability",
+      "Tools",
+      "Tracing"
+    ]
+  },
+  {
+    "id": "networking",
+    "label": "Networking",
+    "icon": "📘",
+    "color": "#06a8e9",
+    "subs": [
+      "DNS",
+      "Protocols",
+      "TCP"
+    ]
+  },
+  {
+    "id": "others",
+    "label": "Others",
+    "icon": "📘",
+    "color": "#64748b",
+    "subs": [
+      "Architecture",
+      "Code Quality",
+      "Code Review",
+      "Experience",
+      "production issues"
+    ]
+  },
+  {
+    "id": "production-issues",
+    "label": "Production Issues",
+    "icon": "📘",
+    "color": "#06a8e9",
+    "subs": [
+      "Performance"
+    ]
+  },
+  {
+    "id": "react",
+    "label": "React",
+    "icon": "⚛️",
+    "color": "#06b6d4",
+    "subs": [
+      "Basics",
+      "Components",
+      "Forms",
+      "Hooks",
+      "Lifecycle",
+      "Performance",
+      "Redux",
+      "Rendering",
+      "Routing",
+      "State Management"
+    ]
+  },
+  {
+    "id": "redis",
+    "label": "Redis",
+    "icon": "📘",
+    "color": "#06a8e9",
+    "subs": [
+      "Data Structures",
+      "Distributed Systems",
+      "High Availability",
+      "Messaging",
+      "Persistence",
+      "Scalability"
+    ]
+  },
+  {
+    "id": "rest-apis",
+    "label": "REST APIs",
+    "icon": "📘",
+    "color": "#06a8e9",
+    "subs": [
+      "API Design",
+      "Caching",
+      "HTTP",
+      "HTTP Methods",
+      "REST Principles"
+    ]
+  },
+  {
+    "id": "security",
+    "label": "Security",
+    "icon": "📘",
+    "color": "#06a8e9",
+    "subs": [
+      "spring-security"
+    ]
+  },
+  {
+    "id": "spring",
+    "label": "Spring",
+    "icon": "🌱",
+    "color": "#22c55e",
+    "subs": [
+      "Dependency Injection",
+      "spring-core",
+      "Transactions"
+    ]
+  },
+  {
+    "id": "spring-boot",
+    "label": "Spring Boot",
+    "icon": "📘",
+    "color": "#06a8e9",
+    "subs": [
+      "Concurrency",
+      "IO",
+      "JPA",
+      "Migration",
+      "Networking",
+      "Reactive Programming",
+      "REST",
+      "Spring Advance",
+      "Spring Security",
+      "Validation",
+      "version"
+    ]
+  },
+  {
+    "id": "sql",
+    "label": "SQL",
+    "icon": "🗄️",
+    "color": "#3b82f6",
+    "subs": [
+      "Concurrency",
+      "Database Security",
+      "Functions",
+      "Indexing",
+      "NoSQL",
+      "Partitioning",
+      "Performance",
+      "Query",
+      "Scalability",
+      "theory",
+      "Theory"
+    ]
+  },
+  {
+    "id": "system-design",
+    "label": "System Design",
+    "icon": "📘",
+    "color": "#06a8e9",
+    "subs": [
+      "Algorithms",
+      "Infrastructure",
+      "Scalability"
+    ]
+  },
+  {
+    "id": "testing",
+    "label": "Testing",
+    "icon": "📘",
+    "color": "#06a8e9",
+    "subs": [
+      "Integration Testing"
+    ]
+  },
+  {
+    "id": "web",
+    "label": "Web",
+    "icon": "📘",
+    "color": "#06a8e9",
+    "subs": [
+      "Communication"
+    ]
+  }
+]

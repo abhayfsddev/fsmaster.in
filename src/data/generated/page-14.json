@@ -1,0 +1,538 @@
+[
+  {
+    "id": 131,
+    "question": "Design a parking lot microservice",
+    "category": "Microservices",
+    "subCategory": "Architecture",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": " In enterprise production systems, \"Design a parking lot microservice\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Microservices / Architecture, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Architecture",
+        "Category: Microservices",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"Design a parking lot microservice\" maps to concrete behavior in the Microservices stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Architecture decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"Design a parking lot microservice\" by explaining fundamentals, production impact, and trade-offs in Microservices / Architecture.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 132,
+    "question": "Explain CAP theorem",
+    "category": "Microservices",
+    "subCategory": "Distributed Systems",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": " In enterprise production systems, \"Explain CAP theorem\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Microservices / Distributed Systems, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Distributed Systems",
+        "Category: Microservices",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"Explain CAP theorem\" maps to concrete behavior in the Microservices stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Distributed Systems decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"Explain CAP theorem\" by explaining fundamentals, production impact, and trade-offs in Microservices / Distributed Systems.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 133,
+    "question": "Explain CQRS pattern",
+    "category": "Design Patterns",
+    "subCategory": "CQRS",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": " In enterprise production systems, \"Explain CQRS pattern\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Design Patterns / CQRS, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: CQRS",
+        "Category: Design Patterns",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"Explain CQRS pattern\" maps to concrete behavior in the Design Patterns stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where CQRS decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"Explain CQRS pattern\" by explaining fundamentals, production impact, and trade-offs in Design Patterns / CQRS.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 134,
+    "question": "Explain event sourcing",
+    "category": "Microservices",
+    "subCategory": "Architecture",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": "@Qualifier and @Autowired are both Spring annotations used for dependency injection, but serve different purposes. @Autowired is used to automatically inject dependencies by type, while @Qualifier is used to specify which bean to inject when there are multiple beans of the same type. @Autowired alone can cause ambiguity when multiple beans of the same type exist, leading to NoUniqueBeanDefinitionException. @Qualifier resolves this by specifying the bean name to inject. You can also use @Primary to mark a bean as the default candidate for autowiring. Understanding the difference between these annotations is essential for managing dependency injection in Spring applications, especially when dealing with multiple implementations of the same interface. In enterprise production systems, \"Explain event sourcing\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Microservices / Architecture, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Architecture",
+        "Category: Microservices",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"Explain event sourcing\" maps to concrete behavior in the Microservices stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Architecture decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"Explain event sourcing\" by explaining fundamentals, production impact, and trade-offs in Microservices / Architecture.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 135,
+    "question": "Explain distributed caching",
+    "category": "Microservices",
+    "subCategory": "Distributed Systems",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": "Eureka Client is a service discovery client in Netflix Eureka that allows microservices to register themselves with the Eureka Server and discover other registered services. Eureka Client periodically sends heartbeats to the server to maintain registration status and fetches the service registry to discover available services. Key features include: automatic registration, service discovery, load balancing through Ribbon integration, health checks, and fault tolerance. Eureka Client enables dynamic service discovery without hardcoding service URLs, making microservices more flexible and resilient. Understanding Eureka Client is essential for building microservices architectures with service discovery capabilities. In enterprise production systems, \"Explain distributed caching\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Microservices / Distributed Systems, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Distributed Systems",
+        "Category: Microservices",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"Explain distributed caching\" maps to concrete behavior in the Microservices stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Distributed Systems decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"Explain distributed caching\" by explaining fundamentals, production impact, and trade-offs in Microservices / Distributed Systems.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 136,
+    "question": "Explain service mesh",
+    "category": "Microservices",
+    "subCategory": "Architecture",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": "API Gateway is a critical component in microservices architecture that acts as a single entry point for all client requests. It handles cross-cutting concerns like authentication, authorization, rate limiting, load balancing, caching, request/response transformation, and routing to appropriate backend services. API Gateway simplifies client communication by providing a unified interface, hides backend service complexity, and enables centralized management of API policies. Popular implementations include Spring Cloud Gateway, Netflix Zuul, Kong, and AWS API Gateway. Understanding API Gateway is essential for designing scalable microservices architectures with proper separation of concerns and centralized API management. In enterprise production systems, \"Explain service mesh\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Microservices / Architecture, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Architecture",
+        "Category: Microservices",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"Explain service mesh\" maps to concrete behavior in the Microservices stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Architecture decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"Explain service mesh\" by explaining fundamentals, production impact, and trade-offs in Microservices / Architecture.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 137,
+    "question": "Explain blue-green deployment",
+    "category": "DevOps",
+    "subCategory": "Deployment",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": "Service Registry is a fundamental component in microservices architecture that maintains a registry of available service instances and their locations. Services register themselves with the registry on startup and deregister on shutdown. Other services query the registry to discover available service instances. Service Registry enables dynamic service discovery, load balancing, and fault tolerance by automatically removing unhealthy instances. Popular implementations include Netflix Eureka, HashiCorp Consul, and Zookeeper. Understanding Service Registry is essential for building resilient microservices that can handle service instance changes dynamically without manual configuration. In enterprise production systems, \"Explain blue-green deployment\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For DevOps / Deployment, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Deployment",
+        "Category: DevOps",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"Explain blue-green deployment\" maps to concrete behavior in the DevOps stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Deployment decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"Explain blue-green deployment\" by explaining fundamentals, production impact, and trade-offs in DevOps / Deployment.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 138,
+    "question": "Explain canary deployment",
+    "category": "DevOps",
+    "subCategory": "Deployment",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": "Defining REST endpoints in Spring Boot is straightforward using annotations like @RestController, @RequestMapping, @GetMapping, @PostMapping, @PutMapping, @DeleteMapping, and @PatchMapping. These annotations map HTTP requests to specific handler methods. You can specify URL paths, HTTP methods, request/response formats, and parameters. Path variables and query parameters can be extracted using @PathVariable and @RequestParam annotations. Request bodies are handled with @RequestBody, and response bodies are automatically serialized to JSON. Understanding REST endpoint definition is essential for building RESTful APIs in Spring Boot applications. In enterprise production systems, \"Explain canary deployment\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For DevOps / Deployment, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Deployment",
+        "Category: DevOps",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"Explain canary deployment\" maps to concrete behavior in the DevOps stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Deployment decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"Explain canary deployment\" by explaining fundamentals, production impact, and trade-offs in DevOps / Deployment.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 139,
+    "question": "Explain sidecar pattern",
+    "category": "Microservices",
+    "subCategory": "Design Patterns",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": "@PutMapping and @PostMapping are both used in Spring Boot for handling HTTP requests, but they serve different purposes according to REST principles. @PostMapping is used for creating new resources and should typically return the created resource with a 201 status code. @PutMapping is used for updating existing resources and should return the updated resource with a 200 or 204 status code. While both can accept request bodies, @PostMapping is idempotent (multiple requests create multiple resources), while @PutMapping should be idempotent (multiple requests should have the same effect). Understanding the distinction is crucial for designing RESTful APIs that follow proper HTTP semantics and REST principles. In enterprise production systems, \"Explain sidecar pattern\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Microservices / Design Patterns, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Design Patterns",
+        "Category: Microservices",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"Explain sidecar pattern\" maps to concrete behavior in the Microservices stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Design Patterns decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"Explain sidecar pattern\" by explaining fundamentals, production impact, and trade-offs in Microservices / Design Patterns.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": [
+      {
+        "title": "Comparison Table",
+        "headers": [
+          "Aspect",
+          "@PostMapping",
+          "@PutMapping"
+        ],
+        "rows": [
+          [
+            "HTTP Method",
+            "POST",
+            "PUT"
+          ],
+          [
+            "Purpose",
+            "Create resource",
+            "Update resource"
+          ],
+          [
+            "Idempotent",
+            "No",
+            "Yes"
+          ],
+          [
+            "Status Code",
+            "201 Created",
+            "200 OK / 204 No Content"
+          ],
+          [
+            "Resource ID",
+            "Generated by server",
+            "Provided by client"
+          ],
+          [
+            "Example",
+            "POST /api/users",
+            "PUT /api/users/1"
+          ],
+          [
+            "Body",
+            "New resource data",
+            "Updated resource data"
+          ],
+          [
+            "Multiple calls",
+            "Creates multiple resources",
+            "Same result"
+          ],
+          [
+            "Use Case",
+            "New entity",
+            "Update existing entity"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": 140,
+    "question": "Explain bulkhead pattern",
+    "category": "Microservices",
+    "subCategory": "Design Patterns",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": "Stereotype annotations in Spring are meta-annotations that serve as shortcuts for commonly used annotation combinations. They are called \"stereotype\" because they represent a specific type or category of component. Common stereotype annotations include @Component (generic), @Service (for service layer), @Repository (for data access layer), and @Controller (for presentation layer). These stereotypes are themselves annotated with @Component and may include additional functionality like @Repository adding exception translation for data access exceptions. Stereotype annotations improve code readability, enable aspect-oriented programming based on component type, and allow for better organization of application layers. Understanding stereotype annotations is essential for writing clean, well-organized Spring applications. In enterprise production systems, \"Explain bulkhead pattern\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Microservices / Design Patterns, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Design Patterns",
+        "Category: Microservices",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"Explain bulkhead pattern\" maps to concrete behavior in the Microservices stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Design Patterns decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"Explain bulkhead pattern\" by explaining fundamentals, production impact, and trade-offs in Microservices / Design Patterns.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  }
+]

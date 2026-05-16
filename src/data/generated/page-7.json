@@ -1,0 +1,554 @@
+[
+  {
+    "id": 61,
+    "question": "Explain service registry",
+    "category": "Microservices",
+    "subCategory": "Service Discovery",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": " In enterprise production systems, \"Explain service registry\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Microservices / Service Discovery, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Service Discovery",
+        "Category: Microservices",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"Explain service registry\" maps to concrete behavior in the Microservices stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Service Discovery decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"Explain service registry\" by explaining fundamentals, production impact, and trade-offs in Microservices / Service Discovery.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 62,
+    "question": "How to define REST endpoints",
+    "category": "REST APIs",
+    "subCategory": "API Design",
+    "codeRequired": true,
+    "tableRequired": false,
+    "content": {
+      "explanation": " In enterprise production systems, \"How to define REST endpoints\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For REST APIs / API Design, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: API Design",
+        "Category: REST APIs",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"How to define REST endpoints\" maps to concrete behavior in the REST APIs stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where API Design decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"How to define REST endpoints\" by explaining fundamentals, production impact, and trade-offs in REST APIs / API Design.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [
+      {
+        "title": "Example",
+        "language": "java",
+        "code": "// Implementation sketch for: How to define REST endpoints\npublic class Example {\n  // TODO: domain logic\n}"
+      }
+    ],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 63,
+    "question": "PutMapping vs PostMapping",
+    "category": "REST APIs",
+    "subCategory": "HTTP Methods",
+    "codeRequired": false,
+    "tableRequired": true,
+    "content": {
+      "explanation": " In enterprise production systems, \"PutMapping vs PostMapping\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For REST APIs / HTTP Methods, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: HTTP Methods",
+        "Category: REST APIs",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"PutMapping vs PostMapping\" maps to concrete behavior in the REST APIs stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where HTTP Methods decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"PutMapping vs PostMapping\" by explaining fundamentals, production impact, and trade-offs in REST APIs / HTTP Methods.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": [
+      {
+        "title": "REST APIs Comparison",
+        "headers": [
+          "Aspect",
+          "Option A",
+          "Option B"
+        ],
+        "rows": [
+          [
+            "Use case",
+            "Structured transactional data",
+            "High-scale flexible schema"
+          ],
+          [
+            "Consistency",
+            "Strong (ACID)",
+            "Configurable / eventual"
+          ],
+          [
+            "Scalability",
+            "Vertical + read replicas",
+            "Horizontal sharding"
+          ],
+          [
+            "Complexity",
+            "JOINs & migrations",
+            "Denormalized documents"
+          ],
+          [
+            "Interview tip",
+            "Lead with requirements",
+            "Mention polyglot persistence"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": 64,
+    "question": "Explain stereotype annotations and why they are called stereotype",
+    "category": "Spring",
+    "subCategory": "spring-core",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": "Using balanced trees in HashMap provides significant performance benefits when dealing with hash collisions. In Java 8+, when a bucket's linked list size exceeds 8 elements (TREEIFY_THRESHOLD), it automatically converts to a red-black tree (balanced tree). This optimization changes the lookup performance from O(n) for linked lists to O(log n) for trees, which is a substantial improvement for heavily populated buckets. The balanced tree structure ensures that operations like search, insert, and delete remain efficient even with many collisions. This feature is particularly beneficial in scenarios with poor hash distribution or when many keys hash to the same bucket. Understanding this optimization helps in designing hash functions and choosing appropriate initial capacities and load factors for HashMaps to balance memory usage and performance. In enterprise production systems, \"Explain stereotype annotations and why they are called stereotype\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Spring / spring-core, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: spring-core",
+        "Category: Spring",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"Explain stereotype annotations and why they are called stereotype\" maps to concrete behavior in the Spring stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where spring-core decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"Explain stereotype annotations and why they are called stereotype\" by explaining fundamentals, production impact, and trade-offs in Spring / spring-core.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 65,
+    "question": "How to validate request body on server side",
+    "category": "Spring Boot",
+    "subCategory": "Validation",
+    "codeRequired": true,
+    "tableRequired": false,
+    "content": {
+      "explanation": "Garbage collection in Java is an automatic memory management process that reclaims memory occupied by objects that are no longer reachable. The JVM uses generational garbage collection, dividing the heap into Young Generation (Eden, Survivor spaces) and Old Generation. Objects are created in Eden, survive multiple garbage collections to move to Survivor spaces, and eventually to Old Generation if they survive long enough. Different GC algorithms exist: Serial GC (single-threaded), Parallel GC (multi-threaded), G1 GC (concurrent, low pause), and ZGC/Shenandoah (ultra-low pause). GC runs when the heap is full or explicitly requested. Understanding GC is crucial for tuning performance, avoiding memory leaks, and choosing appropriate JVM parameters for production applications. In enterprise production systems, \"How to validate request body on server side\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Spring Boot / Validation, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Validation",
+        "Category: Spring Boot",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"How to validate request body on server side\" maps to concrete behavior in the Spring Boot stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Validation decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"How to validate request body on server side\" by explaining fundamentals, production impact, and trade-offs in Spring Boot / Validation.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [
+      {
+        "title": "Example",
+        "language": "java",
+        "code": "// Implementation sketch for: How to validate request body on server side\npublic class Example {\n  // TODO: domain logic\n}"
+      }
+    ],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 66,
+    "question": "How to throw proper custom error to user and how Spring Boot handles errors",
+    "category": "Spring Boot",
+    "subCategory": "Spring Advance",
+    "codeRequired": true,
+    "tableRequired": false,
+    "content": {
+      "explanation": "Memory management in Java is primarily handled by the JVM's automatic garbage collection, but developers can influence it through design choices and JVM configuration. The JVM heap is divided into Young Generation (for short-lived objects) and Old Generation (for long-lived objects). Stack memory stores method calls and local variables, while heap memory stores objects. Developers can optimize memory usage by: reusing objects, using primitive types instead of wrappers, choosing appropriate collection types, implementing object pooling, and avoiding memory leaks by removing references. JVM parameters like -Xms (initial heap), -Xmx (max heap), and -XX:NewRatio control memory allocation. Understanding memory management is essential for building efficient Java applications and troubleshooting performance issues. In enterprise production systems, \"How to throw proper custom error to user and how Spring Boot handles errors\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Spring Boot / Spring Advance, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Spring Advance",
+        "Category: Spring Boot",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"How to throw proper custom error to user and how Spring Boot handles errors\" maps to concrete behavior in the Spring Boot stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Spring Advance decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"How to throw proper custom error to user and how Spring Boot handles errors\" by explaining fundamentals, production impact, and trade-offs in Spring Boot / Spring Advance.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [
+      {
+        "title": "Example",
+        "language": "java",
+        "code": "// Implementation sketch for: How to throw proper custom error to user and how Spring Boot handles errors\npublic class Example {\n  // TODO: domain logic\n}"
+      }
+    ],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 67,
+    "question": "How to upgrade Spring 2.x code to Spring 3.x and what major things should be considered",
+    "category": "Spring Boot",
+    "subCategory": "Migration",
+    "codeRequired": false,
+    "tableRequired": false,
+    "content": {
+      "explanation": "The return type of the filter operation in Java Streams is a Stream, not a Collection. This is a key characteristic of lazy evaluation in Streams - filter() is an intermediate operation that returns a new Stream, allowing chaining of multiple operations before a terminal operation triggers actual processing. The Stream returned by filter() contains only elements that match the predicate, but no actual filtering happens until a terminal operation like collect(), count(), or forEach() is called. This design enables efficient pipelining and potential optimization by the Stream implementation. Understanding that filter() returns a Stream is crucial for correctly chaining Stream operations and avoiding common mistakes like trying to use Collection methods on the result. In enterprise production systems, \"How to upgrade Spring 2.x code to Spring 3.x and what major things should be considered\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Spring Boot / Migration, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: Migration",
+        "Category: Spring Boot",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"How to upgrade Spring 2.x code to Spring 3.x and what major things should be considered\" maps to concrete behavior in the Spring Boot stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where Migration decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"How to upgrade Spring 2.x code to Spring 3.x and what major things should be considered\" by explaining fundamentals, production impact, and trade-offs in Spring Boot / Migration.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 68,
+    "question": "Explain OAuth2 with JWT",
+    "category": "Security",
+    "subCategory": "spring-security",
+    "codeRequired": true,
+    "tableRequired": false,
+    "content": {
+      "explanation": "The Executor Framework in Java provides a higher-level replacement for working with threads directly. It's part of the java.util.concurrent package and includes Executor, ExecutorService, ScheduledExecutorService, and Executors utility class. The framework abstracts thread management, providing thread pools, task scheduling, and resource management. Key benefits include: reusing threads (avoiding thread creation overhead), limiting concurrent threads (preventing resource exhaustion), separating task submission from execution policy, and providing built-in mechanisms for shutdown and task tracking. Common implementations include FixedThreadPool (fixed number of threads), CachedThreadPool (creates threads as needed), and ScheduledThreadPool (for delayed/periodic tasks). Understanding the Executor Framework is essential for writing efficient concurrent Java applications. In enterprise production systems, \"Explain OAuth2 with JWT\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Security / spring-security, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: spring-security",
+        "Category: Security",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"Explain OAuth2 with JWT\" maps to concrete behavior in the Security stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where spring-security decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"Explain OAuth2 with JWT\" by explaining fundamentals, production impact, and trade-offs in Security / spring-security.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [
+      {
+        "title": "Solution",
+        "language": "java",
+        "code": "// Using ExecutorService with FixedThreadPool\nExecutorService executor = Executors.newFixedThreadPool(5);\n\n// Submit tasks\nFuture<Integer> future1 = executor.submit(() -> {\n    Thread.sleep(1000);\n    return 42;\n});\n\nFuture<String> future2 = executor.submit(() -> {\n    return \"Task completed\";\n});\n\n// Execute runnable\nexecutor.execute(() -> {\n    System.out.println(\"Running task\");\n});\n\n// Get results\ntry {\n    Integer result = future1.get(); // Blocks until complete\n    String str = future2.get();\n} catch (InterruptedException | ExecutionException e) {\n    e.printStackTrace();\n}\n\n// Shutdown executor\nexecutor.shutdown();\ntry {\n    executor.awaitTermination(60, TimeUnit.SECONDS);\n} catch (InterruptedException e) {\n    executor.shutdownNow();\n}\n\n// Using Callable with return value\nList<Callable<String>> tasks = Arrays.asList(\n    () -> \"Task 1\",\n    () -> \"Task 2\",\n    () -> \"Task 3\"\n);\n\nList<Future<String>> futures = executor.invokeAll(tasks);\n\n// ScheduledExecutorService for delayed tasks\nScheduledExecutorService scheduledExecutor = Executors.newScheduledThreadPool(2);\nscheduledExecutor.schedule(() -> {\n    System.out.println(\"Delayed task\");\n}, 5, TimeUnit.SECONDS);\n\n// Periodic task\nscheduledExecutor.scheduleAtFixedRate(() -> {\n    System.out.println(\"Periodic task\");\n}, 0, 1, TimeUnit.SECONDS);"
+      }
+    ],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 69,
+    "question": "How do you manage key rotation and secure authentication",
+    "category": "Security",
+    "subCategory": "spring-security",
+    "codeRequired": true,
+    "tableRequired": false,
+    "content": {
+      "explanation": "Java provides multiple ways to handle concurrency: 1) Thread class and Runnable interface for basic thread management, 2) Executor Framework for thread pooling and task management, 3) Synchronized blocks and methods for mutual exclusion, 4) volatile keyword for visibility guarantees, 5) Atomic classes for lock-free thread-safe operations, 6) Lock interfaces (ReentrantLock) for flexible locking, 7) Concurrent collections for thread-safe data structures, 8) CountDownLatch, CyclicBarrier, and Semaphore for coordination, 9) CompletableFuture for asynchronous programming, 10) Fork/Join framework for parallel task execution. Choosing the right approach depends on the specific use case, performance requirements, and complexity. Understanding these different mechanisms is crucial for writing efficient concurrent Java applications. In enterprise production systems, \"How do you manage key rotation and secure authentication\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Security / spring-security, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: spring-security",
+        "Category: Security",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"How do you manage key rotation and secure authentication\" maps to concrete behavior in the Security stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where spring-security decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"How do you manage key rotation and secure authentication\" by explaining fundamentals, production impact, and trade-offs in Security / spring-security.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [
+      {
+        "title": "Example",
+        "language": "java",
+        "code": "// Implementation sketch for: How do you manage key rotation and secure authentication\npublic class Example {\n  // TODO: domain logic\n}"
+      }
+    ],
+    "queryVariations": [],
+    "tables": []
+  },
+  {
+    "id": 70,
+    "question": "Explain RestTemplate methods",
+    "category": "Spring",
+    "subCategory": "spring-core",
+    "codeRequired": true,
+    "tableRequired": false,
+    "content": {
+      "explanation": "Streams in Java are immutable, meaning once a Stream is created, it cannot be modified. Operations on Streams return new Stream objects rather than modifying the original. This immutability is a key design principle that enables safe parallel processing and functional-style programming. When you call intermediate operations like filter(), map(), or sorted(), they return new Stream instances without modifying the source. Terminal operations like collect() or forEach() consume the Stream and cannot be called again on the same Stream instance. This design prevents side effects and makes Stream operations predictable and thread-safe. Understanding Stream immutability is essential for correctly using the Stream API and avoiding common mistakes like reusing consumed Streams. In enterprise production systems, \"Explain RestTemplate methods\" frequently appears during architecture reviews, on-call incidents, and senior-level interviews. Interviewers expect you to connect theory with trade-offs: consistency vs availability, latency vs throughput, and operational cost vs developer velocity. When answering, structure your response as definition → internal mechanism → real-world example → pitfalls → when not to use it. For Spring / spring-core, cite how teams at scale validate behavior using metrics, integration tests, and staged rollouts. Mention observability (logs, traces, dashboards) and safe rollout patterns (feature flags, canary, blue-green). This demonstrates staff-engineer thinking beyond textbook definitions.",
+      "keyConcepts": [
+        "Core topic: spring-core",
+        "Category: Spring",
+        "Production trade-offs and failure modes",
+        "Interview structuring: define → mechanism → example"
+      ],
+      "internalWorking": "At runtime, \"Explain RestTemplate methods\" maps to concrete behavior in the Spring stack. Understand which layer owns the work (client, service, framework, database, broker) and what guarantees apply (latency, ordering, durability). Trace a single request path and identify bottlenecks using profiling and metrics.",
+      "realTimeUseCase": "Teams apply this in payment pipelines, inventory services, and high-traffic APIs where spring-core decisions affect uptime. Use feature flags, staged rollouts, and automated tests before changing behavior in production.",
+      "advantages": [
+        "Clear separation of concerns",
+        "Testable units",
+        "Aligns with enterprise patterns"
+      ],
+      "disadvantages": [
+        "Added complexity if over-engineered",
+        "Operational overhead",
+        "Learning curve for juniors"
+      ],
+      "performanceConsiderations": [
+        "Measure p95/p99 latency",
+        "Avoid N+1 access patterns",
+        "Cache hot paths with TTL invalidation"
+      ],
+      "commonMistakes": [
+        "Skipping edge cases (null, empty, duplicates)",
+        "Ignoring idempotency",
+        "No observability on failures"
+      ],
+      "summary": "Master \"Explain RestTemplate methods\" by explaining fundamentals, production impact, and trade-offs in Spring / spring-core.",
+      "followUpQuestions": [
+        "How would you debug this in production?",
+        "What breaks at scale?",
+        "What alternative design would you choose?"
+      ]
+    },
+    "codeExamples": [
+      {
+        "title": "Example",
+        "language": "java",
+        "code": "// Implementation sketch for: Explain RestTemplate methods\npublic class Example {\n  // TODO: domain logic\n}"
+      }
+    ],
+    "queryVariations": [],
+    "tables": []
+  }
+]
