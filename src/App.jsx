@@ -40,7 +40,7 @@ function App() {
           currentTopic={currentTopic}
           currentSub={currentSub}
           onTopicSelect={handleTopicSelect}
-          isVisible={currentPage === 'topic' || currentPage === 'about'}
+          isVisible={true}
         />
         {currentPage === 'home' && (
           <Home onTopicSelect={handleTopicSelect} onPageChange={handlePageChange} />

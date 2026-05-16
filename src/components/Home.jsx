@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { topics, roles } from '../data/topicsData';
 import '../styles/Home.css';
+import JavaCodeAnimation from './JavaCodeAnimation';
 
 export default function Home({ onTopicSelect, onPageChange }) {
   const [typedText, setTypedText] = useState('');
@@ -41,55 +42,49 @@ export default function Home({ onTopicSelect, onPageChange }) {
 
   return (
     <div className="main">
-      <div className="hero">
-        <div className="hero-text">
-          <div className="badge">
-            <span className="dot"></span> Open to Mentoring & Interview Prep
-          </div>
-          <p className="hero-subtitle">Hi, I'm</p>
-          <h1>
-            <span className="name">Abhay Kumar</span>
-          </h1>
-          <div className="typed">
-            <span>{typedText}</span>
-            <span className="cursor">|</span>
-          </div>
-          <p className="hero-desc">
-            7+ years building enterprise Java apps. Currently leading Verizon's B360 platform at{' '}
-            <strong>ACS Global Tech Solutions</strong> using Spring Boot, Microservices & Angular.
-          </p>
-          <div className="hero-btns">
-            <button
-              className="btn-p"
-              onClick={() => onTopicSelect('java', 'JVM')}
-            >
-              Start Learning →
-            </button>
-            <button className="btn-g" onClick={() => onPageChange('about')}>
-              View Resume
-            </button>
-          </div>
-          <div className="hero-contact-info">
-            <span>📍 Hyderabad, India</span>
-            <span>📧 ancabhay@gmail.com</span>
+      <div className="hero-split">
+        <div className="hero-left">
+          <div className="hero-text">
+            <div className="badge">
+              <span className="dot"></span> Open to Mentoring & Interview Prep
+            </div>
+            <p className="hero-subtitle">Hi, I'm</p>
+            <h1>
+              <span className="name">Abhay Kumar</span>
+            </h1>
+            <div className="typed">
+              <span>{typedText}</span>
+              <span className="cursor">|</span>
+            </div>
+            <p className="hero-desc">
+              8+ years building enterprise Java apps. Currently leading Trinet Project  at{' '}
+              <strong>Coforge</strong> using Spring Boot, Microservices, React js & Angular.
+            </p>
+            <p className="hero-desc">
+              Possesses versatile skills in project management, problem-solving,
+              and collaboration. Brings fresh perspective and strong commitment
+              to quality and success. Recognized for adaptability and proactive
+              approach in delivering effective solutions.
+            </p>
+            <div className="hero-btns">
+              <button
+                className="btn-p"
+                onClick={() => onTopicSelect('java', 'JVM')}
+              >
+                Start Learning →
+              </button>
+              <button className="btn-g" onClick={() => onPageChange('about')}>
+                View Resume
+              </button>
+            </div>
+            <div className="hero-contact-info">
+              <span>📍 Hyderabad, India</span>
+              <span>📧 ancabhay@gmail.com</span>
+            </div>
           </div>
         </div>
-        <div className="hero-photo-wrapper">
-          <div className="hero-photo-ring"></div>
-          <div className="hero-photo">
-            <img
-              src="/profile.png"
-              alt="Abhay Kumar"
-              onError={(e) => {
-                e.target.src =
-                  'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%2306a8e9%22 rx=%2250%22/><text x=%2250%22 y=%2265%22 text-anchor=%22middle%22 font-size=%2240%22 fill=%22white%22>AK</text></svg>';
-              }}
-            />
-          </div>
-          <div className="hero-years-badge">
-            <div className="hero-years-badge-num">7+</div>
-            <div className="hero-years-badge-lbl">Years</div>
-          </div>
+        <div className="hero-right">
+          <JavaCodeAnimation />
         </div>
       </div>
       <div className="stats-row">
