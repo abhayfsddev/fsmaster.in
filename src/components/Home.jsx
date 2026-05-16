@@ -82,6 +82,23 @@ export default function Home({ onTopicSelect, onPageChange }) {
               <span>📧 ancabhay@gmail.com</span>
             </div>
           </div>
+          <div className="hero-photo-wrapper">
+            <div className="hero-photo-ring"></div>
+            <div className="hero-photo">
+              <img
+                src="/profile.png"
+                alt="Abhay Kumar"
+                onError={(e) => {
+                  e.target.src =
+                    'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%2306a8e9%22 rx=%2250%22/><text x=%2250%22 y=%2265%22 text-anchor=%22middle%22 font-size=%2240%22 fill=%22white%22>AK</text></svg>';
+                }}
+              />
+            </div>
+            <div className="hero-years-badge">
+              <div className="hero-years-badge-num">8+</div>
+              <div className="hero-years-badge-lbl">Years</div>
+            </div>
+          </div>
         </div>
         <div className="hero-right">
           <JavaCodeAnimation />
