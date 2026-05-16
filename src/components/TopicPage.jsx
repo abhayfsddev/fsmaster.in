@@ -1,50 +1,47 @@
 import React, { useState } from 'react';
-import { topics, getQuestions } from '../data/topicsData';
+import { topics } from '../data/topicsData';
+import { questions } from '../data/questions';
 import '../styles/TopicPage.css';
 
-export default function TopicPage({ currentTopic, currentSub, onTopicSelect }) {
-  const [openQuestions, setOpenQuestions] = useState({});
+export default function TopicPage({ currentTopic, currentSub, onTopicSelect, onQuestionSelect }) {
   const [searchQuery, setSearchQuery] = useState('');
-  const [difficultyFilter, setDifficultyFilter] = useState('All');
+  const [currentPage, setCurrentPage] = useState(1);
+  const questionsPerPage = 200;
 
   const topic = topics.find((t) => t.id === currentTopic);
   if (!topic) return <div className="main"><p>Topic not found</p></div>;
 
-  const allQuestions = getQuestions(currentTopic, currentSub);
-
-  const filteredQuestions = allQuestions.filter((q) => {
-    const matchesSearch =
-      !searchQuery ||
-      q.q.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      q.a.toLowerCase().includes(searchQuery.toLowerCase());
-    const matchesDifficulty =
-      difficultyFilter === 'All' || q.d === difficultyFilter;
-    return matchesSearch && matchesDifficulty;
+  // Filter questions by category and subcategory
+  const filteredQuestions = questions.filter((q) => {
+    const matchesCategory = q.category.toLowerCase() === currentTopic.toLowerCase() || 
+                            q.category.toLowerCase().replace(/\s+/g, '-') === currentTopic.toLowerCase();
+    const matchesSub = q.subCategory.toLowerCase() === currentSub.toLowerCase() ||
+                      q.subCategory.toLowerCase().replace(/\s+/g, '-') === currentSub.toLowerCase();
+    return matchesCategory && matchesSub;
   });
 
-  const toggleQuestion = (index) => {
-    setOpenQuestions((prev) => ({
-      ...prev,
-      [index]: !prev[index],
-    }));
+  // Apply search filter
+  const searchedQuestions = filteredQuestions.filter((q) => {
+    if (!searchQuery) return true;
+    const query = searchQuery.toLowerCase();
+    return q.question.toLowerCase().includes(query) ||
+           q.category.toLowerCase().includes(query) ||
+           q.subCategory.toLowerCase().includes(query);
+  });
+
+  // Pagination
+  const totalPages = Math.ceil(searchedQuestions.length / questionsPerPage);
+  const startIndex = (currentPage - 1) * questionsPerPage;
+  const endIndex = startIndex + questionsPerPage;
+  const currentQuestions = searchedQuestions.slice(startIndex, endIndex);
+
+  const handleQuestionClick = (questionId) => {
+    onQuestionSelect(questionId);
   };
 
-  const copyCode = (code, buttonId) => {
-    if (code && navigator.clipboard) {
-      navigator.clipboard.writeText(code);
-      const btn = document.getElementById(buttonId);
-      if (btn) {
-        btn.textContent = 'Copied!';
-        setTimeout(() => {
-          if (btn) btn.textContent = 'Copy';
-        }, 1500);
-      }
-    }
-  };
-
-  const getDiffClass = (difficulty) => {
-    const map = { Basic: 'diff-basic', Intermediate: 'diff-inter', Advanced: 'diff-adv' };
-    return map[difficulty] || 'diff-basic';
+  const handlePageChange = (newPage) => {
+    setCurrentPage(newPage);
+    window.scrollTo(0, 0);
   };
 
   return (
@@ -57,7 +54,7 @@ export default function TopicPage({ currentTopic, currentSub, onTopicSelect }) {
         <div className="page-header-content">
           <h2>{currentSub}</h2>
           <p>
-            {topic.label} → {currentSub} · {allQuestions.length} Questions
+            {topic.label} → {currentSub} · {searchedQuestions.length} Questions
           </p>
         </div>
       </div>
@@ -66,55 +63,54 @@ export default function TopicPage({ currentTopic, currentSub, onTopicSelect }) {
           className="search-box"
           placeholder="Search questions..."
           value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
+          onChange={(e) => {
+            setSearchQuery(e.target.value);
+            setCurrentPage(1);
+          }}
         />
-        <div className="diff-tabs">
-          {['All', 'Basic', 'Intermediate', 'Advanced'].map((diff) => (
-            <button
-              key={diff}
-              className={`diff-tab ${difficultyFilter === diff ? 'active' : ''}`}
-              onClick={() => setDifficultyFilter(diff)}
-            >
-              {diff}
-            </button>
-          ))}
-        </div>
       </div>
       <div className="q-list">
-        {filteredQuestions.map((q, i) => {
-          const qIndex = allQuestions.indexOf(q);
-          const isOpen = openQuestions[qIndex];
-          return (
-            <div key={qIndex} className={`q-card ${isOpen ? 'open' : ''}`}>
-              <div className="q-header" onClick={() => toggleQuestion(qIndex)}>
-                <div className="q-num">{String(qIndex + 1).padStart(2, '0')}</div>
-                <div className="q-header-content">
-                  <p className="q-title">{q.q}</p>
-                  <span className={`diff-badge ${getDiffClass(q.d)}`}>{q.d}</span>
+        {currentQuestions.map((q) => (
+          <div key={q.id} className="q-card" onClick={() => handleQuestionClick(q.id)}>
+            <div className="q-header">
+              <div className="q-num">#{q.id}</div>
+              <div className="q-header-content">
+                <p className="q-title">{q.question}</p>
+                <div className="q-meta">
+                  <span className="category-badge">{q.category}</span>
+                  <span className="subcategory-badge">{q.subCategory}</span>
+                  {q.codeRequired && <span className="code-badge">💻 Code</span>}
+                  {q.tableRequired && <span className="table-badge">📊 Table</span>}
                 </div>
-                <div className="chevron">▾</div>
               </div>
-              {isOpen && (
-                <div className="q-body">
-                  <p className="q-ans">{q.a}</p>
-                  {q.code && (
-                    <div className="code-block">
-                      <button
-                        className="copy-btn"
-                        id={`copy-${qIndex}`}
-                        onClick={() => copyCode(q.code, `copy-${qIndex}`)}
-                      >
-                        Copy
-                      </button>
-                      <pre>{q.code.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</pre>
-                    </div>
-                  )}
-                </div>
-              )}
+              <div className="chevron">→</div>
             </div>
-          );
-        })}
+          </div>
+        ))}
       </div>
+      
+      {totalPages > 1 && (
+        <div className="pagination">
+          <button
+            className="pagination-btn"
+            onClick={() => handlePageChange(currentPage - 1)}
+            disabled={currentPage === 1}
+          >
+            ← Previous
+          </button>
+          <span className="pagination-info">
+            Page {currentPage} of {totalPages}
+          </span>
+          <button
+            className="pagination-btn"
+            onClick={() => handlePageChange(currentPage + 1)}
+            disabled={currentPage === totalPages}
+          >
+            Next →
+          </button>
+        </div>
+      )}
+      
       <div className="related-topics">
         <div className="related-topics-title">Other {topic.label} Topics</div>
         <div className="related-topics-buttons">

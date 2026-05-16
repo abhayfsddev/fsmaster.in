@@ -5,12 +5,14 @@ import Home from './components/Home';
 import About from './components/About';
 import Contact from './components/Contact';
 import TopicPage from './components/TopicPage';
+import QuestionDetail from './components/QuestionDetail';
 import './index.css';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
   const [currentTopic, setCurrentTopic] = useState(null);
   const [currentSub, setCurrentSub] = useState(null);
+  const [currentQuestionId, setCurrentQuestionId] = useState(null);
   const [darkMode, setDarkMode] = useState(false);
 
   const handlePageChange = (page) => {
@@ -21,6 +23,16 @@ function App() {
     setCurrentPage('topic');
     setCurrentTopic(topic);
     setCurrentSub(sub);
+  };
+
+  const handleQuestionSelect = (questionId) => {
+    setCurrentQuestionId(questionId);
+    setCurrentPage('question-detail');
+  };
+
+  const handleBackToQuestions = () => {
+    setCurrentPage('topic');
+    setCurrentQuestionId(null);
   };
 
   const toggleDarkMode = () => {
@@ -52,6 +64,13 @@ function App() {
             currentTopic={currentTopic}
             currentSub={currentSub}
             onTopicSelect={handleTopicSelect}
+            onQuestionSelect={handleQuestionSelect}
+          />
+        )}
+        {currentPage === 'question-detail' && (
+          <QuestionDetail
+            questionId={currentQuestionId}
+            onBack={handleBackToQuestions}
           />
         )}
       </div>
